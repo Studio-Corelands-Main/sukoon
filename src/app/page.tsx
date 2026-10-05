@@ -87,10 +87,12 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="h-[50vw] bg-[#481904] flex items-center justify-center"
+        className="h-[50vw] bg-[#481904] flex items-center justify-center relative"
         style={{ backgroundImage: "url('/images/peacock.png')" }}
       >
-        <div className="text-center mx-auto flex flex-col justify-center items-center leading-25">
+        <div className="absolute inset-0 bg-[#481904]/95" />
+
+        <div className="relative z-10 text-center mx-auto flex flex-col justify-center items-center leading-25">
           <p className="text-[96px] font-charman-serif-light text-[#DDB789] ">
             TRADITION
           </p>
@@ -103,6 +105,99 @@ export default function Home() {
           <p className="text-[96px] font-charman-serif-light text-[#DDB789]">
             SIMPLICITY
           </p>
+        </div>
+      </section>
+      <section
+        className="bg-center bg-cover bg-no-repeat w-full aspect-1920/1000 text-white flex flex-col justify-center items-center"
+        style={{ backgroundImage: "url('/images/hero-image.png')" }}
+      >
+        <img
+          src="/images/Popup.png"
+          alt="Popup"
+          className="w-[1099.83px] h-[573.32px] object-cover"
+        />
+      </section>
+      <section className="bg-[#481904] flex flex-row justify-center px-25 py-45">
+        <div className="w-1/2 flex flex-col justify-between">
+          <div>
+            <h1 className="text-[#DDB789] text-[84px] font-charman-serif-light leading-20">
+              Gallery Tagline for Sukoon Here
+            </h1>
+            <p className="text-[#DDB789] text-[24px] font-instrument-regular leading-7 pt-8 pr-50">
+              Good food tastes even better when it’s shared. Reserve your table
+              at Sukoon and settle in for soulful Indian flavours, warm
+              hospitality and moments made to be savoured.
+            </p>
+          </div>
+          <div className="mb-27.5">
+            <p className="text-[20px] text-instrument-regular text-[#EBD2B1]">
+              A tagline here for redirecting to the menu Page
+            </p>
+            <p className="text-[20px] text-instrument-regular text-[#EBD2B1]">
+              A tagline here for redirecting to the menu Page
+            </p>
+            <button className="border border-[#DDB789] rounded-full mt-5">
+              <p className="font-[16px] py-2.5 px-7.5 text-[#DDB789] text-instrument-regular">
+                VIEW GALLERY
+              </p>
+            </button>
+          </div>
+        </div>
+        <div className="w-1/2">
+          <img src="/images/gallery.png" alt="Gallery" className="" />
+        </div>
+      </section>
+      <section className="px-25 bg-[#481904]">
+        <div className="flex justify-between items-center">
+          <h2 className="w-[50%] text-[40px] font-charman-serif-light text-[#DDB789] leading-10">
+            A taste of
+            <br />
+            Sorrel
+          </h2>
+          <p className="w-[50%] text-[20px] font-instrument-regular text-[#EBD2B1] leading-6 ml-30">
+            Good food tastes even better when it’s shared. Reserve your table at
+            Sukoon and settle in for soulful Indian flavours, warm hospitality
+            and moments made to be savoured.
+          </p>
+        </div>
+        <div className="border-b border-[#DDB789] mt-7.5 mb-15" />
+        <div className="flex justify-between">
+          <div className="w-[50%]">
+            <h1 className="text-[64px] font-charman-serif-light text-[#DDB789] leading-10">
+              Dish Name
+            </h1>
+            <p className="text-[20px] font-instrument-regular text-[#EBD2B1] leading-6 my-10 w-162.5 ">
+              Good food tastes even better when it’s shared. Reserve your table at Sukoon and settle in for soulful Indian flavours, warm hospitality and moments made to be savoured.
+            </p>
+            <button className="border border-[#DDB789] rounded-full ">
+              <p className="font-[16px] py-2.5 px-7.5 text-[#DDB789] text-instrument-regular">
+                VIEW MENU
+              </p>
+            </button>
+          </div>
+          <div className="w-[50%]">
+            <img src="/images/gallery.png" alt="Dish" className="w-full h-162.5 object-cover mb-5" />
+            <p className="text-[20px] font-instrument-regular text-[#DDB789] leading-6 mb-10">
+              DISH NAME HERE
+            </p>
+            <img src="/images/gallery.png" alt="Dish" className="w-full h-162.5 object-cover mb-5" />
+            <p className="text-[20px] font-instrument-regular text-[#DDB789] leading-6 mb-10">
+              DISH NAME HERE
+            </p>
+            <img src="/images/gallery.png" alt="Dish" className="w-full h-162.5 object-cover mb-5" />
+            <p className="text-[20px] font-instrument-regular text-[#DDB789] leading-6 mb-10">
+              DISH NAME HERE
+            </p>
+            <img src="/images/gallery.png" alt="Dish" className="w-full h-162.5 object-cover mb-5" />
+            <p className="text-[20px] font-instrument-regular text-[#DDB789] leading-6 mb-10">
+              DISH NAME HERE
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#481904] flex flex-col justify-center items-center pt-45 px-25">
+        <div>
+          
         </div>
       </section>
     </>
