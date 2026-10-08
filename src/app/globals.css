@@ -18,6 +18,10 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@theme {
+  --font-charman-serif-light: "font-instrument-regular";
+  --font-instrument-regular: "font-instrument-regular";
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
