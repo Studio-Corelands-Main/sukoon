@@ -1,12 +1,9 @@
-interface HeroSectionI{
-  title:string
-  subTitle:string
-  image:string
-}
-const HeroSection = ({title,subTitle,image}:HeroSectionI) => {
+import { HeroSectionI } from "@/app/types/HeroSectionTypes";
+
+const HeroSection = ({ title, subTitle, image }: HeroSectionI) => {
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto  px-5 lg:px-25 text-white flex flex-col"
+      className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto px-5 lg:px-25 text-white flex flex-col"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="w-175 m-auto">
@@ -22,3 +19,4 @@ const HeroSection = ({title,subTitle,image}:HeroSectionI) => {
 };
 
 export default HeroSection;
+
