@@ -95,7 +95,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             height="80"
             viewBox="0 0 44 80"
             fill="none"
-            className="h-14 w-auto shrink-0 md:h-20"
+            className="shrink-0 animate-logo-crazy h-14 w-auto md:h-20"
           >
             <path
               d="M0 57.192V22.3515C0 10.0267 9.71669 0 21.6604 0C33.6041 0 43.3208 10.0267 43.3208 22.3515V57.192C43.3208 69.5167 33.6041 79.5434 21.6604 79.5434C9.71669 79.5434 0 69.5167 0 57.192ZM42.0084 22.3515C42.0084 10.7722 32.8817 1.35423 21.6604 1.35423C10.4391 1.35423 1.31235 10.7722 1.31235 22.3515V57.192C1.31235 68.7712 10.4391 78.1892 21.6604 78.1892C32.8817 78.1892 42.0084 68.7712 42.0084 57.192V22.3515Z"
@@ -163,7 +163,11 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             className="order-first col-span-2 cursor-pointer justify-self-center sm:order-none sm:col-span-1"
             onClick={onClose}
           >
-            <img src="/logo/sukoon.svg" alt="Sukoon" className="h-4 w-auto md:h-5" />
+            <img
+              src="/logo/sukoon.svg"
+              alt="Sukoon"
+              className="h-4 w-auto md:h-5"
+            />
           </Link>
           <div className="flex flex-col items-end text-[11px] leading-tight">
             <a href="tel:0400000000" className="hover:underline">

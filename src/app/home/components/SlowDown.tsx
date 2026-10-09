@@ -45,18 +45,13 @@ const SlowDown = () => {
             </p>
             <Link
               href="#"
-              className="text-[#474806] text-base border-[#474806] border rounded-full px-7.5 py-2.5 mt-7.5 font-instrument-regular "
+              className="cursor-pointer text-[#474806] text-base border-[#474806] border rounded-full px-7.5 py-2.5 mt-7.5 font-instrument-regular "
             >
               BOOK NOW
             </Link>
           </div>
         </div>
       </div>
-      {/* <img
-        src="/images/Popup.png"
-        alt="Popup"
-        className="w-[1099.83px] h-[573.32px] object-cover"
-      /> */}
     </section>
   );
 };
