@@ -67,23 +67,25 @@ export default function SukoonGlimpse() {
           orientation="vertical"
         >
           <div className="w-[30%] relative">
-            <div className="sticky top-12">
-              <TabsList className="  flex  justify-center gap-2  w-full">
-                {galleryFilters.map((item) => (
-                  <TabsTrigger
-                    key={item.id}
-                    value={item.tag}
-                    className="opacity-50 data-active:opacity-100 data-active:bg-transparent group-data-[variant=default]/tabs-list:data-active:shadow-none"
-                  >
-                    <h1 className="text-[32px] font-charman-serif-light text-[#474806] -mt-2">
-                      {item.title}
-                    </h1>
-                  </TabsTrigger>
-                ))}
+            <div className="sticky top-12 bottom-20  ">
+              <TabsList className=" flex flex-col items-start justify-between  gap-y-[420px] w-full px-0 h-full  ">
+                <div>
+                  {galleryFilters.map((item) => (
+                    <TabsTrigger
+                      key={item.id}
+                      value={item.tag}
+                      className="opacity-50 data-active:opacity-100 data-active:bg-transparent group-data-[variant=default]/tabs-list:data-active:shadow-none px-0"
+                    >
+                      <h1 className="text-[32px] font-charman-serif-light text-[#474806] -mt-2">
+                        {item.title}
+                      </h1>
+                    </TabsTrigger>
+                  ))}
+                </div>
+                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular w-[351px]">
+                  {activeFilter?.description}
+                </p>
               </TabsList>
-              <p className="mt-101.5 text-[#0B0B0B] text-[14px] font-instrument-regular w-[351px]">
-                {activeFilter?.description}
-              </p>
             </div>
           </div>
 
