@@ -7,7 +7,9 @@ import SlowDownSection from "./components/SlowDownSection";
 const page = () => {
   return (
     <div className="">
-      <HeroSection />
+      <HeroSection title="Gallery Tagline for Sukoon Heres" subTitle="Good food tastes even better when it’s shared. Reserve your table at
+          Sukoon and settle in for soulful Indian flavours, warm hospitality and
+          moments made to be savoured." image="/images/hero-image.png"/>
       <SlowDownSection />
       <FeelingSection />
       <SlowDown />
