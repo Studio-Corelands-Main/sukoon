@@ -17,7 +17,7 @@ const footerSections: FooterSection[] = [
     items: [
       {
         label: (
-          <div className="w-[200px]">
+          <div className="w-[230px]">
             128 Rue de Rivoli, 4th Arrondissement 75001 Melbourne
           </div>
         ),
@@ -104,12 +104,14 @@ const Footer = () => {
                   {href ? (
                     <Link
                       href={href}
-                      className="block transition-opacity hover:opacity-70"
+                      className="block transition-opacity hover:opacity-70 font-instrument-regular text-xl cursor-pointer"
                     >
                       {label}
                     </Link>
                   ) : (
-                    <div>{label}</div>
+                    <div className="transition-opacity hover:opacity-70 font-instrument-regular text-xl cursor-pointer">
+                      {label}
+                    </div>
                   )}
                 </div>
               ))}
