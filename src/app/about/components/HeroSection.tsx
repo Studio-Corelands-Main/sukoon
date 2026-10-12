@@ -6,8 +6,8 @@ const HeroSection = ({ title, subTitle, image }: HeroSectionI) => {
       className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto px-5 lg:px-25 text-white flex flex-col"
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="w-175 m-auto">
-        <h2 className="font-charman-serif-light text-[96px] leading-25">
+      <div className="lg:w-175 m-auto">
+        <h2 className="font-charman-serif-light text-[60px] lg:text-[96px] leading-15 lg:leading-25">
           {title}
         </h2>
         <p className="pt-10 font-[16px] font-instrument-regular">

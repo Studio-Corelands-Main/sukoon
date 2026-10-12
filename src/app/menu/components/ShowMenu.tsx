@@ -3,7 +3,7 @@ import TabView from "./TabView";
 
 const ShowMenu = () => {
   return (
-    <div className="px-25 bg-[#3E3F05]">
+    <div className="px-5 lg:px-25 bg-[#3E3F05]">
       <div className="pt-25 text-center font-charman-serif-light text-[48px] text-[#F4EDE2]">
         Where Flavour Meets Comfort
       </div>

@@ -35,14 +35,14 @@ export default function SukoonGlimpse() {
   return (
     <>
       <div className="px-5 lg:px-25 bg-[#F4EDE2]">
-        <div className="flex flex-row justify-between items-center  pt-25 pb-7.5 gap-5">
-          <div className="w-[50%]">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center  pt-25 pb-7.5 gap-5">
+          <div className="lg:w-[50%]">
             <h1 className="font-charman-serif-light text-[40px] text-[#777A35] w-58 leading-10">
               A Glimpse Into Sukoon
             </h1>
           </div>
-          <div className="w-[50%] flex justify-end">
-            <p className="text-[20px] font-instrument-regular text-[#0B0B0B] w-[800px] leading-6.5">
+          <div className="lg:w-[50%] flex justify-end">
+            <p className="text-[20px] font-instrument-regular text-[#0B0B0B] lg:w-[800px] leading-6.5">
               {" "}
               Some details are felt before they are noticed. The light, the
               textures, the table, the quiet corners and the moments shared
@@ -63,12 +63,12 @@ export default function SukoonGlimpse() {
         <Tabs
           value={activeTab}
           onValueChange={handleTabChange}
-          className="w-full pt-15"
+          className="w-full pt-15 pb-15 lg:pb-0 flex-col lg:flex-row"
           orientation="vertical"
         >
-          <div className="w-[30%] relative">
+          <div className="lg:w-[30%] relative">
             <div className="sticky top-12 bottom-20  ">
-              <TabsList className=" flex flex-col items-start justify-between  gap-y-[420px] w-full px-0 h-full  ">
+              <TabsList className=" flex flex-col items-start justify-between  lg:gap-y-[420px] w-full px-0 h-full  ">
                 <div>
                   {galleryFilters.map((item) => (
                     <TabsTrigger
@@ -82,7 +82,7 @@ export default function SukoonGlimpse() {
                     </TabsTrigger>
                   ))}
                 </div>
-                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular w-[351px]">
+                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular my-10 lg:my-0 lg:mb-25  lg:w-[351px]">
                   {activeFilter?.description}
                 </p>
               </TabsList>
@@ -93,13 +93,13 @@ export default function SukoonGlimpse() {
             <TabsContent
               key={record.id}
               value={record.tag}
-              className=" sm:mb-25 p-2 w-70%"
+              className=" sm:mb-25 w-70%"
             >
-              <div className="flex flex-col gap-7.5">
+              <div className="flex flex-col gap-3 lg:gap-7.5">
                 {Array.from({ length: pages }, (_, index) => (
                   <div key={index}>
                     <img src="/images/hero-image.png" alt="" />
-                    <div className="flex flex-row gap-7.5 mt-7.5">
+                    <div className="flex flex-row gap-3 lg:gap-7.5 mt-3 lg:mt-7.5">
                       <div className="w-[50%]">
                         <img src="/images/hero-image.png" alt="" />
                       </div>
