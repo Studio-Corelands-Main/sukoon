@@ -1,17 +1,17 @@
 const SlowDownSection = () => {
   return (
     <>
-      <div className="pt-24 pb-[150px] bg-[#F4EDE2]">
-        <p className="w-[1000px] mx-auto font-charman-serif-light text-[40px] text-center leading-10 text-[#474806]">
+      <div className="pt-15 lg:pt-24 pb-[80px] lg:pb-[150px] bg-[#F4EDE2]">
+        <p className="lg:w-[1000px] mx-auto font-charman-serif-light text-[28px] lg:text-[40px] text-center leading-10 text-[#474806] px-5 lg:px-0">
           Rooted in the warmth of Indian culture, shaped for today and created
           for moments that deserve to be savoured.
         </p>
       </div>
-      <div className="flex justify-start gap-10 pr-25 bg-[#F4EDE2] relative">
+      <div className="flex flex-col lg:flex-row justify-start gap-10 px-5 lg:px-0 lg:pr-25 bg-[#F4EDE2] relative">
         <div className="w-full">
           <img src="/images/about-image.png" />
         </div>
-        <div className="w-[40%] relative ">
+        <div className="lg:w-[40%] relative ">
           <div className="sticky top-10 pb-10">
             <p className="text-black font-instrument-regular text-xl pb-4">
               The name speaks to a sense of ease, comfort and quiet contentment.

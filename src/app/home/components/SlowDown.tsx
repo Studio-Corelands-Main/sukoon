@@ -8,7 +8,7 @@ const SlowDown = () => {
     >
       <div
         style={{ backgroundImage: "url('/images/slow.png')" }}
-        className="lg:h-[573px] lg:w-[1100px] mx-auto px-5 bg-center lg:bg-cover bg-no-repeat"
+        className="lg:h-[573px] lg:w-[840px] xl:w-[1100px] mx-auto px-5 bg-center lg:bg-cover bg-no-repeat"
       >
         <div className="flex  flex-col items-center justify-between">
           <div className="pt-10 lg:pt-[87px]">

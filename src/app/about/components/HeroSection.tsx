@@ -1,12 +1,16 @@
+"use client"
+
 import { HeroSectionI } from "@/app/types/HeroSectionTypes";
+import { usePathname } from "next/navigation";
 
 const HeroSection = ({ title, subTitle, image }: HeroSectionI) => {
+  const pathname = usePathname()
   return (
     <section
       className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto px-5 lg:px-25 text-white flex flex-col"
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="lg:w-175 m-auto">
+      <div className={`${pathname === "/contact" ? "lg:w-191" : "lg:w-175"}  m-auto`}>
         <h2 className="font-charman-serif-light text-[60px] lg:text-[96px] leading-15 lg:leading-25">
           {title}
         </h2>

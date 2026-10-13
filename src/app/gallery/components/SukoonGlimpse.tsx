@@ -82,7 +82,7 @@ export default function SukoonGlimpse() {
                     </TabsTrigger>
                   ))}
                 </div>
-                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular my-10 lg:my-0 lg:mb-25  lg:w-[351px]">
+                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular my-10 lg:my-0 lg:mb-25 lg:w-[200px]  xl:w-[351px]">
                   {activeFilter?.description}
                 </p>
               </TabsList>
