@@ -42,7 +42,7 @@ export default function SukoonGlimpse() {
             </h1>
           </div>
           <div className="lg:w-[50%] flex justify-end">
-            <p className="text-[20px] font-instrument-regular text-[#0B0B0B] lg:w-[800px] leading-6.5">
+            <p className="text-[20px] font-instrument-regular text-[#0B0B0B] lg:max-w-[800px] 2xl:w-[800px] leading-6.5">
               {" "}
               Some details are felt before they are noticed. The light, the
               textures, the table, the quiet corners and the moments shared
@@ -82,7 +82,7 @@ export default function SukoonGlimpse() {
                     </TabsTrigger>
                   ))}
                 </div>
-                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular my-10 lg:my-0 lg:mb-25 lg:w-[200px]  xl:w-[351px]">
+                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular my-10 lg:my-0 lg:mb-25 lg:max-w-[351px] 2xl:w-[351px]">
                   {activeFilter?.description}
                 </p>
               </TabsList>

@@ -3,11 +3,11 @@ const ExperinceSection = () => {
     <section className="flex flex-col-reverse lg:flex-row bg-[#F4EDE2] px-5 lg:px-0">
       <div className="flex lg:w-1/2 flex-col justify-between lg:pl-15 2xl:pl-25 py-16 lg:py-30">
         <div>
-          <p className="font-charman-serif-light text-[#474806] text-[28px] lg:text-[48px] leading-6 lg:leading-12 mb-10 lg:w-163">
+          <p className="font-charman-serif-light text-[#474806] text-[28px] lg:text-[48px] leading-6 lg:leading-12 mb-10 lg:max-w-163 2xl:w-163">
             Sukoon is more than a name. It is a feeling we want you to carry
             with you.
           </p>
-          <p className="text-[#0b0b0b] text-sm lg:text-[24px] leading-4.5 lg:leading-7 font-instrument-regular lg:w-163">
+          <p className="text-[#0b0b0b] text-sm lg:text-[24px] leading-4.5 lg:leading-7 font-instrument-regular lg:max-w-163 2xl:w-163">
             Inspired by the warmth of Indian culture, Sukoon brings together
             familiar flavours, thoughtful design and genuine hospitality in a
             calm, contemporary setting. Every detail is considered with
@@ -48,7 +48,7 @@ const ExperinceSection = () => {
           </svg>
         </div>
       </div>
-      <div className="lg:w-1/2 bg-[#F9F9F9] lg:h-[56.25vw] pt-20 lg:pt-0">
+      <div className="lg:w-1/2 bg-[#F9F9F9] xl:h-[56.25vw] pt-20 lg:pt-0">
         <img
           src="/images/hero-image.png"
           alt=""

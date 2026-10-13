@@ -164,7 +164,7 @@ const DishGallery = () => {
           {activeDish}
         </h1>
 
-        <p className="text-[20px] font-instrument-regular text-[#EBD2B1] leading-6 my-10 lg:w-[650px]">
+        <p className="text-[20px] font-instrument-regular text-[#EBD2B1] leading-6 my-10 lg:max-w-[650px] 2xl:w-[650px]">
           Good food tastes even better when it’s shared. Reserve your table at
           Sukoon and settle in for soulful Indian flavours, warm hospitality and
           moments made to be savoured.

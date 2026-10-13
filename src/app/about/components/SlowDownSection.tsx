@@ -1,8 +1,8 @@
 const SlowDownSection = () => {
   return (
     <>
-      <div className="pt-15 lg:pt-24 pb-[80px] lg:pb-[150px] bg-[#F4EDE2]">
-        <p className="lg:w-[1000px] mx-auto font-charman-serif-light text-[28px] lg:text-[40px] text-center leading-10 text-[#474806] px-5 lg:px-0">
+      <div className="pt-15 lg:pt-24 lg:px-15 2xl:px-25 pb-[80px] lg:pb-[150px] bg-[#F4EDE2]">
+        <p className="lg:max-w-[1000px] 2xl:w-[1000px] mx-auto font-charman-serif-light text-[28px] lg:text-[40px] text-center leading-10 text-[#474806] px-5 lg:px-0">
           Rooted in the warmth of Indian culture, shaped for today and created
           for moments that deserve to be savoured.
         </p>

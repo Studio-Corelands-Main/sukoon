@@ -28,10 +28,10 @@ const GalleryTagline = () => {
     <section className="bg-[#481904] flex flex-col lg:flex-row  gap-20 lg:gap-0 justify-between px-5 lg:px-15 2xl:px-25 py-20 lg:py-45">
       <div className="lg:w-1/2 flex flex-col justify-between">
         <div>
-          <h1 className="text-[#DDB789] text-[40px] lg:text-[84px] font-charman-serif-light lg:leading-20 lg:w-[450px]">
+          <h1 className="text-[#DDB789] text-[40px] lg:text-[84px] font-charman-serif-light lg:leading-20 lg:max-w-[450px] 2xl:w-[450px]">
             A Glimpse Into Sukoon
           </h1>
-          <p className="text-[#DDB789] text-sm lg:text-[24px] font-instrument-regular leading-7 pt-8 pr-0 lg:pr-50 lg:w-[850px]">
+          <p className="text-[#DDB789] text-sm lg:text-[24px] font-instrument-regular leading-7 pt-8 pr-0 lg:pr-10 2xl:pr-50 lg:max-w-[850px] 2xl:w-[850px]">
             Step inside Sukoon through the details that shape the experience.
             From the warmth of the interiors to the food, the table and the
             moments shared around it, every frame captures a little of what

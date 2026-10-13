@@ -9,7 +9,7 @@ const AboutMoment = () => {
             Sukoon,
             <br /> in Moments
           </h2>
-          <p className="lg:w-162.5 text-[18px] lg:text-[24px] font-instrument-regular text-[#DDB789] pt-8 leading-7.5 ">
+          <p className="lg:max-w-162.5 2xl:w-162.5 text-[18px] lg:text-[24px] font-instrument-regular text-[#DDB789] pt-8 leading-7.5 ">
             From quiet corners and thoughtful details to the warmth that fills
             the room, every part of Sukoon has been shaped to create a sense of
             ease. Explore the spaces, moments and details that bring our story
@@ -17,7 +17,7 @@ const AboutMoment = () => {
           </p>
         </div>
         <div className="w-full">
-          <p className="w-100 text-[15px] lg:text-[20px] font-instrument-regular text-[#EBD2B1]   ">
+          <p className="max-w-100 text-[15px] lg:text-[20px] font-instrument-regular text-[#EBD2B1]   ">
             Step inside Sukoon and discover the atmosphere behind the
             experience.
           </p>

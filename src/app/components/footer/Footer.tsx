@@ -91,7 +91,7 @@ const Footer = () => {
     <footer className="bg-[#481904]  px-5 lg:px-15 2xl:px-25 text-[#F4EDE2]">
       <div className="h-px bg-[#F4EDE2]" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-50 pt-25">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-10 2xl:gap-x-50 pt-25 justify-between">
         {footerSections.map(({ title, items }) => (
           <div key={title}>
             <h3 className="font-instrument-regular text-base uppercase text-[#DDB789]">

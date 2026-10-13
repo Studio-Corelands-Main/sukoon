@@ -36,7 +36,7 @@ const TabView = () => {
           value={record.tag}
           className=" sm:mb-25 p-2 bg-[#481904]"
         >
-          <div className="min-h-[50vh] sm:min-h-[80vh] border border-[#EBD2B1] p-5 lg:p-30">
+          <div className="min-h-[50vh] sm:min-h-[80vh] border border-[#EBD2B1] p-5 lg:p-10 2xl:p-30">
             {/* Render menu records for this category here */}
             <div className=" m-1.5">
               <div className="font-charman-serif-light text-[32px] text-[#DDB789] pb-14.5">
