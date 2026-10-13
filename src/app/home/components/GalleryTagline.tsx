@@ -25,7 +25,7 @@ const GalleryTagline = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-[#481904] flex flex-col lg:flex-row  gap-20 lg:gap-0 justify-between px-5 lg:px-25 py-20 lg:py-45">
+    <section className="bg-[#481904] flex flex-col lg:flex-row  gap-20 lg:gap-0 justify-between px-5 lg:px-15 2xl:px-25 py-20 lg:py-45">
       <div className="lg:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-[#DDB789] text-[40px] lg:text-[84px] font-charman-serif-light lg:leading-20 lg:w-[450px]">

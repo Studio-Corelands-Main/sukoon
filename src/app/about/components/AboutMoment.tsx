@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const AboutMoment = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-stretch gap-y-8 lg:gap-y-0 gap-x-8 h-full pb-25 lg:pb-35.75 px-5 lg:px-25 bg-[#481904] pt-30 lg:pt-60">
+    <div className="flex flex-col lg:flex-row items-stretch gap-y-8 lg:gap-y-0 gap-x-8 h-full pb-25 lg:pb-35.75 px-5 lg:px-15 2xl:px-25 bg-[#481904] pt-30 lg:pt-60">
       <div className="lg:w-[60%] flex flex-col justify-between  gap-20 lg:gap-0">
         <div className=" ">
           <h2 className="text-[60px] lg:text-[84px] font-charman-serif-light text-[#DDB789] leading-18.75">

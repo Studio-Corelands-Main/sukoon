@@ -3,7 +3,7 @@ import TasteOfSorrelRepeated from "./TasteOfSorrelRepeated";
 
 const TasteOfSorrel = () => {
   return (
-    <section className=" px-5 lg:px-25 bg-[#481904]">
+    <section className=" px-5 lg:px-15 2xl:px-25 bg-[#481904]">
       <div className="flex flex-col lg:flex-row justify-between items-center pb-10 ">
         <h2 className="lg:w-[50%] text-xl lg:text-[40px] font-charman-serif-light text-[#DDB789] leading-10text-[40px] text-[#DDB789] leading-10">
           A Taste of Sukoon

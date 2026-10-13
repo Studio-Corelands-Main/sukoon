@@ -7,7 +7,7 @@ const SlowDownSection = () => {
           for moments that deserve to be savoured.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-start gap-10 px-5 lg:px-0 lg:pr-25 bg-[#F4EDE2] relative">
+      <div className="flex flex-col lg:flex-row justify-start gap-10 px-5 lg:px-0 lg:pr-15 2xl:pr-25 bg-[#F4EDE2] relative">
         <div className="w-full">
           <img src="/images/about-image.png" />
         </div>

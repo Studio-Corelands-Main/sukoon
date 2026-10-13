@@ -34,7 +34,7 @@ export default function SukoonGlimpse() {
 
   return (
     <>
-      <div className="px-5 lg:px-25 bg-[#F4EDE2]">
+      <div className="px-5 lg:px-15 2xl:px-25 bg-[#F4EDE2]">
         <div className="flex flex-col lg:flex-row justify-between lg:items-center  pt-25 pb-7.5 gap-5">
           <div className="lg:w-[50%]">
             <h1 className="font-charman-serif-light text-[40px] text-[#777A35] w-58 leading-10">
