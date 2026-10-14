@@ -1,6 +1,4 @@
-
 @import "tailwindcss";
-@import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
@@ -27,8 +25,7 @@
   --font-charman-serif-light: var(--font-charman-serif-light);
 
   --animate-logo-crazy: logo-crazy 3s ease-in-out infinite;
-  --animate-text-reveal: text-reveal 0.9s
-    cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-text-reveal: text-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

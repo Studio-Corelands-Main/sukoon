@@ -20,9 +20,9 @@ const images = [
 
 const HomeGallery = () => {
   return (
-    <section className="bg-[#474806] aspect-1920/1020 px-7.5 lg:px-0 ">
-      <div className="py-37.25 lg:px-15 2xl:px-0">
-        <p className="font-charman-serif-light text-[#FFF9F0] text-center text-[28px] lg:text-[40px] mb-8">
+    <section className="bg-[#474806] aspect-1920/1020  ">
+      <div className="py-25 lg:py-37.25 lg:px-15 2xl:px-0 px-7.5 ">
+        <p className="font-charman-serif-light text-[#FFF9F0] text-center text-[24px] lg:text-[40px] mb-8">
           Flavours That Comforts The Soul
         </p>
         <p className="font-instrument-regular text-[#FFF9F0] text-center text-sm lg:text-[24px] lg:max-w-337.5 2xl:w-337.5 mx-auto">
@@ -36,10 +36,10 @@ const HomeGallery = () => {
           leave you with a little more comfort than you came with.
         </p>
       </div>
-      <div className="pb-20">
+      <div className="pb-25 lg:pb-20">
         <Swiper
           spaceBetween={36}
-          slidesPerView={3.8}
+          // slidesPerView={3.8}
           modules={[Autoplay]}
           centeredSlides={true}
           autoplay={{
@@ -47,10 +47,36 @@ const HomeGallery = () => {
             disableOnInteraction: false,
           }}
           loop={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 1.8,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 1.8,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 1.8,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3.8,
+              spaceBetween: 36,
+            },
+          }}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} alt="" className="w-[25.2748vw] h-[27.7776vw]" />
+              <img
+                src={image}
+                alt=""
+                className="h-[300px] lg:w-[25.2748vw]  lg:h-[27.7776vw] object-cover "
+              />
             </SwiperSlide>
           ))}
         </Swiper>
