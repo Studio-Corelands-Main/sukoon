@@ -3,10 +3,10 @@ import Link from "next/link";
 const SlowDown = () => {
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-full  text-white flex flex-col justify-center items-center md:px-7.5 xl:py-[172px]"
+      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-full  text-white flex flex-col justify-center items-center md:px-7.5 xl:py-43"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
-      <div className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-center bg-no-repeat bg-cover md:bg-contain  h-[750px] w-full px-0 md:px-7.5 my-auto  relative">
+      <div className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain  h-187.5 w-full px-0 md:px-7.5 my-auto  relative">
         <div className="absolute top-0 bottom-0 left-0 right-0 w-full my-auto flex items-center justify-center">
           <div className="flex flex-col items-center justify-between 2xl:py-20">
             <div className="">
@@ -27,16 +27,16 @@ const SlowDown = () => {
                 />
               </svg>
             </div>
-            <div className="pt-[30px]">
-              <p className="text-[#474806] font-charman-serif-light text-[28px] md:text-[38px] lg:text-[64px] lg:w-[550px] text-center -mt-[20px]">
+            <div className="pt-7.5">
+              <p className="text-[#474806] font-charman-serif-light text-[28px] md:text-[38px] lg:text-[64px] lg:w-137.5 text-center -mt-5">
                 Slow Down and
               </p>
-              <p className="text-[#474806] font-charman-serif-light text-[28px]  md:text-[38px] lg:text-[64px] lg:w-[600px] text-center -mt-[10px] md-mt-[20px] lg:-mt-[30px]">
+              <p className="text-[#474806] font-charman-serif-light text-[28px]  md:text-[38px] lg:text-[64px] lg:w-150 text-center -mt-2.5 md-mt-[20px] lg:-mt-7.5">
                 Make Time for Sukoon
               </p>
             </div>
-            <div className="xs:w-[400px] md:w-[600px] pt-2 flex flex-col items-center lg:pb-0">
-              <p className="font-instrument-regular text-sm lg:text-xl text-center text-black px-10 ">
+            <div className="xs:w-[400px] md:w-150 pt-2 flex flex-col items-center lg:pb-0">
+              <p className="font-instrument-regular lg:text-xl text-center text-black px-10 ">
                 Good food tastes even better when it’s shared. Reserve your
                 table at Sukoon and settle in for soulful Indian flavours, warm
                 hospitality and moments made to be savoured.

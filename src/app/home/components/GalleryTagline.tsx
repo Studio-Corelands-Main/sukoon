@@ -31,7 +31,7 @@ const GalleryTagline = () => {
           <h1 className="text-[#DDB789] text-[40px] lg:text-[84px] font-charman-serif-light leading-10 lg:leading-20 lg:max-w-[450px] 2xl:w-[450px]">
             A Glimpse Into Sukoon
           </h1>
-          <p className="text-[#DDB789] text-sm lg:text-[24px] font-instrument-regular leading-5 lg:leading-7 pt-8 pr-0 lg:pr-10 2xl:pr-50 lg:max-w-[850px] 2xl:w-[850px]">
+          <p className="text-[#DDB789] text-xl md:text-2xl  font-instrument-regular leading-6 lg:leading-7 pt-8 pr-0 lg:pr-10 2xl:pr-50 lg:max-w-[850px] 2xl:w-[850px]">
             Step inside Sukoon through the details that shape the experience.
             From the warmth of the interiors to the food, the table and the
             moments shared around it, every frame captures a little of what
@@ -39,7 +39,7 @@ const GalleryTagline = () => {
           </p>
         </div>
         <div className="hidden md:block">
-          <p className="text-sm lg:text-[20px] font-instrument-regular text-[#EBD2B1] lg:w-[320px]">
+          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] lg:w-[320px]">
             See the spaces, details and moments that bring Sukoon to life.
           </p>
           <div className="pt-5">
@@ -146,7 +146,7 @@ const GalleryTagline = () => {
           </div>
         </div>
         <div className="md:hidden block pt-11">
-          <p className="text-sm lg:text-[20px] font-instrument-regular text-[#EBD2B1] lg:w-[320px]">
+          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] lg:w-[320px]">
             See the spaces, details and moments that bring Sukoon to life.
           </p>
           <div className="pt-5">

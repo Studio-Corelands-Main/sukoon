@@ -8,7 +8,7 @@ const TasteOfSorrel = () => {
         <h2 className="lg:w-[50%] lg:text-[40px] font-charman-serif-light text-[#DDB789] leading-10 text-[40px] text-[#DDB789] leading-10">
           A Taste of Sukoon
         </h2>
-        <p className="lg:w-[50%] text-sm lg:text-[20px] font-instrument-regular text-[#EBD2B1] leading-6 lg:ml-30 pt-8 md:pt-0">
+        <p className="lg:w-[50%] text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] leading-6 lg:ml-30 pt-8 md:pt-0">
           Rooted in the flavours of India and guided by a contemporary hand, our
           menu brings together comfort, character and thoughtful detail.
         </p>

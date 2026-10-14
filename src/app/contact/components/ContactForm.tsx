@@ -1,8 +1,6 @@
-import React from "react";
-
 export default function ContactForm() {
   return (
-    <div className="pt-25 lg:pt-38 pb-50 bg-[#F4EDE2] px-7.5 sm:px-13 lg:px-15 2xl:px-25">
+    <div className="pt-25 lg:pt-38 pb-50 bg-[#F4EDE2] px-7.5 sm:px-13 lg:px-15 2xl:px-25 ">
       <div className="flex flex-col items-center gap-8 pb-[100px] sm:pb-[150px] lg:pb-[179px]">
         <h1 className="text-[#3E3F05] text-[35px] sm:text-[48px] lg:text-[48px] font-charman-serif-light leading-12">
           Need a little help? We’re here.
@@ -23,7 +21,7 @@ export default function ContactForm() {
           </p>
           <div className="hidden lg:block">
             <p className="font-instrument-regular text-[16px] lg:text-[20px] text-[#0B0B0B]">
-              EMAIL: <span className="underline">email@domain.com.au</span> 
+              EMAIL: <span className="underline">email@domain.com.au</span>
             </p>
             <p className="font-instrument-regular  text-[16px] lg:text-[20px] text-[#0B0B0B] mb-10  lg:mb-16">
               PHONE: <span className="underline"> 04 000 0000</span>
@@ -40,47 +38,47 @@ export default function ContactForm() {
           <div className="flex flex-row gap-10 w-full">
             <input
               type="text"
-              className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black"
+              className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
               placeholder="First Name"
             />
             <input
               type="text"
-              className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black"
+              className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
               placeholder="Last Name"
             />
           </div>
           <input
             type="text"
-            className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black"
+            className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
             placeholder="Your Email"
           />
           <input
             type="text"
-            className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black"
+            className="w-full border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
             placeholder="Your phone no"
           />
           <textarea
-            className="w-full h-20 border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black"
+            className="w-full h-20 border-b border-0 focus:outline-none text-[16px] lg:text-[20px] font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
             placeholder="Your Message"
           />
-          <button className="border rounded-full px-7.5 py-2.5 cursor-pointer border-[#777A35] text-[#777A35]">
+          <button className="border rounded-full px-7.5 py-2.5 cursor-pointer border-[#777A35] text-[#777A35] uppercase">
             Send Message
           </button>
         </div>
         <div className="lg:hidden mt-45">
-            <p className="font-instrument-regular text-[16px] lg:text-[20px] text-[#0B0B0B]">
-              EMAIL: <span className="underline">email@domain.com.au</span> 
-            </p>
-            <p className="font-instrument-regular  text-[16px] lg:text-[20px] text-[#0B0B0B] mb-10  lg:mb-16">
-              PHONE: <span className="underline"> 04 000 0000</span>
-            </p>
-            <p className="font-instrument-regular text-[16px] lg:text-[20px] text-[#0B0B0B] mb-2">
-              ADDRESS
-            </p>
-            <p className="w-[180px] text-[#0B0B0B] font-charman-serif-light text-[24px] lg:text-[32px] leading-7">
-              128 Euede Rivoli, 4th Melburne
-            </p>
-          </div>
+          <p className="font-instrument-regular text-[16px] lg:text-[20px] text-[#0B0B0B]">
+            EMAIL: <span className="underline">email@domain.com.au</span>
+          </p>
+          <p className="font-instrument-regular  text-[16px] lg:text-[20px] text-[#0B0B0B] mb-10  lg:mb-16">
+            PHONE: <span className="underline"> 04 000 0000</span>
+          </p>
+          <p className="font-instrument-regular text-[16px] lg:text-[20px] text-[#0B0B0B] mb-2">
+            ADDRESS
+          </p>
+          <p className="w-[180px] text-[#0B0B0B] font-charman-serif-light text-[24px] lg:text-[32px] leading-7">
+            128 Euede Rivoli, 4th Melburne
+          </p>
+        </div>
       </div>
     </div>
   );
