@@ -6,7 +6,7 @@ const FeelingSection = () => {
           <h2 className="lg:max-w-[500px] 2xl:w-[500px] text-[60px] 2xl:text-[84px] lg:text-[70px] font-charman-serif-light text-[#474806] leading-[75px]  ">
             A Feeling Called Sukoon
           </h2>
-          <p className="lg:max-w-200 2xl:w-200 text-[20px] font-instrument-regular text-[#0B0B0B] pt-8 pb-[100px] 2xl:pb-[266px]  ">
+          <p className="lg:max-w-[738px] text-[18px] lg:text-[24px] font-instrument-regular text-[#0B0B0B] pt-8 pb-[100px] 2xl:pb-[266px]  ">
             Sukoon is the feeling of being completely at ease. It is found in
             familiar flavours, warm surroundings, unhurried conversations and
             the comfort of simply being present. That idea shapes everything we
