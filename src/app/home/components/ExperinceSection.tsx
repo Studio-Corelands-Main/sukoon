@@ -1,7 +1,7 @@
 const ExperinceSection = () => {
   return (
     <section className="flex flex-col-reverse lg:flex-row bg-[#F4EDE2]">
-      <div className="flex lg:w-1/2 flex-col justify-between lg:pl-15 2xl:pl-25 py-25 lg:py-30 px-7.5 lg:px-0">
+      <div className="flex lg:w-1/2 flex-col justify-between lg:pl-15 2xl:pl-25 py-25 lg:py-30 px-7.5 sm:px-13 lg:px-0">
         <div>
           <p className="font-charman-serif-light text-[#474806] text-[28px] sm:text-[38px] lg:text-[48px] leading-7 lg:leading-12 mb-8 lg:mb-10 lg:max-w-163 2xl:w-163">
             Sukoon is more than a name. It is a feeling we want you to carry

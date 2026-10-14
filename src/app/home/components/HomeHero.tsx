@@ -1,7 +1,7 @@
 const HomeHero = () => {
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat w-full h-screen px-7.5 lg:px-15 2xl:px-25 text-white flex flex-col"
+      className="bg-center bg-cover bg-no-repeat w-full h-screen px-7.5 sm:px-13 lg:px-15 2xl:px-25 text-white flex flex-col"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
       <p className="pt-43 w-63.75 lg:w-64 text-[16px] font-instrument-regular">

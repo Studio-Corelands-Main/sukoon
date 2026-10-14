@@ -21,7 +21,7 @@ const images = [
 const HomeGallery = () => {
   return (
     <section className="bg-[#474806] aspect-1920/1020  ">
-      <div className="py-25 lg:py-37.25 lg:px-15 2xl:px-0 px-7.5 ">
+      <div className="py-25 lg:py-37.25 lg:px-15 2xl:px-0 px-7.5  sm:px-13">
         <p className="font-charman-serif-light text-[#FFF9F0] text-center text-[28px] md:text-[48px] me lg:text-[40px] mb-8">
           Flavours That Comforts The Soul
         </p>
