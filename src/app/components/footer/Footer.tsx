@@ -18,7 +18,7 @@ const footerSections: FooterSection[] = [
       {
         label: (
           <div className="w-[230px]">
-            128 Rue de Rivoli, 4th Arrondissement 75001 Melbourne
+            128 EuedeRivoli, 4th Arrondissement 75001 Melbourne
           </div>
         ),
       },
@@ -33,7 +33,7 @@ const footerSections: FooterSection[] = [
     ],
   },
   {
-    title: "HOURS",
+    title: "SUKOON HOURS",
     items: [
       {
         label: "Mon - Closed",
@@ -88,10 +88,10 @@ const footerSections: FooterSection[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#481904]  px-7.5 lg:px-15 2xl:px-25 text-[#F4EDE2]">
+    <footer className="bg-[#481904]  px-7.5 sm:px-13 lg:px-15 2xl:px-25 text-[#F4EDE2]">
       <div className="h-px bg-[#F4EDE2]" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-10 2xl:gap-x-50 pt-25 justify-between">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-15 lg:gap-0  lg:gap-x-10 lg:2xl:gap-x-50 pt-25 justify-between">
         {footerSections.map(({ title, items }) => (
           <div key={title}>
             <h3 className="font-instrument-regular text-base uppercase text-[#DDB789]">
@@ -150,8 +150,11 @@ const Footer = () => {
             />
           </svg>
         </div>
-        <div className="flex flex-col lg:flex-row  justify-end items-center gap-5">
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
+        <p className="lg:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-[72px] mb-2.5">
+            Website by <strong>Corelands</strong>
+          </p>
+        <div className="flex flex-row lg:flex-row  justify-end items-center gap-5">
+          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular ">
             ©2026 All rights reserved
           </p>
           <div className="h-[3px] w-[3px] bg-[#F4EDE2]/50 "></div>
@@ -163,7 +166,7 @@ const Footer = () => {
             PRIVACY POLICY
           </p>
           <div className="h-[3px] w-[3px] bg-[#F4EDE2]/50"></div>
-          <p className="text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
+          <p className="hidden lg:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
             Website by <strong>Corelands</strong>
           </p>
         </div>
