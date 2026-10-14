@@ -3,12 +3,12 @@ import Link from "next/link";
 const SlowDown = () => {
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-screen text-white flex flex-col justify-center items-center px-5"
+      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-screen text-white flex flex-col justify-center items-center px-7.5"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
       <div
         style={{ backgroundImage: "url('/images/slow.png')" }}
-        className="lg:h-[573px] lg:w-[840px] xl:w-[1100px] mx-auto px-5 bg-center lg:bg-cover bg-no-repeat"
+        className="lg:h-[573px] lg:w-[840px] xl:w-[1100px] mx-auto px-7.5 bg-center lg:bg-cover bg-no-repeat"
       >
         <div className="flex  flex-col items-center justify-between">
           <div className="pt-10 lg:pt-[87px]">

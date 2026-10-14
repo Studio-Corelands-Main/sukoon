@@ -68,7 +68,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
           <Link
             href="/reserve"
             onClick={onClose}
-            className="shrink-0 rounded-full border border-[#f3ead8]/70 px-5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-[16px] transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
+            className="shrink-0 rounded-full border border-[#f3ead8]/70 px-7.5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-[16px] transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
           >
             RESERVE
           </Link>

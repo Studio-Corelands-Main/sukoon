@@ -2,12 +2,12 @@ const SlowDownSection = () => {
   return (
     <>
       <div className="pt-15 lg:pt-24 lg:px-15 2xl:px-25 pb-[80px] lg:pb-[150px] bg-[#F4EDE2]">
-        <p className="lg:max-w-[1000px] 2xl:w-[1000px] mx-auto font-charman-serif-light text-[28px] lg:text-[40px] text-center leading-10 text-[#474806] px-5 lg:px-0">
+        <p className="lg:max-w-[1000px] 2xl:w-[1000px] mx-auto font-charman-serif-light text-[28px] lg:text-[40px] text-center leading-10 text-[#474806] px-7.5 lg:px-0">
           Rooted in the warmth of Indian culture, shaped for today and created
           for moments that deserve to be savoured.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-start gap-10 px-5 lg:px-0 lg:pr-15 2xl:pr-25 bg-[#F4EDE2] relative">
+      <div className="flex flex-col lg:flex-row justify-start gap-10 px-7.5 lg:px-0 lg:pr-15 2xl:pr-25 bg-[#F4EDE2] relative">
         <div className="w-full">
           <img src="/images/about-image.png" />
         </div>

@@ -1,6 +1,6 @@
 const ExperinceSection = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row bg-[#F4EDE2] px-5 lg:px-0">
+    <section className="flex flex-col-reverse lg:flex-row bg-[#F4EDE2] px-7.5 lg:px-0">
       <div className="flex lg:w-1/2 flex-col justify-between lg:pl-15 2xl:pl-25 py-16 lg:py-30">
         <div>
           <p className="font-charman-serif-light text-[#474806] text-[28px] lg:text-[48px] leading-6 lg:leading-12 mb-10 lg:max-w-163 2xl:w-163">

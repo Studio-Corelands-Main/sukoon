@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactForm() {
   return (
-    <div className="pt-25 lg:pt-38 pb-50 bg-[#F4EDE2] px-5 lg:px-15 2xl:px-25">
+    <div className="pt-25 lg:pt-38 pb-50 bg-[#F4EDE2] px-7.5 lg:px-15 2xl:px-25">
       <div className="flex flex-col items-center gap-8 pb-[100px] lg:pb-[179px]">
         <h1 className="text-[#3E3F05] text-[35px] lg:text-[48px] font-charman-serif-light leading-12">
           Need a little help? We’re here.

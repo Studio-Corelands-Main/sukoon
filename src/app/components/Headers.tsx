@@ -10,9 +10,9 @@ export default function Headers() {
 
   return (
     <>
-      <div className="absolute top-0 left-0 z-50 w-full bg-transparent flex flex-row items-center justify-between gap-4 px-4 pt-4 sm:px-5 md:pt-6 lg:px-15 2xl:px-25 text-white font-instrument-regular">
+      <div className="absolute top-0 left-0 z-50 w-full bg-transparent flex flex-row items-center justify-between gap-4 px-4 pt-4 sm:px-7.5 md:pt-6 lg:px-15 2xl:px-25 text-white font-instrument-regular">
         <div className="shrink-0 border border-white rounded-full">
-          <p className="text-[13px] py-2 px-5 md:text-[16px] md:py-2.5 md:px-7.5">
+          <p className="text-[13px] py-2 px-7.5 md:text-[16px] md:py-2.5 md:px-7.5">
             RESERVE
           </p>
         </div>
