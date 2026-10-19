@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { type CSSProperties, type ReactNode, useEffect, useState } from "react";
+import { useElementHeight } from "@/hooks/useElementHeight";
 
 const dishes = [
   {
@@ -21,29 +22,41 @@ const dishes = [
   },
 ];
 
-const DishGallery = () => {
+const DishGallery = ({ header }: { header: ReactNode }) => {
   const [activeDish, setActiveDish] = useState(dishes[0].name);
+  // Images start below the pinned header, so track its height
+  const [headerRef, headerHeight] = useElementHeight<HTMLDivElement>();
 
   useEffect(() => {
     const dishNames =
       document.querySelectorAll<HTMLElement>("[data-dish-name]");
+    const visibleDishes = new Set<string>();
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
           const element = entry.target as HTMLElement;
           const dishName = element.dataset.dishName;
+          if (!dishName) return;
 
-          if (dishName) {
-            setActiveDish(dishName);
+          if (entry.isIntersecting) {
+            visibleDishes.add(dishName);
+          } else {
+            visibleDishes.delete(dishName);
           }
         });
+
+        // Images stack in order, so the last one in the band is on top
+        const topDish = dishes.findLast((dish) => visibleDishes.has(dish.name));
+
+        if (topDish) {
+          setActiveDish(topDish.name);
+        }
       },
       {
         threshold: 0,
-        rootMargin: "-10px 0px -90% 0px",
+        // Thin band at mid-viewport, below the pinned header
+        rootMargin: "-50% 0px -49% 0px",
       },
     );
 
@@ -57,30 +70,47 @@ const DishGallery = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-20 lg:gap-0 justify-between relative">
-      {/* LEFT CONTENT */}
-      <div className="lg:w-1/2 lg:sticky top-[30%] h-auto lg:h-screen flex flex-col justify-start">
-        <h1 className=" text-[28px] lg:text-[64px] font-charman-serif-light text-[#DDB789] leading-none">
-          {activeDish}
-        </h1>
+    <div
+      className="relative"
+      style={{ "--dish-header-h": `${headerHeight}px` } as CSSProperties}
+    >
+      {/* PINNED FRAME — pulled up into the previous section's bottom padding so
+          its background can cover the area behind the fixed site header */}
+      <div className="lg:pointer-events-none lg:sticky lg:top-0 lg:z-10 lg:-mt-30 lg:h-screen">
+        <div
+          ref={headerRef}
+          className="pointer-events-auto flow-root bg-[#481904] lg:pt-30"
+        >
+          {header}
+        </div>
 
-        <p className="text-xl md:text-2xl  font-instrument-regular text-[#EBD2B1] leading-6 my-10 lg:max-w-[650px] 2xl:w-[650px]">
-          Good food tastes even better when it’s shared. Reserve your table at
-          Sukoon and settle in for soulful Indian flavours, warm hospitality and
-          moments made to be savoured.
-        </p>
+        {/* LEFT CONTENT */}
+        <div className="pointer-events-auto flex flex-col justify-start lg:w-1/2">
+          <h1 className=" text-[28px] lg:text-[64px] font-charman-serif-light text-[#DDB789] leading-none">
+            {activeDish}
+          </h1>
 
-        <button className="border border-[#DDB789] rounded-full w-fit">
-          <p className="text-[16px] py-2.5 px-7.5 text-[#DDB789] font-instrument-regular">
-            VIEW MENU
+          <p className="text-xl md:text-2xl  font-instrument-regular text-[#EBD2B1] leading-6 lg:leading-7 my-10 lg:max-w-[650px] 2xl:w-[650px]">
+            Good food tastes even better when it’s shared. Reserve your table at
+            Sukoon and settle in for soulful Indian flavours, warm hospitality
+            and moments made to be savoured.
           </p>
-        </button>
+
+          <button className="border border-[#DDB789] rounded-full w-fit">
+            <p className="text-[16px] py-2.5 px-7.5 text-[#DDB789] font-instrument-regular">
+              VIEW MENU
+            </p>
+          </button>
+        </div>
       </div>
 
-      {/* RIGHT DISHES */}
-      <div className="lg:w-1/2">
+      {/* RIGHT DISHES — each sticks below the pinned frame so the next one stacks over it */}
+      <div className="mt-20 lg:mt-[-100vh] lg:ml-auto lg:w-1/2 lg:pt-(--dish-header-h)">
         {dishes.map((dish) => (
-          <div key={dish.name} className="mb-10">
+          <div
+            key={dish.name}
+            className="bg-[#481904] pb-10 lg:sticky lg:top-(--dish-header-h)"
+          >
             <img
               src={dish.image}
               alt={dish.name}
