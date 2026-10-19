@@ -91,10 +91,10 @@ const Footer = () => {
     <footer className="bg-[#481904]  px-7.5 sm:px-13 md:px-container-25 text-[#F4EDE2]">
       <div className="h-px bg-[#F4EDE2]" />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between">
         {footerSections.map(({ title, items }) => (
           <div key={title}>
-            <h3 className="font-instrument-regular text-base uppercase text-[#DDB789]">
+            <h3 className="font-instrument-regular text-sm lg:text-base uppercase text-[#DDB789]">
               {title}
             </h3>
 
@@ -104,12 +104,12 @@ const Footer = () => {
                   {href ? (
                     <Link
                       href={href}
-                      className="block transition-opacity hover:opacity-70 font-instrument-regular text-xl cursor-pointer"
+                      className="block transition-opacity hover:opacity-70 font-instrument-regular text-base lg:text-xl cursor-pointer"
                     >
                       {label}
                     </Link>
                   ) : (
-                    <div className="transition-opacity hover:opacity-70 font-instrument-regular text-xl cursor-pointer">
+                    <div className="transition-opacity hover:opacity-70 font-instrument-regular text-base lg:text-xl cursor-pointer">
                       {label}
                     </div>
                   )}
