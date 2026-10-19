@@ -73,8 +73,9 @@ export default function SukoonGlimpse() {
 
             <div className="pointer-events-auto md:w-[30%]">
               <TabsList className=" flex flex-col items-start justify-between md:gap-y-72.5 w-full px-0 h-full  ">
-                {/* Below md the filters become a full-bleed, horizontally scrollable pill strip */}
-                <div className="flex gap-5 overflow-x-auto no-scrollbar self-stretch bg-[#474806] -mx-7.5 px-7.5 py-5 sm:-mx-14 sm:px-14 md:block md:self-auto md:overflow-visible md:bg-transparent md:mx-0 md:p-0">
+                {/* Below md the filters become a full-bleed, horizontally scrollable pill strip.
+                    md:text-fluid-16 scales the line height the inline tabs sit on */}
+                <div className="flex gap-5 overflow-x-auto no-scrollbar self-stretch bg-[#474806] -mx-7.5 px-7.5 py-5 sm:-mx-14 sm:px-14 md:block md:self-auto md:overflow-visible md:bg-transparent md:mx-0 md:p-0 md:text-fluid-16">
                   {galleryFilters.map((item) => (
                     <TabsTrigger
                       key={item.id}
