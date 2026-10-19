@@ -59,7 +59,7 @@ const DishGallery = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-20 lg:gap-0 justify-between relative">
       {/* LEFT CONTENT */}
-      <div className="lg:w-1/2 lg:sticky top-[10%] h-auto lg:h-screen flex flex-col justify-start">
+      <div className="lg:w-1/2 lg:sticky top-[30%] h-auto lg:h-screen flex flex-col justify-start">
         <h1 className=" text-[28px] lg:text-[64px] font-charman-serif-light text-[#DDB789] leading-none">
           {activeDish}
         </h1>

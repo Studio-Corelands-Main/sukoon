@@ -29,7 +29,7 @@ export default function Headers() {
   return (
     <>
       <div
-        className={`fixed  top-0 left-0 z-50 w-full bg-transparent flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 lg:px-15 2xl:px-25 text-white font-instrument-regular ${scrollY ? null : "bg-black/10 backdrop-blur-2xl"}`}
+        className={`fixed  top-0 left-0 z-50 w-full  flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 lg:px-15 2xl:px-25 text-white font-instrument-regular ${scrollY ? "bg-transparent" : "  bg-[#3e3f05]  backdrop-blur-2xl z-50"}`}
       >
         <div className="shrink-0 border border-white rounded-full">
           <p className="text-[13px] py-2 px-7.5 md:text-[16px] md:py-2.5 md:px-7.5">

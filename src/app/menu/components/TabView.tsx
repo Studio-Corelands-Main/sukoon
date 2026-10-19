@@ -17,24 +17,26 @@ interface Menu {
 
 const TabView = () => {
   return (
-    <Tabs defaultValue="veg" className="w-full">
-      <TabsList className="mx-auto flex  max-w-full justify-center gap-2  bg-transparent px-2 pt-10 pb-6 sm:gap-5 sm:pt-15 sm:pb-10">
-        {menulist.map((item) => (
-          <TabsTrigger
-            key={item.id}
-            value={item.tag}
-            className={`shrink-0 cursor-pointer rounded-full border border-[#FFF9F0] text-sm font-instrument-regular text-[#FFF9F0] hover:text-white hover:bg-[#481904] data-active:bg-[#481904] data-active:text-white sm:text-base data-[state=active]:bg-red-800  px-7.5 py-5`}
-          >
-            {item.title}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+    <Tabs defaultValue="veg" className="w-full   ">
+      <div className="sticky top-10 z-50 bg-[#3e3f05]   overflow-x-scroll">
+        <TabsList className=" mx-auto flex justify-center gap-2 px-2 pt-10 pb-6 sm:gap-5 sm:pt-15 sm:pb-10  ">
+          {menulist.map((item) => (
+            <TabsTrigger
+              key={item.id}
+              value={item.tag}
+              className="shrink-0 cursor-pointer rounded-full border border-[#FFF9F0] px-7.5 py-5 text-sm font-instrument-regular text-[#FFF9F0] bg-[#481904] hover:text-white data-active:bg-[#481904] data-active:text-white sm:text-base"
+            >
+              {item.title}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
 
       {menulist.map((record) => (
         <TabsContent
           key={record.id}
           value={record.tag}
-          className=" sm:mb-25 p-2 bg-[#481904]"
+          className=" sm:mb-25 p-2 bg-[#481904]   z-0"
         >
           <div className="min-h-[50vh] sm:min-h-[80vh] border border-[#EBD2B1] p-5 lg:p-10 2xl:p-30">
             {/* Render menu records for this category here */}
