@@ -1,12 +1,55 @@
+"use client";
 import Link from "next/link";
 
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 const SlowDown = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // const { scrollYProgress } = useScroll({
+  //   target: sectionRef,
+  //   offset: ["start end", "end start"],
+  // });
+
+  // const y = useTransform(scrollYProgress, [0, 0.5, 1], [450, 0, 100]);
+
+  // const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [-30.95, 0, -0]);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const yRaw = useTransform(scrollYProgress, [0, 0.5, 1], [450, 0, 100]);
+
+  const rotateRaw = useTransform(scrollYProgress, [0, 0.5, 1], [-30.95, 0, -0]);
+
+  const y = useSpring(yRaw, {
+    stiffness: 120,
+    damping: 25,
+    mass: 0.5,
+  });
+
+  const rotate = useSpring(rotateRaw, {
+    stiffness: 120,
+    damping: 25,
+    mass: 0.5,
+  });
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-full  text-white flex flex-col justify-center items-center md:px-7.5 xl:py-43"
+      ref={sectionRef}
+      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-7.5 xl:py-43 overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
-      <div className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain  h-187.5 w-full px-0 md:px-7.5 my-auto  relative">
+      <motion.div
+        style={{
+          y,
+          rotate,
+          transformOrigin: "center center",
+        }}
+        className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain h-187.5 w-full px-0 md:px-7.5 my-auto relative"
+      >
         <div className="absolute top-0 bottom-0 left-0 right-0 w-full my-auto flex items-center justify-center">
           <div className="flex flex-col items-center justify-between 2xl:py-20">
             <div className="">
@@ -50,7 +93,7 @@ const SlowDown = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
