@@ -19,8 +19,8 @@ const images = [
 
 const HomeGallery = () => {
   return (
-    <section className="bg-[#474806] aspect-1920/1020  ">
-      <div className="py-25 md:py-37.25 md:px-0 px-7.5  sm:px-13">
+    <section className="bg-[#474806] aspect-1920/1020 md:aspect-auto md:min-h-255">
+      <div className="py-25 md:py-37.25 md:px-container-0 px-7.5  sm:px-13">
         <p className="font-charman-serif-light text-[#FFF9F0] text-center text-[28px] md:text-fluid-40 me mb-8">
           Flavours That Comforts The Soul
         </p>
@@ -35,7 +35,7 @@ const HomeGallery = () => {
           leave you with a little more comfort than you came with.
         </p>
       </div>
-      <div className="pb-25 md:pb-20">
+      <div className="pb-25 md:pb-20 md:px-container-0">
         {/* <Swiper
           spaceBetween={36}
           modules={[Autoplay]}

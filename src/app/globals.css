@@ -26,6 +26,21 @@
   font-size: calc(var(--spacing) * --value(number) / 4);
 }
 
+/* Container padding: px-container-N is px-N, plus (above 2560px) the space either side
+   of a centered 2560px container. Use it on full-width sections so their background
+   spans the screen while the content stays at the 2560 design width */
+@utility px-container-* {
+  padding-inline: calc(var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2));
+}
+
+@utility pl-container-* {
+  padding-left: calc(var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2));
+}
+
+@utility pr-container-* {
+  padding-right: calc(var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2));
+}
+
 /* Tailwind v4 theme */
 @theme inline {
   --color-background: var(--background);

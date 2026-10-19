@@ -40,7 +40,7 @@ const GalleryTagline = () => {
   };
 
   return (
-    <section className="bg-[#481904] flex flex-col md:flex-row  gap-20 md:gap-0 justify-between px-7.5 sm:px-13 md:px-25 py-20 md:py-45">
+    <section className="bg-[#481904] flex flex-col md:flex-row  gap-20 md:gap-0 justify-between px-7.5 sm:px-13 md:px-container-25 py-20 md:py-45">
       <div className="md:w-1/2 flex flex-col justify-between">
         <div>
           <h1 className="text-[#DDB789] text-[40px] md:text-fluid-84 font-charman-serif-light leading-10 md:leading-20 md:max-w-112.5 md:w-112.5">

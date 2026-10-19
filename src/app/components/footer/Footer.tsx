@@ -88,7 +88,7 @@ const footerSections: FooterSection[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#481904]  px-7.5 sm:px-13 md:px-25 text-[#F4EDE2]">
+    <footer className="bg-[#481904]  px-7.5 sm:px-13 md:px-container-25 text-[#F4EDE2]">
       <div className="h-px bg-[#F4EDE2]" />
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between">

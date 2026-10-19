@@ -59,7 +59,7 @@ const MarqueeGallery = ({ images }: { images: string[] }) => {
         {[...images, ...images].map((image, index) => (
           <div
             key={index}
-            className="w-[75vw] shrink-0 cursor-pointer md:w-[25.2748vw]"
+            className="w-[75vw] shrink-0 cursor-pointer md:w-[30.32976rem]"
             onClick={() => {
               console.log("Clicked image:", image);
             }}
@@ -68,7 +68,7 @@ const MarqueeGallery = ({ images }: { images: string[] }) => {
               src={image}
               alt={`Gallery image ${(index % images.length) + 1}`}
               draggable={false}
-              className="h-[300px] w-full object-cover md:h-[27.7776vw]"
+              className="h-[300px] w-full object-cover md:h-[33.33312rem]"
             />
           </div>
         ))}

@@ -39,32 +39,6 @@ const HomeHero = () => {
   });
 
   useEffect(() => {
-    const updatePositions = () => {
-      const placeholder = placeholderRef.current;
-      if (!placeholder) return;
-
-      const rect = placeholder.getBoundingClientRect();
-      const scale = getRootScale();
-      const endWidth = HEADER_WIDTH * scale;
-
-      setPositions({
-        startX: rect.left,
-        startY: rect.top,
-        startWidth: rect.width,
-        endX: (window.innerWidth - endWidth) / 2,
-        endY: HEADER_TOP * scale,
-        endWidth,
-        ready: true,
-      });
-    };
-
-    updatePositions();
-    window.addEventListener("resize", updatePositions);
-
-    return () => window.removeEventListener("resize", updatePositions);
-  }, []);
-
-  useEffect(() => {
     const unsubscribe = scrollY.on("change", (value) => {
       setShowHeader(value > 20);
     });
@@ -92,7 +66,8 @@ const HomeHero = () => {
 
   useEffect(() => {
     const updatePositions = () => {
-      const desktop = window.matchMedia("(min-width: 1024px)").matches;
+      // The logo animates into the header from md up; below md it stays static in the hero
+      const desktop = window.matchMedia("(width >= 48rem)").matches;
       setIsDesktop(desktop);
 
       if (!desktop) {
@@ -104,12 +79,16 @@ const HomeHero = () => {
       if (!placeholder) return;
 
       const rect = placeholder.getBoundingClientRect();
+      const scale = getRootScale();
+      const endWidth = HEADER_WIDTH * scale;
 
       setPositions({
         startX: rect.left,
         startY: rect.top,
         startWidth: rect.width,
-        endX: (window.innerWidth - HEADER_WIDTH) / 2,
+        endX: (window.innerWidth - endWidth) / 2,
+        endY: HEADER_TOP * scale,
+        endWidth,
         ready: true,
       });
     };
@@ -124,7 +103,7 @@ const HomeHero = () => {
     <>
       <section
         ref={heroRef}
-        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-25"
+        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-container-25"
         style={{ backgroundImage: "url('/images/hero-image.png')" }}
       >
         <p className="w-63.75 pt-43 text-[16px] font-instrument-regular md:w-64 md:text-fluid-16">
@@ -154,14 +133,14 @@ const HomeHero = () => {
             pointerEvents: "none",
             zIndex: 50,
           }}
-          className="max-w-[calc(100vw-60px)]"
+          className="max-w-[calc(100vw-3.75rem)]"
         >
           <Link href={URLS.HOME} className="cursor-pointer">
             <SukoonLogo className="block h-auto w-full" />
           </Link>
         </motion.div>
       ) : (
-        <div className="absolute inset-x-7.5 bottom-25 flex justify-center lg:hidden">
+        <div className="absolute inset-x-7.5 bottom-25 flex justify-center md:hidden">
           <div className="aspect-950/169 w-full max-w-237.5">
             <Link href={URLS.HOME} className="cursor-pointer">
               <SukoonLogo className="block h-auto w-full" />

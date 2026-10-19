@@ -64,7 +64,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
         }`}
       >
         {/* Top bar */}
-        <div className="flex shrink-0 items-center justify-between gap-4 px-4 pt-4 sm:px-8 md:px-25 md:pt-6">
+        <div className="flex shrink-0 items-center justify-between gap-4 px-4 pt-4 sm:px-8 md:px-container-25 md:pt-6">
           <Link
             href="/reserve"
             onClick={onClose}
@@ -153,7 +153,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
         </div>
 
         {/* Bottom bar */}
-        <div className="grid shrink-0 grid-cols-2 items-center gap-y-4 bg-[#24280a] px-4 py-5 sm:grid-cols-3 sm:px-8 md:px-25 md:py-6">
+        <div className="grid shrink-0 grid-cols-2 items-center gap-y-4 bg-[#24280a] px-4 py-5 sm:grid-cols-3 sm:px-8 md:px-container-25 md:py-6">
           <ul className="flex flex-col text-[11px] md:text-fluid-11 leading-tight">
             {socialLinks.map((s, i) => (
               <li key={s.label}>

@@ -1,6 +1,6 @@
 const FeelingSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-stretch gap-x-8 h-full pb-[80px] md:pb-35.75  px-7.5 sm:px-13 md:px-25 bg-[#F4EDE2] pt-[80px] md:pt-60">
+    <div className="flex flex-col md:flex-row items-stretch gap-x-8 h-full pb-[80px] md:pb-35.75  px-7.5 sm:px-13 md:px-container-25 bg-[#F4EDE2] pt-[80px] md:pt-60">
       <div className="md:w-[50%] flex flex-col justify-between  ">
         <div className=" ">
           <h2 className=" sm:w-70 md:max-w-125 md:w-125 text-[48px] md:text-fluid-84 font-charman-serif-light text-[#474806] leading-[60px] md:leading-18.75  ">

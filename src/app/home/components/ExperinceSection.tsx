@@ -1,6 +1,6 @@
 const ExperinceSection = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row bg-[#F4EDE2]">
+    <section className="flex flex-col-reverse md:flex-row md:px-container-0 bg-[#F4EDE2]">
       <div className="flex md:w-1/2 flex-col justify-between md:pl-25 py-25 md:py-30 px-7.5 sm:px-13 md:px-0">
         <div>
           <p className="font-charman-serif-light text-[#474806] text-[28px] sm:text-[38px] md:text-fluid-48 leading-7 md:leading-12 mb-8 md:mb-10 md:max-w-163 md:w-163">
@@ -49,7 +49,7 @@ const ExperinceSection = () => {
           </svg>
         </div>
       </div>
-      <div className="md:w-1/2 bg-[#F9F9F9] md:h-[56.25vw]  h-[600px] md:pt-0">
+      <div className="md:w-1/2 bg-[#F9F9F9] md:h-270  h-[600px] md:pt-0">
         <img
           src="/images/hero-image.png"
           alt=""

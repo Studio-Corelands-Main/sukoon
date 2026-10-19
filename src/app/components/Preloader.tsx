@@ -106,7 +106,7 @@ export default function Preloader() {
     <div
       aria-busy={!hiding}
       aria-label="Loading"
-      className={`fixed inset-0 z-[200] flex flex-col justify-between overflow-hidden bg-[#252500] py-10 text-[#F4EDE2] transition-transform duration-1000 ease-[cubic-bezier(0.77,0,0.175,1)]  px-7.5 md:px-25 md:py-15 ${
+      className={`fixed inset-0 z-[200] flex flex-col justify-between overflow-hidden bg-[#252500] py-10 text-[#F4EDE2] transition-transform duration-1000 ease-[cubic-bezier(0.77,0,0.175,1)]  px-7.5 md:px-container-25 md:py-15 ${
         hiding ? "-translate-y-full" : "translate-y-0"
       }`}
     >
@@ -114,7 +114,7 @@ export default function Preloader() {
       <svg
         viewBox={`0 0 ${EMBLEM_WIDTH} ${EMBLEM_HEIGHT}`}
         fill="none"
-        className="pointer-events-none absolute right-6 top-1/2 h-[60vh] w-auto -translate-y-1/2 md:right-15 md:top-15 md:h-[80vh] md:translate-y-0"
+        className="pointer-events-none absolute right-6 top-1/2 h-[60vh] w-auto -translate-y-1/2 md:right-[calc(var(--spacing)*15+max(0px,(100%-2560px)/2))] md:top-15 md:h-[80vh] md:translate-y-0"
         aria-hidden="true"
       >
         <defs>

@@ -37,7 +37,7 @@ export default function SukoonGlimpse() {
 
   return (
     <>
-      <div className="px-7.5 sm:px-14 md:px-25 bg-[#F4EDE2]">
+      <div className="px-7.5 sm:px-14 md:px-container-25 bg-[#F4EDE2]">
         <Tabs
           value={activeTab}
           onValueChange={handleTabChange}

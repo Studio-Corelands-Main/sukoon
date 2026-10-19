@@ -7,7 +7,7 @@ const HeroSection = ({ title, secondTitle="", subTitle, image }: HeroSectionI) =
   const pathname = usePathname();
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto px-7.5 sm:px-13 md:px-25 text-white flex flex-col"
+      className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto px-7.5 sm:px-13 md:px-container-25 text-white flex flex-col"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div

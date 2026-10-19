@@ -1,7 +1,7 @@
 const Tradition = () => {
   return (
     <section
-      className="h-[50vw] bg-[#481904] flex items-center justify-center relative"
+      className="h-[50vw] md:h-240 bg-[#481904] flex items-center justify-center relative"
       style={{ backgroundImage: "url('/images/peacock.png')" }}
     >
       <div className="absolute inset-0 bg-[#481904]/95" />

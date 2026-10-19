@@ -34,20 +34,20 @@ export default function Headers() {
   return (
     <>
       <div
-        className={`fixed h-21.5 top-0 left-0 z-50 w-full  flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 lg:px-15 2xl:px-25 text-white font-instrument-regular ${scrollY ? "bg-transparent" : "  bg-[#3e3f05]  backdrop-blur-2xl z-50"}`}
+        className={`fixed h-21.5 top-0 inset-x-0 z-50 flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 md:px-container-25 text-white font-instrument-regular ${scrollY ? "bg-transparent" : "  bg-[#3e3f05]  backdrop-blur-2xl z-50"}`}
       >
         <div className="shrink-0 border border-white rounded-full ">
           <Link href={URLS.HOME} className="cursor-pointer z-50 lg">
             <SukoonLogo className="w-[130px]   md:hidden" />
           </Link>
-          <p className="text-[13px] py-2 px-7.5 md:text-[16px] md:py-2.5 md:px-7.5 hidden md:block">
+          <p className="text-[13px] py-2 px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 hidden md:block">
             RESERVE
           </p>
         </div>
 
         {pathname !== "/" && (
           <Link href={URLS.HOME} className="cursor-pointer z-50 lg">
-            <SukoonLogo className="w-[100px] md:w-[180px] " />
+            <SukoonLogo className="w-[100px] md:w-45 " />
           </Link>
         )}
 

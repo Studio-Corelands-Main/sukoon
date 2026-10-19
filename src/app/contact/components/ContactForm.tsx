@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <div className="pt-25 md:pt-38 pb-50 bg-[#F4EDE2] px-7.5 sm:px-13 md:px-25 ">
+    <div className="pt-25 md:pt-38 pb-50 bg-[#F4EDE2] px-7.5 sm:px-13 md:px-container-25 ">
       <div className="flex flex-col items-center gap-8 pb-[100px] sm:pb-[150px] md:pb-44.75">
         <h1 className="text-[#3E3F05] text-[35px] sm:text-[48px] md:text-fluid-48 font-charman-serif-light leading-12">
           Need a little help? We’re here.

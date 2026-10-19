@@ -45,7 +45,7 @@ const AnimatedHeader = () => {
       style={{ y, top }}
       className="fixed inset-x-0 top-0 z-50 pointer-events-none"
     >
-      <div className="flex justify-center px-7.5 md:px-25">
+      <div className="flex justify-center px-7.5 md:px-container-25">
         <motion.div style={{ width }} className="origin-center">
           <SukoonLogo />
         </motion.div>

@@ -3,7 +3,7 @@ import TasteOfSorrelRepeated from "./TasteOfSorrelRepeated";
 
 const TasteOfSorrel = () => {
   return (
-    <section className="relative bg-[#481904] px-7.5 md:px-25">
+    <section className="relative bg-[#481904] px-7.5 md:px-container-25">
       <DishGallery
         header={
           <>
