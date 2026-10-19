@@ -12,6 +12,19 @@
   font-family: var(--font-charman-serif-light);
 }
 
+/* Fluid 1920 design: inside .fluid-1920, spacing utilities (and text-fluid-*)
+   scale with the viewport from md up, keeping 1920px proportions; capped at 2560px */
+@media (width >= 48rem) {
+  .fluid-1920 {
+    --spacing: calc(min(100vw, 2560px) / 480);
+  }
+}
+
+/* Font size in 1920px-design pixels, e.g. text-fluid-40 is 40px at 1920 */
+@utility text-fluid-* {
+  font-size: calc(var(--spacing) * --value(number) / 4);
+}
+
 /* Tailwind v4 theme */
 @theme inline {
   --color-background: var(--background);

@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { type CSSProperties, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useElementHeight } from "@/hooks/useElementHeight";
 import { galleryFilters, menulist } from "../../../../constants/menu/list";
 import { motion } from "motion/react";
 
@@ -11,6 +12,8 @@ export default function SukoonGlimpse() {
   const [activeTab, setActiveTab] = useState(galleryFilters[0].tag);
   const [pages, setPages] = useState(1);
   const activeFilter = galleryFilters.find((item) => item.tag === activeTab);
+  // Images start below the pinned header, so track its height
+  const [headerRef, headerHeight] = useElementHeight<HTMLDivElement>();
 
   const handleTabChange = (value: string) => {
     setActiveTab(value);
@@ -34,80 +37,94 @@ export default function SukoonGlimpse() {
 
   return (
     <>
-      <div className="px-7.5 sm:px-14 md:px-13 lg:px-15 2xl:px-25 bg-[#F4EDE2]">
-        <div className="flex flex-col lg:flex-row justify-between lg:items-center  pt-25 pb-8 gap-8">
-          <div className="lg:w-[50%]">
-            <h1 className="font-charman-serif-light text-[48px] lg:text-[40px] text-[#777A35] w-60 lg:w-58 leading-10">
-              A Glimpse Into Sukoon 
-            </h1>
-          </div>
-          <div className="lg:w-[50%] flex justify-end">
-            <p className="text-[24px] lg:text-[20px] font-instrument-regular text-[#0B0B0B] lg:max-w-[800px] 2xl:w-[800px] leading-6.5">
-              {" "}
-              Some details are felt before they are noticed. The light, the
-              textures, the table, the quiet corners and the moments shared
-              between them all come together to create the Sukoon
-              experience.{" "}
-            </p>
-          </div>
-        </div>
-        <div className="h-[.75px] bg-black lg:block hidden"></div>
-       
+      {/* fluid-1920: from md up, every size scales with the viewport like the 1920px design */}
+      <div className="fluid-1920 px-7.5 sm:px-14 md:px-25 bg-[#F4EDE2]">
         <Tabs
           value={activeTab}
           onValueChange={handleTabChange}
-          className="w-full pt-15 pb-15 lg:pb-0 flex-col lg:flex-row"
+          className="w-full pb-15 md:pb-0 flex-col md:gap-0"
           orientation="vertical"
         >
-          <div className="lg:w-[30%] relative">
-            <div className="sticky top-12 bottom-20  ">
-              <TabsList className=" flex flex-col items-start justify-between lg:gap-y-[420px] w-full px-0 h-full  ">
-                {/* Below lg the filters become a full-bleed, horizontally scrollable pill strip */}
-                <div className="flex gap-5 overflow-x-auto no-scrollbar self-stretch bg-[#474806] -mx-7.5 px-7.5 py-5 sm:-mx-14 sm:px-14 md:-mx-13 md:px-13 lg:block lg:self-auto lg:overflow-visible lg:bg-transparent lg:mx-0 lg:p-0">
+          {/* PINNED FRAME — header and filters stay put while the images scroll beneath */}
+          <div className="md:pointer-events-none md:sticky md:top-0 md:z-10 md:h-screen">
+            <div
+              ref={headerRef}
+              className="pointer-events-auto bg-[#F4EDE2] pb-15"
+            >
+              <div className="flex flex-col md:flex-row justify-between md:items-center  pt-25 pb-8 gap-8">
+                <div className="md:w-[50%]">
+                  <h1 className="font-charman-serif-light text-[48px] md:text-fluid-40 text-[#777A35] w-60 md:w-58 leading-10">
+                    A Glimpse Into Sukoon
+                  </h1>
+                </div>
+                <div className="md:w-[50%] flex justify-end">
+                  <p className="text-[24px] md:text-fluid-20 font-instrument-regular text-[#0B0B0B] md:w-200 leading-6.5">
+                    {" "}
+                    Some details are felt before they are noticed. The light,
+                    the textures, the table, the quiet corners and the moments
+                    shared between them all come together to create the Sukoon
+                    experience.{" "}
+                  </p>
+                </div>
+              </div>
+              {/* Hairline stays 0.75px so it doesn't vanish when scaled down */}
+              <div className="h-[.75px] bg-black md:block hidden"></div>
+            </div>
+
+            <div className="pointer-events-auto md:w-[30%]">
+              <TabsList className=" flex flex-col items-start justify-between md:gap-y-72.5 w-full px-0 h-full  ">
+                {/* Below md the filters become a full-bleed, horizontally scrollable pill strip */}
+                <div className="flex gap-5 overflow-x-auto no-scrollbar self-stretch bg-[#474806] -mx-7.5 px-7.5 py-5 sm:-mx-14 sm:px-14 md:block md:self-auto md:overflow-visible md:bg-transparent md:mx-0 md:p-0">
                   {galleryFilters.map((item) => (
                     <TabsTrigger
                       key={item.id}
                       value={item.tag}
-                      className="opacity-50 data-active:opacity-100 data-active:bg-transparent group-data-[variant=default]/tabs-list:data-active:shadow-none px-0 max-lg:flex-none max-lg:group-data-vertical/tabs:w-auto max-lg:rounded-full max-lg:border-[#F4EDE2] max-lg:px-8 max-lg:py-2.5 max-lg:opacity-100 max-lg:data-active:border-[#777A35] max-lg:data-active:bg-[#777A35]"
+                      className="opacity-50 data-active:opacity-100 data-active:bg-transparent group-data-[variant=default]/tabs-list:data-active:shadow-none px-0 max-md:flex-none max-md:group-data-vertical/tabs:w-auto max-md:rounded-full max-md:border-[#F4EDE2] max-md:px-8 max-md:py-2.5 max-md:opacity-100 max-md:data-active:border-[#777A35] max-md:data-active:bg-[#777A35]"
                     >
-                      <h1 className="text-[16px] lg:text-[32px] lg:font-charman-serif-light text-[#474806] -mt-2 max-lg:mt-0 max-lg:text-base max-lg:font-instrument-regular max-lg:text-[#F4EDE2]">
+                      <h1 className="text-[16px] md:text-fluid-32 md:font-charman-serif-light text-[#474806] -mt-2 max-md:mt-0 max-md:text-base max-md:font-instrument-regular max-md:text-[#F4EDE2]">
                         {item.title}
                       </h1>
                     </TabsTrigger>
                   ))}
                 </div>
-                <p className="  bottom-20 text-[#0B0B0B] text-[14px] font-instrument-regular my-10 lg:my-0 lg:mb-25 lg:max-w-[351px] 2xl:w-[351px]">
+                <p className="  bottom-20 text-[#0B0B0B] text-[14px] md:text-fluid-14 font-instrument-regular my-10 md:my-0 md:mb-25 md:w-87.75">
                   {activeFilter?.description}
                 </p>
               </TabsList>
             </div>
           </div>
 
-          {galleryFilters.map((record) => (
-            <TabsContent
-              key={record.id}
-              value={record.tag}
-              className=" sm:mb-25 w-70%"
-            >
-              <div className="flex flex-col gap-3.5 lg:gap-7.5">
-                {Array.from({ length: pages }, (_, index) => (
-                  <div key={index}>
-                    <img src="/images/hero-image.png" alt="" />
-                    <div className="flex flex-row gap-3.5 lg:gap-7.5 mt-3 lg:mt-7.5">
-                      <div className="w-[50%]">
-                        <img src="/images/hero-image.png" alt="" />
-                      </div>
-                      <div className="w-[50%]">
-                        <img src="/images/hero-image.png" alt="" />
+          {/* IMAGES — scroll underneath the pinned frame */}
+          <div
+            className="md:mt-[calc(86px-100vh)] md:ml-auto md:w-[70%] md:pl-2 md:pt-(--glimpse-header-h)"
+            style={{ "--glimpse-header-h": `${headerHeight}px` } as CSSProperties}
+          >
+            {galleryFilters.map((record) => (
+              <TabsContent
+                key={record.id}
+                value={record.tag}
+                className=" sm:mb-25"
+              >
+                <div className="flex flex-col gap-3.5 md:gap-7.5">
+                  {Array.from({ length: pages }, (_, index) => (
+                    <div key={index}>
+                      <img src="/images/hero-image.png" alt="" />
+                      <div className="flex flex-row gap-3.5 md:gap-7.5 mt-3 md:mt-7.5">
+                        <div className="w-[50%]">
+                          <img src="/images/gallery.png" alt="" className="md:w-157.5 md:h-189.5" />
+                        </div>
+                        <div className="w-[50%]">
+                          <img src="/images/gallery.png" alt="" className="md:w-157.5 md:h-189.5"/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-              {/* Keyed by page so the check runs again after each load */}
-              {pages < MAX_PAGES && <div key={pages} ref={loadMoreRef} />}
-            </TabsContent>
-          ))}
+                  ))}
+                </div>
+                {/* Keyed by page so the check runs again after each load */}
+                {pages < MAX_PAGES && <div key={pages} ref={loadMoreRef} />}
+              </TabsContent>
+            ))}
+          </div>
         </Tabs>
       </div>
     </>
