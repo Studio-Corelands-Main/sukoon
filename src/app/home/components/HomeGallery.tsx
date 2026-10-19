@@ -1,7 +1,6 @@
 "use client";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import MarqueeGallery from "./MarqueeGallery";
 
 const images = [
   "/images/1.png",
@@ -37,49 +36,52 @@ const HomeGallery = () => {
         </p>
       </div>
       <div className="pb-25 lg:pb-20">
-        <Swiper
+        {/* <Swiper
           spaceBetween={36}
-          // slidesPerView={3.8}
           modules={[Autoplay]}
           centeredSlides={true}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
+          slidesPerView="auto"
+          speed={10000}
           loop={true}
+          allowTouchMove={false}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+          }}
           breakpoints={{
             320: {
-              slidesPerView: 1.8,
               spaceBetween: 10,
             },
             480: {
-              slidesPerView: 1.8,
               spaceBetween: 10,
             },
             640: {
-              slidesPerView: 1.8,
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 3,
               spaceBetween: 24,
             },
             1024: {
-              slidesPerView: 3.8,
               spaceBetween: 36,
             },
           }}
+          className="marquee-swiper"
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={index}
+              className="!w-[75vw] md:!w-[40vw] lg:!w-[25.2748vw]"
+            >
               <img
                 src={image}
                 alt=""
-                className="h-[300px] lg:w-[25.2748vw]  lg:h-[27.7776vw] object-cover "
+                className="h-[300px] w-full lg:h-[27.7776vw] object-cover"
               />
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+        <MarqueeGallery images={images} />
       </div>
     </section>
   );

@@ -61,7 +61,7 @@ export default function SukoonGlimpse() {
         >
           <div className="lg:w-[30%] relative">
             <div className="sticky top-12 bottom-20  ">
-              <TabsList className=" flex flex-col items-start justify-between  lg:gap-y-[420px] w-full px-0 h-full  ">
+              <TabsList className=" flex flex-col items-start justify-between lg:gap-y-[420px] w-full px-0 h-full  ">
                 {/* Below lg the filters become a full-bleed, horizontally scrollable pill strip */}
                 <div className="flex gap-5 overflow-x-auto no-scrollbar self-stretch bg-[#474806] -mx-7.5 px-7.5 py-5 sm:-mx-14 sm:px-14 md:-mx-13 md:px-13 lg:block lg:self-auto lg:overflow-visible lg:bg-transparent lg:mx-0 lg:p-0">
                   {galleryFilters.map((item) => (

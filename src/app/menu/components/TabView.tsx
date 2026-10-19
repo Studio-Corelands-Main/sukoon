@@ -1,6 +1,6 @@
 "use client";
-import { motion } from "motion/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "motion/react";
 import { menulist } from "../../../../constants/menu/list";
 interface MenuI {
   id: number;
@@ -23,7 +23,7 @@ const TabView = () => {
           <TabsTrigger
             key={item.id}
             value={item.tag}
-            className={`shrink-0 cursor-pointer rounded-full border border-[#FFF9F0] px-6 py-3 text-sm font-instrument-regular text-[#FFF9F0] hover:text-white hover:bg-[#481904] data-active:bg-[#481904] data-active:text-white sm:px-10 sm:py-5 sm:text-base data-[state=active]:bg-red-800 `}
+            className={`shrink-0 cursor-pointer rounded-full border border-[#FFF9F0] text-sm font-instrument-regular text-[#FFF9F0] hover:text-white hover:bg-[#481904] data-active:bg-[#481904] data-active:text-white sm:text-base data-[state=active]:bg-red-800  px-7.5 py-5`}
           >
             {item.title}
           </TabsTrigger>
