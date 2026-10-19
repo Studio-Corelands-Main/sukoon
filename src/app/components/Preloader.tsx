@@ -106,7 +106,7 @@ export default function Preloader() {
     <div
       aria-busy={!hiding}
       aria-label="Loading"
-      className={`fixed inset-0 z-[200] flex flex-col justify-between overflow-hidden bg-[#252500] py-10 text-[#F4EDE2] transition-transform duration-1000 ease-[cubic-bezier(0.77,0,0.175,1)]  px-7.5 lg:px-15 2xl:px-25 md:py-15 ${
+      className={`fixed inset-0 z-[200] flex flex-col justify-between overflow-hidden bg-[#252500] py-10 text-[#F4EDE2] transition-transform duration-1000 ease-[cubic-bezier(0.77,0,0.175,1)]  px-7.5 md:px-25 md:py-15 ${
         hiding ? "-translate-y-full" : "translate-y-0"
       }`}
     >
@@ -138,15 +138,15 @@ export default function Preloader() {
       <img
         src="/logo/sukoon.svg"
         alt="Sukoon"
-        className="relative h-auto w-[200px] md:w-[305px]"
+        className="relative h-auto w-[200px] md:w-76.25"
       />
 
       <div className="relative flex items-end justify-between font-instrument-regular">
-        <p className="max-w-[250px] text-[16px] leading-[1.2] font-instrument-regular">
+        <p className="max-w-[250px] text-[16px] leading-[1.2] md:max-w-62.5 md:text-fluid-16 font-instrument-regular">
           Stay until the early hours with cocktails, craft beers, bar food &amp;
           London&apos;s finest hi-fi sound
         </p>
-        <p className="font-charman-serif-light text-[22px] tabular-nums">
+        <p className="font-charman-serif-light text-[22px] md:text-fluid-22 tabular-nums">
           {Math.round(percent)}%
         </p>
       </div>

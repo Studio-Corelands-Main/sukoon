@@ -40,13 +40,13 @@ const GalleryTagline = () => {
   };
 
   return (
-    <section className="bg-[#481904] flex flex-col lg:flex-row  gap-20 lg:gap-0 justify-between px-7.5 sm:px-13 lg:px-15 2xl:px-25 py-20 lg:py-45">
-      <div className="lg:w-1/2 flex flex-col justify-between">
+    <section className="bg-[#481904] flex flex-col md:flex-row  gap-20 md:gap-0 justify-between px-7.5 sm:px-13 md:px-25 py-20 md:py-45">
+      <div className="md:w-1/2 flex flex-col justify-between">
         <div>
-          <h1 className="text-[#DDB789] text-[40px] lg:text-[84px] font-charman-serif-light leading-10 lg:leading-20 lg:max-w-[450px] 2xl:w-[450px]">
+          <h1 className="text-[#DDB789] text-[40px] md:text-fluid-84 font-charman-serif-light leading-10 md:leading-20 md:max-w-112.5 md:w-112.5">
             A Glimpse Into Sukoon
           </h1>
-          <p className="text-[#DDB789] text-xl md:text-2xl  font-instrument-regular leading-6 lg:leading-7 pt-8 pr-0 lg:pr-10 2xl:pr-50 lg:max-w-[850px] 2xl:w-[850px]">
+          <p className="text-[#DDB789] text-xl md:text-2xl  font-instrument-regular leading-6 md:leading-7 pt-8 pr-0 md:pr-50 md:max-w-212.5 md:w-212.5">
             Step inside Sukoon through the details that shape the experience.
             From the warmth of the interiors to the food, the table and the
             moments shared around it, every frame captures a little of what
@@ -54,20 +54,20 @@ const GalleryTagline = () => {
           </p>
         </div>
         <div className="hidden md:block">
-          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] lg:w-[320px]">
+          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] md:w-80">
             See the spaces, details and moments that bring Sukoon to life.
           </p>
           <div className="pt-5">
             <Link
               href="#"
-              className="inline-block border border-[#DDB789] rounded-full text-xs lg:text-base py-2.5 px-7.5 text-[#DDB789] font-instrument-regular"
+              className="inline-block border border-[#DDB789] rounded-full text-xs md:text-base py-2.5 px-7.5 text-[#DDB789] font-instrument-regular"
             >
               VIEW GALLERY
             </Link>
           </div>
         </div>
       </div>
-      <div className="lg:w-1/2">
+      <div className="md:w-1/2">
         <div className=" min-w-0 flex justify-end">
           <div className="relative w-full min-w-0">
             <div
@@ -94,11 +94,11 @@ const GalleryTagline = () => {
               <div className="h-[80vh] w-full" />
 
               <div className="absolute bottom-7.5 left-7.5 right-7.5 z-10 flex items-end justify-between">
-                <div className="font-charman-serif-light text-[40px] text-[#DDB789]">
+                <div className="font-charman-serif-light text-[40px] md:text-fluid-40 text-[#DDB789]">
                   {activeIndex + 1}/{images.length}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 md:[&>button>svg]:size-6.25">
                   <button
                     onClick={handlePrev}
                     aria-label="Previous image"
@@ -120,13 +120,13 @@ const GalleryTagline = () => {
           </div>
         </div>
         <div className="md:hidden block pt-11">
-          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] lg:w-[320px]">
+          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] md:w-80">
             See the spaces, details and moments that bring Sukoon to life.
           </p>
           <div className="pt-5">
             <Link
               href="#"
-              className="inline-block border border-[#DDB789] rounded-full text-xs lg:text-base py-2.5 px-7.5 text-[#DDB789] font-instrument-regular"
+              className="inline-block border border-[#DDB789] rounded-full text-xs md:text-base py-2.5 px-7.5 text-[#DDB789] font-instrument-regular"
             >
               VIEW GALLERY
             </Link>

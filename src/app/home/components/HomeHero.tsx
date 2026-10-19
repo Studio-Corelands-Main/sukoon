@@ -6,8 +6,15 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { URLS } from "../../../../constants/routes/urls";
 
+// Sizes in 1920px-design pixels; from md up they scale with the root font size
 const HEADER_WIDTH = 180;
 const HEADER_TOP = 30;
+
+// Root scale factor: 1 below md and at 1920, root font size / 16 from md up
+const getRootScale = () =>
+  window.matchMedia("(width >= 48rem)").matches
+    ? parseFloat(getComputedStyle(document.documentElement).fontSize) / 16
+    : 1;
 
 const HomeHero = () => {
   const heroRef = useRef<HTMLElement>(null);
@@ -18,6 +25,8 @@ const HomeHero = () => {
     startY: 0,
     startWidth: 0,
     endX: 0,
+    endY: HEADER_TOP,
+    endWidth: HEADER_WIDTH,
     ready: false,
   });
 
@@ -34,12 +43,16 @@ const HomeHero = () => {
       if (!placeholder) return;
 
       const rect = placeholder.getBoundingClientRect();
+      const scale = getRootScale();
+      const endWidth = HEADER_WIDTH * scale;
 
       setPositions({
         startX: rect.left,
         startY: rect.top,
         startWidth: rect.width,
-        endX: (window.innerWidth - HEADER_WIDTH) / 2,
+        endX: (window.innerWidth - endWidth) / 2,
+        endY: HEADER_TOP * scale,
+        endWidth,
         ready: true,
       });
     };
@@ -67,28 +80,28 @@ const HomeHero = () => {
   const y = useTransform(
     scrollYProgress,
     [0, 0.7, 1],
-    [positions.startY, HEADER_TOP, HEADER_TOP],
+    [positions.startY, positions.endY, positions.endY],
   );
 
   const width = useTransform(
     scrollYProgress,
     [0, 0.7, 1],
-    [positions.startWidth, HEADER_WIDTH, HEADER_WIDTH],
+    [positions.startWidth, positions.endWidth, positions.endWidth],
   );
 
   return (
     <>
       <section
         ref={heroRef}
-        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white lg:px-15 2xl:px-25"
+        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-25"
         style={{ backgroundImage: "url('/images/hero-image.png')" }}
       >
-        <p className="w-63.75 pt-43 text-[16px] font-instrument-regular lg:w-64">
+        <p className="w-63.75 pt-43 text-[16px] font-instrument-regular md:w-64 md:text-fluid-16">
           CONTEMPORARY INDIAN DINING MADE FOR CALM MOMENTS.
         </p>
 
         {/* Reserves the logo's original bottom position */}
-        <div className="absolute inset-x-7.5 bottom-25 flex justify-center lg:inset-x-15 2xl:inset-x-25">
+        <div className="absolute inset-x-7.5 bottom-25 flex justify-center md:inset-x-25">
           <div
             ref={placeholderRef}
             className="aspect-950/169 w-full max-w-237.5"
@@ -104,7 +117,7 @@ const HomeHero = () => {
           y: 0,
         }}
         transition={{ duration: 0.4 }}
-        className={`fixed inset-x-0 top-0 z-40 flex items-center justify-between px-7.5 py-6 text-white lg:px-15 2xl:px-25  ${showHeader ? "" : null}`}
+        className={`fixed inset-x-0 top-0 z-40 flex items-center justify-between px-7.5 py-6 text-white md:px-25  ${showHeader ? "" : null}`}
         style={{ pointerEvents: showHeader ? "auto" : "none" }}
       >
         {/* Left side */}
@@ -116,8 +129,8 @@ const HomeHero = () => {
           </div>
         </div> */}
 
-        {/* Space reserved for the centered logo */}
-        <div style={{ width: HEADER_WIDTH }} className="shrink-0" />
+        {/* Space reserved for the centered logo (HEADER_WIDTH, 180px at 1920) */}
+        <div className="w-45 shrink-0" />
 
         {/* Right side */}
         {/* <div className="flex flex-1 items-center justify-end gap-6">
@@ -147,7 +160,7 @@ const HomeHero = () => {
           pointerEvents: "none",
           zIndex: 50,
         }}
-        className="max-w-[calc(100vw-60px)]"
+        className="max-w-[calc(100vw-60px)] md:max-w-[calc(100vw-3.75rem)]"
       >
         <Link href={URLS.HOME} className="cursor-pointer">
           <SukoonLogo className="block h-auto w-full" />

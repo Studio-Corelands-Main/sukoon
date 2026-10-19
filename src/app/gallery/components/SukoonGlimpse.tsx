@@ -37,8 +37,7 @@ export default function SukoonGlimpse() {
 
   return (
     <>
-      {/* fluid-1920: from md up, every size scales with the viewport like the 1920px design */}
-      <div className="fluid-1920 px-7.5 sm:px-14 md:px-25 bg-[#F4EDE2]">
+      <div className="px-7.5 sm:px-14 md:px-25 bg-[#F4EDE2]">
         <Tabs
           value={activeTab}
           onValueChange={handleTabChange}
@@ -97,7 +96,7 @@ export default function SukoonGlimpse() {
 
           {/* IMAGES — scroll underneath the pinned frame */}
           <div
-            className="md:mt-[calc(86px-100vh)] md:ml-auto md:w-[70%] md:pl-2 md:pt-(--glimpse-header-h)"
+            className="md:mt-[calc(5.375rem-100vh)] md:ml-auto md:w-[70%] md:pl-2 md:pt-(--glimpse-header-h)"
             style={{ "--glimpse-header-h": `${headerHeight}px` } as CSSProperties}
           >
             {galleryFilters.map((record) => (

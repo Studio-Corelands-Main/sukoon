@@ -76,28 +76,28 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
     >
       {/* PINNED FRAME — pulled up into the previous section's bottom padding so
           its background can cover the area behind the fixed site header */}
-      <div className="lg:pointer-events-none lg:sticky lg:top-0 lg:z-10 lg:-mt-30 lg:h-screen">
+      <div className="md:pointer-events-none md:sticky md:top-0 md:z-10 md:-mt-30 md:h-screen">
         <div
           ref={headerRef}
-          className="pointer-events-auto flow-root bg-[#481904] lg:pt-30"
+          className="pointer-events-auto flow-root bg-[#481904] md:pt-30"
         >
           {header}
         </div>
 
         {/* LEFT CONTENT */}
-        <div className="pointer-events-auto flex flex-col justify-start lg:w-1/2">
-          <h1 className=" text-[28px] lg:text-[64px] font-charman-serif-light text-[#DDB789] leading-none">
+        <div className="pointer-events-auto flex flex-col justify-start md:w-1/2">
+          <h1 className=" text-[28px] md:text-fluid-64 font-charman-serif-light text-[#DDB789] leading-none">
             {activeDish}
           </h1>
 
-          <p className="text-xl md:text-2xl  font-instrument-regular text-[#EBD2B1] leading-6 lg:leading-7 my-10 lg:max-w-[650px] 2xl:w-[650px]">
+          <p className="text-xl md:text-2xl  font-instrument-regular text-[#EBD2B1] leading-6 md:leading-7 my-10 md:max-w-162.5 md:w-162.5">
             Good food tastes even better when it’s shared. Reserve your table at
             Sukoon and settle in for soulful Indian flavours, warm hospitality
             and moments made to be savoured.
           </p>
 
           <button className="border border-[#DDB789] rounded-full w-fit">
-            <p className="text-[16px] py-2.5 px-7.5 text-[#DDB789] font-instrument-regular">
+            <p className="text-[16px] md:text-fluid-16 py-2.5 px-7.5 text-[#DDB789] font-instrument-regular">
               VIEW MENU
             </p>
           </button>
@@ -105,25 +105,25 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
       </div>
 
       {/* RIGHT DISHES — each sticks below the pinned frame so the next one stacks over it */}
-      <div className="mt-20 lg:mt-[-100vh] lg:ml-auto lg:w-1/2 lg:pt-(--dish-header-h)">
+      <div className="mt-20 md:mt-[-100vh] md:ml-auto md:w-1/2 md:pt-(--dish-header-h)">
         {dishes.map((dish) => (
           <div
             key={dish.name}
-            className="bg-[#481904] pb-10 lg:sticky lg:top-(--dish-header-h)"
+            className="bg-[#481904] pb-10 md:sticky md:top-(--dish-header-h)"
           >
             <img
               src={dish.image}
               alt={dish.name}
               data-dish-name={dish.name}
-              className="w-full h-[650px] object-cover mb-5"
+              className="w-full h-[650px] md:h-162.5 object-cover mb-5"
             />
 
-            <p className="text-[20px] font-instrument-regular text-[#DDB789] leading-6 mb-10">
+            <p className="text-[20px] md:text-fluid-20 font-instrument-regular text-[#DDB789] leading-6 mb-10">
               {dish.name}
             </p>
           </div>
         ))}
-        <div className="hidden lg:block h-[180px]"></div>
+        <div className="hidden md:block h-[180px] md:h-45"></div>
       </div>
     </div>
   );

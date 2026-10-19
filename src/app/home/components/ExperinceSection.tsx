@@ -1,13 +1,13 @@
 const ExperinceSection = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row bg-[#F4EDE2]">
-      <div className="flex lg:w-1/2 flex-col justify-between lg:pl-15 2xl:pl-25 py-25 lg:py-30 px-7.5 sm:px-13 lg:px-0">
+    <section className="flex flex-col-reverse md:flex-row bg-[#F4EDE2]">
+      <div className="flex md:w-1/2 flex-col justify-between md:pl-25 py-25 md:py-30 px-7.5 sm:px-13 md:px-0">
         <div>
-          <p className="font-charman-serif-light text-[#474806] text-[28px] sm:text-[38px] lg:text-[48px] leading-7 lg:leading-12 mb-8 lg:mb-10 lg:max-w-163 2xl:w-163">
+          <p className="font-charman-serif-light text-[#474806] text-[28px] sm:text-[38px] md:text-fluid-48 leading-7 md:leading-12 mb-8 md:mb-10 md:max-w-163 md:w-163">
             Sukoon is more than a name. It is a feeling we want you to carry
             with you.
           </p>
-          <p className="text-[#0b0b0b] text-xl md:text-2xl lg:leading-7 font-instrument-regular lg:max-w-163 2xl:w-163">
+          <p className="text-[#0b0b0b] text-xl md:text-2xl md:leading-7 font-instrument-regular md:max-w-163 md:w-163">
             Inspired by the warmth of Indian culture, Sukoon brings together
             familiar flavours, thoughtful design and genuine hospitality in a
             calm, contemporary setting. Every detail is considered with
@@ -15,13 +15,14 @@ const ExperinceSection = () => {
             feel unhurried and good food is enjoyed the way it should be.
           </p>
         </div>
-        <div className="pt-10 lg:pt-0">
+        <div className="pt-10 md:pt-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="268"
             height="48"
             viewBox="0 0 268 48"
             fill="none"
+            className="md:w-67 md:h-12"
           >
             <g opacity="0.21">
               <path
@@ -48,7 +49,7 @@ const ExperinceSection = () => {
           </svg>
         </div>
       </div>
-      <div className="lg:w-1/2 bg-[#F9F9F9] xl:h-[56.25vw]  h-[600px] lg:pt-0">
+      <div className="md:w-1/2 bg-[#F9F9F9] md:h-[56.25vw]  h-[600px] md:pt-0">
         <img
           src="/images/hero-image.png"
           alt=""

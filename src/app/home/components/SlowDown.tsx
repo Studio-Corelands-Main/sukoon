@@ -25,11 +25,14 @@ const SlowDown = () => {
 
   const rotateRaw = useTransform(scrollYProgress, [0, 0.5, 1], [-30.95, 0, -0]);
 
-  const y = useSpring(yRaw, {
+  const ySpring = useSpring(yRaw, {
     stiffness: 120,
     damping: 25,
     mass: 0.5,
   });
+
+  // Offsets above are 1920-design px; output them as rem so they scale with the fluid root font size
+  const y = useTransform(ySpring, (value) => `${value / 16}rem`);
 
   const rotate = useSpring(rotateRaw, {
     stiffness: 120,
@@ -39,7 +42,7 @@ const SlowDown = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-center bg-cover bg-no-repeat lg:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-7.5 xl:py-43 overflow-hidden"
+      className="bg-center bg-cover bg-no-repeat md:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-7.5 md:py-43 overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
       <motion.div
@@ -51,7 +54,7 @@ const SlowDown = () => {
         className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain h-187.5 w-full px-0 md:px-7.5 my-auto relative"
       >
         <div className="absolute top-0 bottom-0 left-0 right-0 w-full my-auto flex items-center justify-center">
-          <div className="flex flex-col items-center justify-between 2xl:py-20">
+          <div className="flex flex-col items-center justify-between md:py-20">
             <div className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +62,7 @@ const SlowDown = () => {
                 height="75"
                 viewBox="0 0 43 75"
                 fill="none"
+                className="md:w-10.75 md:h-18.75"
               >
                 <path
                   d="M0 53.8304V21.0378C0 9.43739 9.43738 0 21.0378 0C32.6381 0 42.0755 9.43739 42.0755 21.0378V53.8304C42.0755 65.4308 32.6381 74.8682 21.0378 74.8682C9.43738 74.8682 0 65.4308 0 53.8304ZM40.8009 21.0378C40.8009 10.1391 31.9364 1.27463 21.0378 1.27463C10.1391 1.27463 1.27463 10.1391 1.27463 21.0378V53.8304C1.27463 64.7291 10.1391 73.5935 21.0378 73.5935C31.9364 73.5935 40.8009 64.7291 40.8009 53.8304V21.0378Z"
@@ -71,15 +75,15 @@ const SlowDown = () => {
               </svg>
             </div>
             <div className="pt-7.5">
-              <p className="text-[#474806] font-charman-serif-light text-[28px] md:text-[38px] lg:text-[64px] lg:w-137.5 text-center -mt-5">
+              <p className="text-[#474806] font-charman-serif-light text-[28px] md:text-fluid-64 md:w-137.5 text-center -mt-5">
                 Slow Down and
               </p>
-              <p className="text-[#474806] font-charman-serif-light text-[28px]  md:text-[38px] lg:text-[64px] lg:w-150 text-center -mt-2.5 md-mt-[20px] lg:-mt-7.5">
+              <p className="text-[#474806] font-charman-serif-light text-[28px]  md:text-fluid-64 md:w-150 text-center -mt-2.5 md-mt-[20px] md:-mt-7.5">
                 Make Time for Sukoon
               </p>
             </div>
-            <div className="xs:w-[400px] md:w-150 pt-2 flex flex-col items-center lg:pb-0">
-              <p className="font-instrument-regular lg:text-xl text-center text-black px-10 ">
+            <div className="xs:w-[400px] md:w-150 pt-2 flex flex-col items-center md:pb-0">
+              <p className="font-instrument-regular md:text-xl text-center text-black px-10 ">
                 Good food tastes even better when it’s shared. Reserve your
                 table at Sukoon and settle in for soulful Indian flavours, warm
                 hospitality and moments made to be savoured.

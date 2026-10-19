@@ -64,15 +64,15 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
         }`}
       >
         {/* Top bar */}
-        <div className="flex shrink-0 items-center justify-between gap-4 px-4 pt-4 sm:px-8 md:px-12 md:pt-6 lg:px-15 2xl:px-25">
+        <div className="flex shrink-0 items-center justify-between gap-4 px-4 pt-4 sm:px-8 md:px-25 md:pt-6">
           <Link
             href="/reserve"
             onClick={onClose}
-            className="shrink-0 rounded-full border border-[#f3ead8]/70 px-7.5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-[16px] transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
+            className="shrink-0 rounded-full border border-[#f3ead8]/70 px-7.5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-fluid-16 transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
           >
             RESERVE
           </Link>
-          <p className="hidden truncate text-[16px] underline md:block">
+          <p className="hidden truncate text-[16px] md:text-fluid-16 underline md:block">
             205 Swan St, Richmond
           </p>
           <button
@@ -81,7 +81,13 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             aria-label="Close menu"
             className="shrink-0 p-2 transition-opacity hover:opacity-70 cursor-pointer"
           >
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              className="md:size-4.5"
+            >
               <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" />
             </svg>
           </button>
@@ -107,7 +113,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             />
           </svg>
 
-          <nav className="w-full max-w-[300px] px-4 md:max-w-[340px]">
+          <nav className="w-full max-w-[300px] px-4 md:max-w-85">
             <ul className="flex flex-col">
               {navLinks.map((link, i) => {
                 const active =
@@ -122,7 +128,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
                     <Link
                       href={link.href}
                       onClick={onClose}
-                      className={`group my-1.5 flex items-center justify-center gap-4 rounded-full border px-8 py-1.5 font-charman-serif-light text-[22px] leading-tight sm:text-[26px] md:px-12 md:text-[28px] transition-colors duration-300 ${
+                      className={`group my-1.5 flex items-center justify-center gap-4 rounded-full border px-8 py-1.5 font-charman-serif-light text-[22px] leading-tight sm:text-[26px] md:px-12 md:text-fluid-28 transition-colors duration-300 ${
                         active
                           ? "border-[#c9a96a]"
                           : "border-transparent hover:border-[#c9a96a]/60"
@@ -147,8 +153,8 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
         </div>
 
         {/* Bottom bar */}
-        <div className="grid shrink-0 grid-cols-2 items-center gap-y-4 bg-[#24280a] px-4 py-5 sm:grid-cols-3 sm:px-8 md:px-12 md:py-6 lg:px-15 2xl:px-25">
-          <ul className="flex flex-col text-[11px] leading-tight">
+        <div className="grid shrink-0 grid-cols-2 items-center gap-y-4 bg-[#24280a] px-4 py-5 sm:grid-cols-3 sm:px-8 md:px-25 md:py-6">
+          <ul className="flex flex-col text-[11px] md:text-fluid-11 leading-tight">
             {socialLinks.map((s, i) => (
               <li key={s.label}>
                 <a href={s.href} className="hover:underline">
@@ -169,7 +175,7 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
               className="h-4 w-auto md:h-5"
             />
           </Link>
-          <div className="flex flex-col items-end text-[11px] leading-tight">
+          <div className="flex flex-col items-end text-[11px] md:text-fluid-11 leading-tight">
             <a href="tel:0400000000" className="hover:underline">
               04 0000 000
             </a>

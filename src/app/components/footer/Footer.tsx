@@ -17,7 +17,7 @@ const footerSections: FooterSection[] = [
     items: [
       {
         label: (
-          <div className="w-[230px]">
+          <div className="w-[230px] md:w-57.5">
             128 EuedeRivoli, 4th Arrondissement 75001 Melbourne
           </div>
         ),
@@ -88,10 +88,10 @@ const footerSections: FooterSection[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#481904]  px-7.5 sm:px-13 lg:px-15 2xl:px-25 text-[#F4EDE2]">
+    <footer className="bg-[#481904]  px-7.5 sm:px-13 md:px-25 text-[#F4EDE2]">
       <div className="h-px bg-[#F4EDE2]" />
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-15 lg:gap-0  lg:gap-x-10 lg:2xl:gap-x-50 pt-25 justify-between">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between">
         {footerSections.map(({ title, items }) => (
           <div key={title}>
             <h3 className="font-instrument-regular text-base uppercase text-[#DDB789]">
@@ -119,7 +119,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col p-2.5 lg:p-0 lg:flex-row justify-between items-center pt-[144px] lg:pt-[206px]  pb-[72px] lg:pb-[52px]">
+      <div className="flex flex-col p-2.5 md:p-0 md:flex-row justify-between items-center pt-[144px] md:pt-51.5  pb-[72px] md:pb-13">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -127,6 +127,7 @@ const Footer = () => {
             height="45"
             viewBox="0 0 250 45"
             fill="none"
+            className="md:w-62.5 md:h-11.25"
           >
             <path
               d="M205.981 24.399C205.678 28.058 204.501 31.5018 202.528 34.5911C199.328 39.5923 194.445 42.6689 188.6 43.6312C185.21 44.1883 181.757 44.0743 178.443 43.2133C176.697 42.7575 175.103 42.1245 173.585 41.1622C171.156 39.6176 169.234 37.4779 168.07 34.8444C167.538 33.6416 167.184 32.4261 167.058 31.0713H173.206C172.181 33.0465 173.471 35.9585 174.648 37.6678C177.393 41.656 182.098 43.0994 186.766 42.1625C191.055 41.3015 194.344 38.3895 196.254 34.5152C197.392 32.1982 198.05 29.7546 198.366 27.1718C198.746 23.9558 198.784 20.7525 198.505 17.524C198.151 13.5357 196.975 9.53482 194.369 6.44552C192.18 3.83733 189.106 2.356 185.729 1.95085C181.947 1.49505 178.139 2.03946 174.622 3.44485C171.397 4.73628 168.626 6.93933 166.855 9.91468C166.046 11.2694 165.514 12.6875 165.426 14.2701C165.337 16.0933 166.122 17.7519 167.576 18.8534C169.815 20.5373 172.94 20.8159 175.748 21.0311C175.925 21.0058 175.786 21.0691 175.672 21.1071C173.446 21.373 172.156 21.5502 170.068 22.3985C169.752 22.5251 169.436 22.677 169.12 22.829C168.829 22.9809 168.538 23.1582 168.259 23.3481C167.994 23.5253 167.728 23.7279 167.488 23.9305C167.248 24.1331 167.007 24.3483 166.792 24.5762C166.577 24.8041 166.362 25.0447 166.172 25.2852C165.97 25.5384 165.793 25.7917 165.616 26.0576C165.439 26.3235 165.287 26.602 165.135 26.8805C164.983 27.1591 164.844 27.4503 164.718 27.7541C164.591 28.058 164.465 28.3619 164.363 28.6658C164.249 28.9823 164.148 29.2988 164.06 29.6153C164.06 29.6153 164.06 29.6153 164.06 29.628C163.996 29.8559 163.959 30.0838 163.921 30.3117C163.832 30.8941 163.706 31.5018 163.554 32.0462C162.01 37.7057 157.583 41.2002 151.865 42.8715C149.234 43.6438 146.565 43.9477 143.82 43.9603C139.329 43.9856 135.028 43.5552 131.031 41.3395C128.627 40.0101 126.629 38.1489 125.06 35.8825C121.695 31.0207 121.05 25.3738 121.518 19.5877C121.822 15.9287 122.998 12.4849 124.972 9.39557C128.172 4.39444 133.055 1.31778 138.899 0.355537C142.289 -0.201551 145.743 -0.0875794 149.057 0.773375C150.803 1.22917 152.397 1.86222 153.915 2.82446C156.343 4.36912 158.266 6.50883 159.43 9.14233C159.961 10.3451 160.315 11.5606 160.442 12.9154H154.294C155.319 10.9402 154.028 8.02818 152.852 6.31894C150.107 2.33069 145.401 0.887307 140.733 1.82423C136.445 2.68518 133.156 5.59724 131.246 9.47154C130.107 11.7885 129.45 14.2321 129.133 16.815C128.754 20.0309 128.716 23.2342 128.994 26.4627C129.349 30.451 130.525 34.4519 133.131 37.5412C135.319 40.1494 138.393 41.6307 141.771 42.0359C145.553 42.4917 149.361 41.9472 152.877 40.5419C156.103 39.2504 158.873 37.0474 160.644 34.072C161.454 32.7173 161.985 31.2992 162.074 29.7166C162.162 27.8934 161.378 26.2348 159.923 25.1333C157.684 23.4494 154.56 23.1708 151.751 22.9556C151.574 22.9809 151.713 22.9176 151.827 22.8796C154.054 22.6137 155.344 22.4365 157.431 21.5882C160.859 20.2081 162.668 17.3847 163.528 14.0042C163.579 13.8396 163.617 13.6623 163.655 13.4978C163.706 13.3078 163.743 13.1053 163.781 12.9027C164.047 11.5353 164.465 10.1932 165.11 8.9651C167.197 5.01484 170.992 2.44464 175.647 1.0899C178.278 0.317575 180.947 0.0136893 183.692 0.00102818C188.183 -0.024294 192.484 0.406192 196.481 2.62188C198.885 3.9513 200.883 5.81247 202.452 8.07881C205.817 12.9407 206.462 18.5875 205.994 24.3736L205.981 24.399Z"
@@ -150,23 +151,23 @@ const Footer = () => {
             />
           </svg>
         </div>
-        <p className="lg:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-[62px] mb-2.5">
+        <p className="md:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-[62px] mb-2.5">
             Website by <strong>Corelands</strong>
           </p>
         <div className="flex flex-row  justify-end items-center gap-5">
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular ">
             ©2026 All rights reserved
           </p>
-          <div className="h-[3px] w-[3px] bg-[#F4EDE2]/50 "></div>
+          <div className="h-[3px] w-[3px] md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50 "></div>
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
             TERMS & CONDITIONS
           </p>
-          <div className="h-[3px] w-[3px] bg-[#F4EDE2]/50"></div>
+          <div className="h-[3px] w-[3px] md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
             PRIVACY POLICY
           </p>
-          <div className="h-[3px] w-[3px] bg-[#F4EDE2]/50"></div>
-          <p className="hidden lg:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
+          <div className="h-[3px] w-[3px] md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
+          <p className="hidden md:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
             Website by <strong>Corelands</strong>
           </p>
         </div>
