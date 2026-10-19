@@ -119,7 +119,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center pt-[206px] pb-[52px]">
+      <div className="flex flex-col p-2.5 lg:p-0 lg:flex-row justify-between items-center pt-[144px] lg:pt-[206px]  pb-[72px] lg:pb-[52px]">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -150,10 +150,10 @@ const Footer = () => {
             />
           </svg>
         </div>
-        <p className="lg:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-[72px] mb-2.5">
+        <p className="lg:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-[62px] mb-2.5">
             Website by <strong>Corelands</strong>
           </p>
-        <div className="flex flex-row lg:flex-row  justify-end items-center gap-5">
+        <div className="flex flex-row  justify-end items-center gap-5">
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular ">
             ©2026 All rights reserved
           </p>
