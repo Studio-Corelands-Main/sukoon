@@ -1,5 +1,5 @@
 "use client";
-import Heading from "@/app/components/Typography/Heading";
+import Typography from "@/app/components/Typography/Heading";
 import "swiper/css";
 import MarqueeGallery from "./MarqueeGallery";
 
@@ -22,9 +22,9 @@ const HomeGallery = () => {
   return (
     <section className="bg-[#515227] aspect-1920/1020 md:aspect-auto md:min-h-255">
       <div className="py-25 md:py-37.5   px-7.5 sm:px-13">
-        <Heading className="text-[#FFF9F0] text-center mb-8" variant="h2">
+        <Typography className="text-[#FFF9F0] text-center mb-8" variant="h2">
           Flavours That Comforts The Soul
-        </Heading>
+        </Typography>
 
         <p className="font-instrument-regular text-[#FFF9F0] text-center text-sm md:text-base md:max-w-337.5 md:w-337.5 mx-auto">
           Sukoon brings together the warmth of Indian hospitality with a
