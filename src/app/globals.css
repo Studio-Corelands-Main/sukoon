@@ -15,11 +15,11 @@
 /* Fluid 1920 design: from md up the root font size scales with the viewport, so
    every rem-based size (Tailwind spacing, text sizes, text-fluid-*) keeps its
    1920px proportions; capped at 2560px. Below md the default 16px applies */
-@media (width >= 48rem) {
+/* @media (width >= 48rem) {
   html {
     font-size: calc(min(100vw, 2560px) / 120);
   }
-}
+} */
 
 /* Font size in 1920px-design pixels, e.g. text-fluid-40 is 40px at 1920 */
 @utility text-fluid-* {
@@ -29,23 +29,23 @@
 /* Container padding: px-container-N is px-N, plus (above 2560px) the space either side
    of a centered 2560px container. Use it on full-width sections so their background
    spans the screen while the content stays at the 2560 design width */
-@utility px-container-* {
+/* @utility px-container-* {
   padding-inline: calc(
     var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2)
   );
-}
+} */
 
-@utility pl-container-* {
+/* @utility pl-container-* {
   padding-left: calc(
     var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2)
   );
-}
+} */
 
-@utility pr-container-* {
+/* @utility pr-container-* {
   padding-right: calc(
     var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2)
   );
-}
+} */
 
 /* Tailwind v4 theme */
 @theme inline {
