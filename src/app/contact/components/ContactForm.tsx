@@ -1,3 +1,4 @@
+import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 
 export default function ContactForm() {
