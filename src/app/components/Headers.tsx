@@ -70,7 +70,10 @@ export default function Headers() {
           </div>
 
           {pathname !== "/" && (
-            <Link href={URLS.HOME} className="cursor-pointer z-50 lg">
+            <Link
+              href={URLS.HOME}
+              className="cursor-pointer z-50 hidden md:block fdsgsdf"
+            >
               <SukoonLogo className="w-[100px] md:w-45 " />
             </Link>
           )}

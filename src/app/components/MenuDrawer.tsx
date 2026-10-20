@@ -128,22 +128,13 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
                     <Link
                       href={link.href}
                       onClick={onClose}
-                      className={`group my-1.5 flex items-center justify-center gap-4 rounded-full border px-8 py-1.5 font-charman-serif-light text-[22px] leading-tight sm:text-[26px] md:px-12 md:text-fluid-28 transition-colors duration-300 ${
+                      className={`group my-1.5 flex items-center justify-center gap-4 rounded-full  px-8 py-1.5 font-charman-serif-light text-[22px] leading-tight sm:text-[26px] md:px-12 md:text-fluid-28 transition-colors duration-300 ${
                         active
-                          ? "border-[#c9a96a]"
-                          : "border-transparent hover:border-[#c9a96a]/60"
+                          ? "text-[#DDB789]"
+                          : "border border-transparent hover:border-[#c9a96a]/60"
                       }`}
                     >
                       {link.label}
-                      <span
-                        className={`transition-all duration-300 ${
-                          active
-                            ? "w-auto opacity-100"
-                            : "w-0 -translate-x-2 overflow-hidden opacity-0 group-hover:w-auto group-hover:translate-x-0 group-hover:opacity-100"
-                        }`}
-                      >
-                        &rarr;
-                      </span>
                     </Link>
                   </li>
                 );
