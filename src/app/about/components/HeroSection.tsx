@@ -7,11 +7,11 @@ const HeroSection = ({ title, secondTitle="", subTitle, image }: HeroSectionI) =
   const pathname = usePathname();
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat w-full h-screen my-auto px-7.5 sm:px-13 md:px-container-25 text-white flex flex-col"
+      className="bg-center bg-cover bg-no-repeat w-full h-screen px-7.5 sm:px-13 md:px-container-25 text-white flex flex-col justify-end pb-35"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div
-        className={`${pathname === "/contact" ? "md:w-191" : "md:w-175"}  m-auto`}
+        className={`${pathname === "/contact" ? "md:w-191" : "md:w-175"}  `}
       >
         <h2 className="font-charman-serif-light text-[50px] sm:text-[66px] md:text-fluid-96 leading-15 md:leading-25 font-light md:font-normal">
           {title}

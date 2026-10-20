@@ -1,5 +1,3 @@
-
-
 export const menulist = [
   {
     id: 1,
@@ -285,27 +283,24 @@ export const menulist = [
 
 export const galleryFilters = [
   {
-     id: 1,
-    tag: "function",
-    title: "Function",
-    description: "Bring people together at Sukoon. From intimate celebrations to larger gatherings, thoughtful food, warm hospitality and a considered setting make every occasion feel special."
-  },
-  {
-     id: 2,
+    id: 1,
     tag: "food",
     title: "Food",
-    description: "Rooted in familiar Indian flavours, our food is made with care and a contemporary touch. Each plate is comforting, generous and created to be shared and savoured."
+    description:
+      "Rooted in familiar Indian flavours, our food is made with care and a contemporary touch. Each plate is comforting, generous and created to be shared and savoured.",
   },
   {
-     id: 3,
+    id: 2,
     tag: "drinks",
     title: "Drinks",
-    description: "From refreshing pours to thoughtful pairings, our drinks are made to complement the table, the mood and those slower moments that make the Sukoon experience complete."
+    description:
+      "From refreshing pours to thoughtful pairings, our drinks are made to complement the table, the mood and those slower moments that make the Sukoon experience complete.",
   },
   {
-     id: 4,
+    id: 3,
     tag: "experience",
     title: "Experience",
-    description: "Sukoon is more than a meal. It is the warmth of the room, the ease of good company and thoughtful details that invite you to slow down and stay a little longer."
-  }
-]
+    description:
+      "Sukoon is more than a meal. It is the warmth of the room, the ease of good company and thoughtful details that invite you to slow down and stay a little longer.",
+  },
+];

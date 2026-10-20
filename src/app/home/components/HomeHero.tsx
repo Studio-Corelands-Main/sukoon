@@ -1,5 +1,6 @@
 "use client";
 
+import { useHeaderHidden } from "@/app/components/header/headerVisibility";
 import SukoonLogo from "@/app/components/SukoonLogo";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
@@ -9,6 +10,9 @@ import { URLS } from "../../../../constants/routes/urls";
 // Sizes in 1920px-design pixels; from md up they scale with the root font size
 const HEADER_WIDTH = 180;
 const HEADER_TOP = 30;
+
+// Hero scroll progress at which the logo reaches its header position
+const DOCK_PROGRESS = 0.7;
 
 // Root scale factor: 1 below md and at 1920, root font size / 16 from md up
 const getRootScale = () =>
@@ -32,6 +36,8 @@ const HomeHero = () => {
   });
 
   const [showHeader, setShowHeader] = useState(false);
+  const [docked, setDocked] = useState(false);
+  const headerHidden = useHeaderHidden();
 
   const { scrollY, scrollYProgress } = useScroll({
     target: heroRef,
@@ -46,21 +52,31 @@ const HomeHero = () => {
     return () => unsubscribe();
   }, [scrollY]);
 
+  // Once docked, the logo hides and shows together with the header instead
+  // of staying fixed at the top
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (value) => {
+      setDocked(value >= DOCK_PROGRESS);
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
   const x = useTransform(
     scrollYProgress,
-    [0, 0.7, 1],
+    [0, DOCK_PROGRESS, 1],
     [positions.startX, positions.endX, positions.endX],
   );
 
   const y = useTransform(
     scrollYProgress,
-    [0, 0.7, 1],
+    [0, DOCK_PROGRESS, 1],
     [positions.startY, positions.endY, positions.endY],
   );
 
   const width = useTransform(
     scrollYProgress,
-    [0, 0.7, 1],
+    [0, DOCK_PROGRESS, 1],
     [positions.startWidth, positions.endWidth, positions.endWidth],
   );
 
@@ -135,9 +151,20 @@ const HomeHero = () => {
           }}
           className="max-w-[calc(100vw-3.75rem)]"
         >
-          <Link href={URLS.HOME} className="cursor-pointer">
-            <SukoonLogo className="block h-auto w-full" />
-          </Link>
+          {/* Slides out above the viewport with the header, same timing */}
+          <div
+            className="transition-transform duration-300 ease-out"
+            style={{
+              transform:
+                headerHidden && docked
+                  ? `translateY(calc(-100% - ${positions.endY}px))`
+                  : "translateY(0)",
+            }}
+          >
+            <Link href={URLS.HOME} className="cursor-pointer">
+              <SukoonLogo className="block h-auto w-full" />
+            </Link>
+          </div>
         </motion.div>
       ) : (
         <div className="absolute inset-x-7.5 bottom-25 flex justify-center md:hidden">
