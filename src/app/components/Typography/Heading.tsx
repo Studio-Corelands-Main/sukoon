@@ -13,9 +13,8 @@ const variantClasses = {
 };
 
 const Typography = ({
-  variant = "h1",
+  variant = "p",
   className,
-
   children,
 }: TypographyProps) => {
   const Tag = variant;
