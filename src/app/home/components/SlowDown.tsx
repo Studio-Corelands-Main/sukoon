@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
 
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const SlowDown = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  // const sectionRef = useRef<HTMLElement>(null);
 
   // const { scrollYProgress } = useScroll({
   //   target: sectionRef,
@@ -16,39 +15,39 @@ const SlowDown = () => {
 
   // const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [-30.95, 0, -0]);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: sectionRef,
+  //   offset: ["start end", "end start"],
+  // });
 
-  const yRaw = useTransform(scrollYProgress, [0, 0.5, 1], [450, 0, 100]);
+  // const yRaw = useTransform(scrollYProgress, [0, 0.5, 1], [450, 0, 100]);
 
-  const rotateRaw = useTransform(scrollYProgress, [0, 0.5, 1], [-30.95, 0, -0]);
+  // const rotateRaw = useTransform(scrollYProgress, [0, 0.5, 1], [-30.95, 0, -0]);
 
-  const ySpring = useSpring(yRaw, {
-    stiffness: 120,
-    damping: 25,
-    mass: 0.5,
-  });
+  // const ySpring = useSpring(yRaw, {
+  //   stiffness: 120,
+  //   damping: 25,
+  //   mass: 0.5,
+  // });
 
-  // Offsets above are 1920-design px; output them as rem so they scale with the fluid root font size
-  const y = useTransform(ySpring, (value) => `${value / 16}rem`);
+  // // Offsets above are 1920-design px; output them as rem so they scale with the fluid root font size
+  // const y = useTransform(ySpring, (value) => `${value / 16}rem`);
 
-  const rotate = useSpring(rotateRaw, {
-    stiffness: 120,
-    damping: 25,
-    mass: 0.5,
-  });
+  // const rotate = useSpring(rotateRaw, {
+  //   stiffness: 120,
+  //   damping: 25,
+  //   mass: 0.5,
+  // });
   return (
     <section
-      ref={sectionRef}
+      // ref={sectionRef}
       className="bg-center bg-cover bg-no-repeat md:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-container-7.5 md:py-43 overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
       <motion.div
         style={{
-          y,
-          rotate,
+          // y,
+          // rotate,
           transformOrigin: "center center",
         }}
         className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain h-187.5 w-full px-0 md:px-7.5 my-auto relative"

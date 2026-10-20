@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { URLS } from "../../../../constants/routes/urls";
 
 interface FooterItem {
   label: ReactNode;
@@ -18,7 +19,7 @@ const footerSections: FooterSection[] = [
       {
         label: (
           <div className="w-[230px] md:w-57.5">
-            128 EuedeRivoli, 4th Arrondissement 75001 Melbourne
+            498-500 mt Alexander road Ascot Vale, VIC 3032
           </div>
         ),
       },
@@ -153,24 +154,27 @@ const Footer = () => {
             />
           </svg>
         </div>
-        <p className="md:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-[62px] mb-2.5">
+        <p className="md:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-15.5 mb-2.5">
           Website by <strong>Corelands</strong>
         </p>
         <div className="flex flex-row  justify-end items-center gap-5">
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular ">
             ©2026 All rights reserved
           </p>
-          <div className="h-[3px] w-[3px] md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50 "></div>
+          <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50 "></div>
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
             TERMS & CONDITIONS
           </p>
-          <div className="h-[3px] w-[3px] md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
+          <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
           <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
             PRIVACY POLICY
           </p>
-          <div className="h-[3px] w-[3px] md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
+          <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
           <p className="hidden md:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
-            Website by <strong>Corelands</strong>
+            Website by{" "}
+            <strong>
+              <Link href={URLS.CORELANDS}>Corelands</Link>
+            </strong>
           </p>
         </div>
       </div>

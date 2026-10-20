@@ -30,15 +30,21 @@
    of a centered 2560px container. Use it on full-width sections so their background
    spans the screen while the content stays at the 2560 design width */
 @utility px-container-* {
-  padding-inline: calc(var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2));
+  padding-inline: calc(
+    var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2)
+  );
 }
 
 @utility pl-container-* {
-  padding-left: calc(var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2));
+  padding-left: calc(
+    var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2)
+  );
 }
 
 @utility pr-container-* {
-  padding-right: calc(var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2));
+  padding-right: calc(
+    var(--spacing) * --value(number) + max(0px, (100% - 2560px) / 2)
+  );
 }
 
 /* Tailwind v4 theme */
@@ -54,6 +60,7 @@
   --font-charman-serif-light: var(--font-charman-serif-light);
 
   --animate-logo-crazy: logo-crazy 3s ease-in-out infinite;
+
   --animate-text-reveal: text-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 
   --color-sidebar-ring: var(--sidebar-ring);
@@ -80,32 +87,28 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* Logo animation */
-  @keyframes logo-crazy {
+  /* @keyframes logo-crazy {
     0% {
       transform: rotate(0deg) translateY(0);
-      filter: drop-shadow(0 0 0 #f4ede2);
-    }
-
-    15% {
-      transform: rotate(90deg) translateY(-3px);
-    }
-
-    35% {
-      transform: rotate(180deg) translateY(-7px);
-      filter: drop-shadow(0 0 12px #f4ede2);
-    }
-
-    70% {
-      transform: rotate(300deg) translateY(0);
-    }
-
-    90% {
-      transform: rotate(370deg) translateY(-2px);
+      
     }
 
     100% {
       transform: rotate(360deg) translateY(0);
-      filter: drop-shadow(0 0 0 #f4ede2);
+     
+    }
+  } */
+  @keyframes logo-crazy {
+    0% {
+      transform: rotate(0deg) translateY(0);
+    }
+
+    40% {
+      transform: rotate(360deg) translateY(0);
+    }
+
+    100% {
+      transform: rotate(360deg) translateY(0);
     }
   }
 
