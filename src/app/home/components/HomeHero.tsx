@@ -119,7 +119,7 @@ const HomeHero = () => {
     <>
       <section
         ref={heroRef}
-        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-container-25"
+        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-container-25 container-px"
         style={{ backgroundImage: "url('/images/hero-image.png')" }}
       >
         <p className="w-63.75 pt-43 text-[16px] font-instrument-regular md:w-64 md:text-fluid-16">

@@ -43,7 +43,7 @@ const SlowDown = () => {
   return (
     <section
       // ref={sectionRef}
-      className="bg-center bg-cover bg-no-repeat md:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-container-7.5 md:py-43 overflow-hidden"
+      className="bg-center bg-cover bg-no-repeat md:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-container-7.5  py-10 md:py-43 overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
       <motion.div
@@ -52,9 +52,9 @@ const SlowDown = () => {
           // rotate,
           transformOrigin: "center center",
         }}
-        className="bg-[url('/images/mobile-pop.png')] md:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain h-[700px] w-[1050px] px-0 md:px-7.5 my-auto relative"
+        className="bg-[url('/images/mobile-slow.png')] md:bg-[url('/images/mobile-pop.png')] lg:bg-[url('/images/slow.png')] bg-top md:bg-center bg-no-repeat bg-cover md:bg-contain h-120 w-100 md:h-175 md:w-175 lg:h-175 lg:w-262.5 px-0 md:px-7.5 my-auto relative"
       >
-        <div className="absolute top-10 bottom-10 left-0 right-0  my-auto flex items-center justify-center ">
+        <div className="absolute top-0  bottom-0  left-0 right-0  my-auto flex items-center justify-center ">
           <div className="flex flex-col items-center justify-between md:py-20">
             <div className="">
               <svg
@@ -83,8 +83,8 @@ const SlowDown = () => {
                 Make Time for Sukoon
               </H2>
             </div>
-            <div className="xs:w-[400px] md:w-200 pt-5 flex flex-col items-center md:pb-0">
-              <Text className="font-instrument-regular md:text-base text-center text-black  ">
+            <div className="w-full lg:w-200 pt-5 flex flex-col items-center md:pb-0">
+              <Text className="text-center text-black  px-10 md:px-30 xl:px-0">
                 Good food tastes even better when it’s shared. Reserve your
                 table at Sukoon and settle in for soulful Indian flavours, warm
                 hospitality and moments made to be savoured.

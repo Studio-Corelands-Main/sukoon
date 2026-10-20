@@ -85,6 +85,7 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --breakpoint-3xl: 185rem;
 
   /* Logo animation */
   /* @keyframes logo-crazy {
@@ -133,5 +134,29 @@
   .animate-logo-crazy,
   .animate-text-reveal {
     animation: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-px {
+    padding-inline: 100px;
+  }
+  .container-pl {
+    padding-left: 100px;
+  }
+  .container-pr {
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .container-px {
+    padding-inline: 5.2083vw;
+  }
+  .container-pl {
+    padding-left: 5.2083vw;
+  }
+  .container-pr {
+    padding-right: 5.2083vw;
   }
 }

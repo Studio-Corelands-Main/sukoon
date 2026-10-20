@@ -90,7 +90,7 @@ const footerSections: FooterSection[] = [
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#481904]  px-7.5 sm:px-13 md:px-container-25 text-[#F4EDE2]">
+      <footer className="bg-[#481904]  px-7.5 sm:px-13 container-px text-[#F4EDE2]">
         <div className="h-px bg-[#F4EDE2]" />
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between md:pb-51.5">
@@ -122,7 +122,7 @@ const Footer = () => {
           ))}
         </div>
       </footer>
-      <div className="flex flex-col md:flex-row justify-between items-center    py-13 bg-[#7A2F08] px-7.5 sm:px-13 md:px-container-25">
+      <div className="flex flex-col md:flex-row justify-between items-center py-13 bg-[#7A2F08] px-7.5 sm:px-13 container-px">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

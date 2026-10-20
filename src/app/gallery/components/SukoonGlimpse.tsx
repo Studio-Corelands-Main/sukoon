@@ -1,10 +1,9 @@
 "use client";
-import { type CSSProperties, useState } from "react";
+import { H2, Text } from "@/app/components/Typography/Heading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useElementHeight } from "@/hooks/useElementHeight";
-import { galleryFilters, menulist } from "../../../../constants/menu/list";
-import { motion } from "motion/react";
-import { H2, Text } from "@/app/components/Typography/Heading";
+import { useState } from "react";
+import { galleryFilters } from "../../../../constants/menu/list";
 
 // How many times the image set repeats before scrolling stops loading more
 const MAX_PAGES = 5;
@@ -38,7 +37,7 @@ export default function SukoonGlimpse() {
 
   return (
     <>
-      <div className="px-7.5 sm:px-14 md:px-container-25 bg-[#F4EDE2]">
+      <div className="px-7.5 sm:px-14 container-px bg-[#F4EDE2]">
         <Tabs
           value={activeTab}
           onValueChange={handleTabChange}
@@ -96,10 +95,7 @@ export default function SukoonGlimpse() {
           </div>
 
           {/* IMAGES — scroll underneath the pinned frame */}
-          <div
-            className="md:mt-[calc(5.375rem-100vh)] md:ml-auto md:w-[70%] md:pl-2 md:pt-(--glimpse-header-h)"
-            
-          >
+          <div className="md:mt-[calc(5.375rem-100vh)] md:ml-auto md:w-[70%] md:pl-2 md:pt-(--glimpse-header-h)">
             {galleryFilters.map((record) => (
               <TabsContent
                 key={record.id}
@@ -112,10 +108,18 @@ export default function SukoonGlimpse() {
                       <img src="/images/hero-image.png" alt="" />
                       <div className="flex flex-row gap-3.5 md:gap-7.5 mt-3 md:mt-7.5">
                         <div className="w-[50%]">
-                          <img src="/images/gallery.png" alt="" className="md:w-157.5 md:h-189.5" />
+                          <img
+                            src="/images/gallery.png"
+                            alt=""
+                            className="md:w-157.5 md:h-189.5"
+                          />
                         </div>
                         <div className="w-[50%]">
-                          <img src="/images/gallery.png" alt="" className="md:w-157.5 md:h-189.5"/>
+                          <img
+                            src="/images/gallery.png"
+                            alt=""
+                            className="md:w-157.5 md:h-189.5"
+                          />
                         </div>
                       </div>
                     </div>
