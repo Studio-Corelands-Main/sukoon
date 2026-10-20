@@ -2,9 +2,9 @@ import { H2, Text } from "@/app/components/Typography/Heading";
 
 const ExperinceSection = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row container-pl  bg-[#F4EDE2]">
-      <div className="flex w-full lg:w-1/2 flex-col justify-between py-25 md:py-30 px-7.5 sm:px-13 md:px-0">
-        <div>
+    <section className="flex flex-col-reverse lg:flex-row   bg-[#F4EDE2]">
+      <div className="flex w-full lg:w-1/2 flex-col justify-between py-25 md:py-30 px-7.5 sm:px-13 md:px-0 container-pl">
+        <div className="">
           <H2 className="text-[#474806] md:max-w-143  ">
             Sukoon is more than a name. It is a feeling we want you to carry
             with you.

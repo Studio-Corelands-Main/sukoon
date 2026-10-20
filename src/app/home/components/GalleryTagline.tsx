@@ -46,7 +46,7 @@ const GalleryTagline = () => {
         <div>
           <H2 className="text-[#DDB789]">A Glimpse</H2>
           <H2 className="text-[#DDB789]">Into Sukoon</H2>
-          <Text className="text-[#DDB789] pt-8 pr-0 md:pr-50 md:max-w-212.5 lg:w-212.5">
+          <Text className="text-[#DDB789] pt-8 pr-0 lg:pr-50 lg:max-w-212.5  ">
             Step inside Sukoon through the details that shape the experience.
             From the warmth of the interiors to the food, the table and the
             moments shared around it, every frame captures a little of what

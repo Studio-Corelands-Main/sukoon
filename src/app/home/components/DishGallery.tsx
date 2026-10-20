@@ -90,7 +90,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
         <div className="pointer-events-auto flex flex-col justify-start lg:w-1/2">
           <H2 className="text-[#DDB789]  ">{activeDish}</H2>
 
-          <Text className=" text-[#EBD2B1] my-10 md:max-w-162.5 md:w-162.5">
+          <Text className=" text-[#EBD2B1] my-10 lg:max-w-162.5  ">
             Good food tastes even better when it’s shared. Reserve your table at
             Sukoon and settle in for soulful Indian flavours, warm hospitality
             and moments made to be savoured.
