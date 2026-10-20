@@ -68,7 +68,7 @@ export default function ContactForm() {
           <Button
             className="text-[#777A35] cursor-pointer mt-7.5 bg-transparent hover:bg-[#777A35] hover:text-white"
             color="#777A35"
-            label="Send Message"
+            label="SEND MESSAGE"
           />
         </div>
         <div className="md:hidden mt-45">
