@@ -1,5 +1,6 @@
 "use client";
 
+import { H1, Text } from "@/app/components/Typography/Heading";
 import { HeroSectionI } from "@/app/types/HeroSectionTypes";
 import { usePathname } from "next/navigation";
 
@@ -16,16 +17,12 @@ const HeroSection = ({
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className={`${pathname === "/contact" ? "md:w-191" : "md:w-175"}  `}>
-        <h2 className="font-charman-serif-light text-[50px] sm:text-[66px] md:text-fluid-96 leading-15 md:leading-25 font-light md:font-normal">
-          {title}
-        </h2>
-        <h2 className="font-charman-serif-light  text-[50px] sm:text-[66px] md:text-fluid-96 leading-15 md:leading-25 font-light md:font-normal">
-          {secondTitle}
-        </h2>
+        <H1>{title}</H1>
+        <H1 className="-mt-5">{secondTitle}</H1>
 
-        <p className="pt-10 font-[14px] md:font-[16px] font-instrument-regular">
+        <Text className="pt-10 font-[14px] md:font-[16px] font-instrument-regular">
           {subTitle}
-        </p>
+        </Text>
       </div>
     </section>
   );
