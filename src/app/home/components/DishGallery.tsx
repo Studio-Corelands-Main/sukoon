@@ -77,7 +77,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
     >
       {/* PINNED FRAME — pulled up into the previous section's bottom padding so
           its background can cover the area behind the fixed site header */}
-      <div className="md:pointer-events-none md:sticky md:top-0 md:z-10 md:-mt-30 md:h-screen">
+      <div className="lg:pointer-events-none lg:sticky lg:top-0 lg:z-10 lg:-mt-30 lg:h-screen">
         <div
           ref={headerRef}
           className="pointer-events-auto flow-root bg-[#481904] md:pt-30"
@@ -86,7 +86,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
         </div>
 
         {/* LEFT CONTENT */}
-        <div className="pointer-events-auto flex flex-col justify-start md:w-1/2">
+        <div className="pointer-events-auto flex flex-col justify-start lg:w-1/2">
           <H2 className="text-[#DDB789]  ">{activeDish}</H2>
 
           <Text className=" text-[#EBD2B1] my-10 md:max-w-162.5 md:w-162.5">
@@ -104,7 +104,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
       </div>
 
       {/* RIGHT DISHES — each sticks below the pinned frame so the next one stacks over it */}
-      <div className="mt-20 md:mt-[-100vh] md:ml-auto md:w-1/2 md:pt-(--dish-header-h)">
+      <div className="mt-20 lg:mt-[-100vh] md:ml-auto lg:w-1/2 lg:pt-(--dish-header-h)">
         {dishes.map((dish) => (
           <div
             key={dish.name}

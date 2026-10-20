@@ -41,8 +41,8 @@ const GalleryTagline = () => {
   };
 
   return (
-    <section className="bg-[#481904] flex flex-col md:flex-row  gap-20 md:gap-0 justify-between px-7.5 sm:px-13 md:px-container-25 py-20 md:py-37.5">
-      <div className="md:w-1/2 flex flex-col justify-between">
+    <section className="bg-[#481904] flex flex-col lg:flex-row  gap-20 lg:gap-0 justify-between px-7.5 sm:px-13  container-px py-20 md:py-37.5">
+      <div className="w-full lg:w-1/2 flex flex-col justify-between">
         <div>
           <H2 className="text-[#DDB789]">A Glimpse</H2>
           <H2 className="text-[#DDB789]">Into Sukoon</H2>
@@ -67,7 +67,7 @@ const GalleryTagline = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2">
+      <div className="w-full lg:w-1/2">
         <div className=" min-w-0 flex justify-end">
           <div className="relative w-full min-w-0">
             <div

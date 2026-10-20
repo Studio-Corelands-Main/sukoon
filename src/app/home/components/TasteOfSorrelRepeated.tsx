@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
   return (
-    <div className="flex flex-col md:flex-row items-end  justify-between h-full pb-35.75">
+    <div className="flex flex-col lg:flex-row items-end  justify-between h-full pb-35.75">
       <div className="w-full">
         <H2 className=" text-[#DDB789] pb-10 pt-27.5 md:pt-0">
           Made with care.

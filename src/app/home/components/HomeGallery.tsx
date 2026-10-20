@@ -20,7 +20,7 @@ const images = [
 
 const HomeGallery = () => {
   return (
-    <section className="bg-[#515227] aspect-1920/1020 md:aspect-auto md:min-h-255">
+    <section className="bg-[#515227] aspect-1920/1020 md:aspect-auto md:min-h-255 ">
       <div className="py-25 md:py-37.5 px-7.5 sm:px-13">
         <H2 className="text-[#FFF9F0] text-center mb-8">
           Flavours That Comforts The Soul
