@@ -58,7 +58,7 @@ export default function Headers() {
         }}
       >
         <div
-          className={`h-full flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 md:px-container-25 text-white font-instrument-regular transition-transform duration-300 ease-out ${hidden ? "-translate-y-full" : "translate-y-0"} ${atTop ? "bg-transparent" : "  bg-[#3e3f05]  backdrop-blur-2xl"}`}
+          className={`h-full flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 md:px-container-25 text-white font-instrument-regular transition-transform duration-300 ease-out ${hidden ? "-translate-y-full" : "translate-y-0"} ${atTop ? "bg-transparent" : "  bg-[#515227]  backdrop-blur-2xl"}`}
         >
           <div className="shrink-0">
             <Link href={URLS.HOME} className="cursor-pointer z-50 lg">

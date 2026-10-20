@@ -18,7 +18,7 @@ interface Menu {
 const TabView = () => {
   return (
     <Tabs defaultValue="veg" className="w-full   ">
-      <div className="sticky top-21.5 z-40 bg-[#3e3f05]   overflow-x-scroll md:overflow-x-hidden">
+      <div className="sticky top-21.5 z-40 bg-[#515227]   overflow-x-scroll md:overflow-x-hidden">
         <TabsList className=" mx-auto flex justify-center gap-2 px-2 pt-10 pb-6 sm:gap-5 sm:pt-15 sm:pb-10  ">
           {menulist.map((item) => (
             <TabsTrigger
@@ -36,7 +36,7 @@ const TabView = () => {
         <TabsContent
           key={record.id}
           value={record.tag}
-          className=" sm:mb-25 p-2 md:px-container-2 bg-[#481904]   z-0"
+          className=" sm:mb-25 p-2 md:px-container-2 bg-[#481904] z-0"
         >
           <div className="min-h-[50vh] sm:min-h-[80vh] border border-[#EBD2B1] p-5 md:p-30">
             {/* Render menu records for this category here */}
