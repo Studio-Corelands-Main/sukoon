@@ -25,7 +25,7 @@ const AboutMoment = () => {
           </Text>
           <div className="mt-8">
             <Button
-              className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white"
+              className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904]"
               color="#DDB789"
               label="VIEW GALLERY"
               href="/gallery"
@@ -42,7 +42,7 @@ const AboutMoment = () => {
         </p>
         <div className="mt-8">
           <Button
-            className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white"
+            className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904]"
             color="#DDB789"
             label="VIEW GALLERY"
             href="/gallery"

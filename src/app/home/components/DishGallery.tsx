@@ -97,7 +97,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
           </Text>
 
           <Button
-            className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white w-fit"
+            className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit"
             color="#DDB789"
             label="VIEW MENU"
             href="/gallery"
