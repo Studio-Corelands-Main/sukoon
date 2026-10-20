@@ -2,12 +2,12 @@ import { H2, Text } from "@/app/components/Typography/Heading";
 
 const FeelingSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-stretch gap-x-8 h-full pb-[80px] md:pb-35.75  px-7.5 sm:px-13 md:px-container-25 bg-[#F4EDE2] pt-[80px] md:pt-60">
+    <div className="flex flex-col md:flex-row items-stretch gap-x-8 h-full pb-[80px] md:pb-35.75  px-7.5 sm:px-13 container-px bg-[#F4EDE2] pt-[80px] md:pt-60">
       <div className="md:w-[50%] flex flex-col justify-between  ">
         <div className=" ">
           <H2 className=" sm:w-70 md:max-w-125 md:w-125  text-[#474806]">
             A Feeling
-            <br/>
+            <br />
             Called Sukoon
           </H2>
           <div className="mt-8 md:hidden">
