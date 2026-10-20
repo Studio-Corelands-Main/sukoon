@@ -1,14 +1,13 @@
 "use client";
 
+import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import NextIcon from "../../../../public/logo/NextIcon";
 import PrevIcon from "../../../../public/logo/PrevIcon";
-import Button from "@/app/components/Button";
 
 const images = [
   "/images/moment-1.png",
@@ -47,7 +46,7 @@ const GalleryTagline = () => {
         <div>
           <H2 className="text-[#DDB789]">A Glimpse</H2>
           <H2 className="text-[#DDB789]">Into Sukoon</H2>
-          <Text className="text-[#DDB789] pt-8 pr-0 md:pr-50 md:max-w-212.5 md:w-212.5">
+          <Text className="text-[#DDB789] pt-8 pr-0 md:pr-50 md:max-w-212.5 lg:w-212.5">
             Step inside Sukoon through the details that shape the experience.
             From the warmth of the interiors to the food, the table and the
             moments shared around it, every frame captures a little of what
@@ -65,8 +64,6 @@ const GalleryTagline = () => {
               label="VIEW GALLERY"
               href="/gallery"
             />
-            
-            
           </div>
         </div>
       </div>
@@ -133,7 +130,6 @@ const GalleryTagline = () => {
               label="VIEW GALLERY"
               href="/gallery"
             />
-            
           </div>
         </div>
       </div>

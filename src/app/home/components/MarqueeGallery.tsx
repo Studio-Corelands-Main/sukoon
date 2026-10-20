@@ -53,13 +53,13 @@ const MarqueeGallery = ({ images }: { images: string[] }) => {
     >
       <motion.div
         ref={trackRef}
-        className="flex w-max gap-[10px] md:gap-9"
+        className="flex w-max gap-[10px] md:gap-9 overflow-hidden"
         style={{ x }}
       >
         {[...images, ...images].map((image, index) => (
           <div
             key={index}
-            className="w-[75vw] shrink-0 cursor-pointer md:w-[30.32976rem]"
+            className="w-[45vw] shrink-0 cursor-pointer lg:w-[30.32976rem]"
             onClick={() => {
               console.log("Clicked image:", image);
             }}

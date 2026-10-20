@@ -93,7 +93,7 @@ const Footer = () => {
       <footer className="bg-[#481904]  px-7.5 sm:px-13 container-px text-[#F4EDE2]">
         <div className="h-px bg-[#F4EDE2]" />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between md:pb-51.5">
+        <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-15 md:gap-10  md:gap-x-50 pt-25 justify-between md:pb-51.5">
           {footerSections.map(({ title, items }) => (
             <div key={title}>
               <h3 className="font-instrument-regular text-sm lg:text-base uppercase text-[#DDB789]">
@@ -122,7 +122,7 @@ const Footer = () => {
           ))}
         </div>
       </footer>
-      <div className="flex flex-col md:flex-row justify-between items-center py-13 bg-[#7A2F08] px-7.5 sm:px-13 container-px">
+      <div className="flex flex-col lg:flex-row gap-10 justify-between items-center py-13 bg-[#7A2F08] px-7.5 sm:px-13 container-px">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -25,7 +25,7 @@ const HomeGallery = () => {
         <H2 className="text-[#FFF9F0] text-center mb-8">
           Flavours That Comforts The Soul
         </H2>
-        <Text className="text-[#FFF9F0] text-center w-full lg:w-287.75 mx-auto">
+        <Text className="text-[#FFF9F0] text-center w-full xl:w-287.75 mx-auto">
           Sukoon brings together the warmth of Indian hospitality with a
           quieter, more considered way of dining. Familiar flavours are
           approached with care, while every detail is shaped to make you feel
@@ -34,7 +34,7 @@ const HomeGallery = () => {
           little more comfort than you came with.
         </Text>
       </div>
-      <div className="pb-8 lg:pb-25  ">
+      <div className="pb-8 lg:pb-25 overflow-hidden ">
         <MarqueeGallery images={images} />
       </div>
     </section>

@@ -1,6 +1,5 @@
 import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
-import Link from "next/link";
 
 const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
   return (
@@ -23,7 +22,7 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
       </div>
       <div className="flex flex-col justify-between">
         <div className="hidden md:block ">
-          <Text className="text-[#EBD2B1] w-[831px]">{content}</Text>
+          <Text className="text-[#EBD2B1] lg:w-[831px]">{content}</Text>
           <div className="mt-10 mb-8">
             <Button
               className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white w-fit"
