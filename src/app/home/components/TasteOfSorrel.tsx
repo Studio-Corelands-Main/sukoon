@@ -1,3 +1,4 @@
+import { H2, Text } from "@/app/components/Typography/Heading";
 import DishGallery from "./DishGallery";
 import TasteOfSorrelRepeated from "./TasteOfSorrelRepeated";
 
@@ -8,15 +9,15 @@ const TasteOfSorrel = () => {
         header={
           <>
             <div className="flex flex-col justify-between pt-20 pb-10 md:pt-0 md:flex-row md:items-center">
-              <h2 className="font-charman-serif-light text-[40px] md:text-fluid-40 leading-10 text-[#DDB789] md:w-1/2">
+              <H2 className="text-[#DDB789] md:w-1/2 text-[36px]!">
                 A Taste of Sukoon
-              </h2>
+              </H2>
 
-              <p className="pt-8 font-instrument-regular text-xl leading-6 text-[#EBD2B1] md:pt-0 md:text-2xl md:ml-30 md:w-1/2">
+              <Text className="pt-8 text-[#EBD2B1] md:pt-0  md:ml-30 md:w-1/2">
                 Rooted in the flavours of India and guided by a contemporary
-                hand, our menu brings together comfort, character and
-                thoughtful detail.
-              </p>
+                hand, our menu brings together comfort, character and thoughtful
+                detail.
+              </Text>
             </div>
 
             <div className="mb-10 h-px bg-[#DDB789]" />

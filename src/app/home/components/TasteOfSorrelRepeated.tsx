@@ -1,14 +1,15 @@
+import { H2, Text } from "@/app/components/Typography/Heading";
 import Link from "next/link";
 
 const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
   return (
     <div className="flex flex-col md:flex-row items-end  justify-between h-full pb-35.75">
       <div className="w-full">
-        <h2 className="text-[40px] md:text-fluid-40 font-charman-serif-light text-[#DDB789] leading-10  pb-10  pt-[110px] md:pt-0">
+        <H2 className=" text-[#DDB789] pb-10 pt-27.5 md:pt-0">
           Made with care.
           <br />
           Served with soul.
-        </h2>
+        </H2>
 
         <div>
           <img
@@ -16,16 +17,12 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
             alt="Behind Sukoon"
             className="w-94.5 md:w-151.75 h-142.75 md:h-211.25 "
           />
-          <p className="pt-5 font-instrument-regular text-xl text-[#DDB789]">
-            Behind Sukoon
-          </p>
+          <Text className="pt-5  text-[#DDB789]">Behind Sukoon</Text>
         </div>
       </div>
       <div className="flex flex-col justify-between">
         <div className="hidden md:block ">
-          <p className="font-instrument-regular text-[#EBD2B1] leading-6 text-[14px] w-[831px]">
-            {content}
-          </p>
+          <Text className="text-[#EBD2B1] w-[831px]">{content}</Text>
           <div className="mt-10 mb-8">
             <Link
               href={"#"}
@@ -35,15 +32,11 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
             </Link>
           </div>
         </div>
-        <div className="pt-10"> 
+        <div className="pt-10">
           <img src="/images/people.png" />
-          <p className="pt-5 font-instrument-regular text-xl text-[#DDB789]">
-            The People of Sukoon
-          </p>
+          <Text className="pt-5 text-[#DDB789]">The People of Sukoon</Text>
           <div className="md:hidden block pt-5 ">
-            <p className="text-[12px] md:text-fluid-20 font-instrument-regular text-[#EBD2B1] leading-6  ">
-              {content}
-            </p>
+            <Text className="text-[#EBD2B1]">{content}</Text>
             <div className="mt-10">
               <Link
                 href={"#"}

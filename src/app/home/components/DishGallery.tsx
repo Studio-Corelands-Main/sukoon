@@ -1,7 +1,8 @@
 "use client";
 
-import { type CSSProperties, type ReactNode, useEffect, useState } from "react";
+import { H2, Text } from "@/app/components/Typography/Heading";
 import { useElementHeight } from "@/hooks/useElementHeight";
+import { type CSSProperties, type ReactNode, useEffect, useState } from "react";
 
 const dishes = [
   {
@@ -86,15 +87,13 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
 
         {/* LEFT CONTENT */}
         <div className="pointer-events-auto flex flex-col justify-start md:w-1/2">
-          <h1 className=" text-[28px] md:text-fluid-64 font-charman-serif-light text-[#DDB789] leading-none">
-            {activeDish}
-          </h1>
+          <H2 className="text-[#DDB789]  ">{activeDish}</H2>
 
-          <p className="text-xl md:text-2xl  font-instrument-regular text-[#EBD2B1] leading-6 md:leading-7 my-10 md:max-w-162.5 md:w-162.5">
+          <Text className=" text-[#EBD2B1] my-10 md:max-w-162.5 md:w-162.5">
             Good food tastes even better when it’s shared. Reserve your table at
             Sukoon and settle in for soulful Indian flavours, warm hospitality
             and moments made to be savoured.
-          </p>
+          </Text>
 
           <button className="border border-[#DDB789] rounded-full w-fit">
             <p className="text-[16px] md:text-fluid-16 py-2.5 px-7.5 text-[#DDB789] font-instrument-regular">

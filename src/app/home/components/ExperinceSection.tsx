@@ -1,19 +1,22 @@
+import { H2, Text } from "@/app/components/Typography/Heading";
+
 const ExperinceSection = () => {
   return (
     <section className="flex flex-col-reverse md:flex-row md:px-container-0 bg-[#F4EDE2]">
       <div className="flex md:w-1/2 flex-col justify-between md:pl-25 py-25 md:py-30 px-7.5 sm:px-13 md:px-0">
         <div>
-          <p className="font-charman-serif-light text-[#474806] text-[28px] sm:text-[38px] md:text-fluid-48 leading-7 md:leading-12 mb-8 md:mb-10 md:max-w-163 md:w-163">
+          <H2 className="text-[#474806] md:max-w-143  ">
             Sukoon is more than a name. It is a feeling we want you to carry
             with you.
-          </p>
-          <p className="text-[#0b0b0b] text-xl md:text-2xl md:leading-7 font-instrument-regular md:max-w-163 md:w-163">
+          </H2>
+
+          <Text className="text-[#0b0b0b] pt-8 md:max-w-143">
             Inspired by the warmth of Indian culture, Sukoon brings together
             familiar flavours, thoughtful design and genuine hospitality in a
             calm, contemporary setting. Every detail is considered with
             intention, creating a place where comfort feels natural, moments
             feel unhurried and good food is enjoyed the way it should be.
-          </p>
+          </Text>
         </div>
         <div className="pt-10 md:pt-0">
           <svg
