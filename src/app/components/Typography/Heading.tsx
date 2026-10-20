@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 
 type TypographyProps = {
-  variant?: "h1" | "h2" | "p";
   className?: string;
   children: React.ReactNode;
 };
@@ -12,16 +11,16 @@ const variantClasses = {
   p: "text-sm md:text-[16px] 2xl:text-[20px] font-instrument-regular",
 };
 
-const Typography = ({
-  variant = "p",
-  className,
-  children,
-}: TypographyProps) => {
+type Variant = keyof typeof variantClasses;
+
+const createTypography = (variant: Variant) => {
   const Tag = variant;
 
-  return (
+  return ({ className, children }: TypographyProps) => (
     <Tag className={cn(variantClasses[variant], className)}>{children}</Tag>
   );
 };
 
-export default Typography;
+export const H1 = createTypography("h1");
+export const H2 = createTypography("h2");
+export const Text = createTypography("p");
