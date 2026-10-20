@@ -120,7 +120,7 @@ const GalleryTagline = () => {
           </div>
         </div>
         <div className="md:hidden block pt-11">
-          <Text className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] md:w-80">
+          <Text className=" text-[#EBD2B1] md:w-80">
             See the spaces, details and moments that bring Sukoon to life.
           </Text>
           <div className="pt-5">

@@ -137,14 +137,16 @@
   }
 }
 
-.container-px {
-  padding-inline: 100px;
-}
-.container-pl {
-  padding-left: 100px;
-}
-.container-pr {
-  padding-right: 100px;
+@media screen and (min-width: 768px) {
+  .container-px {
+    padding-inline: 100px;
+  }
+  .container-pl {
+    padding-left: 100px;
+  }
+  .container-pr {
+    padding-right: 100px;
+  }
 }
 
 @media screen and (min-width: 1921px) {
