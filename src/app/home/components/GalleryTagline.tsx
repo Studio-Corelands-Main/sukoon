@@ -1,5 +1,6 @@
 "use client";
 
+import { H2, Text } from "@/app/components/Typography/Heading";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -43,20 +44,19 @@ const GalleryTagline = () => {
     <section className="bg-[#481904] flex flex-col md:flex-row  gap-20 md:gap-0 justify-between px-7.5 sm:px-13 md:px-container-25 py-20 md:py-37.5">
       <div className="md:w-1/2 flex flex-col justify-between">
         <div>
-          <h1 className="text-[#DDB789] text-[40px] md:text-fluid-84 font-charman-serif-light leading-10 md:leading-20 md:max-w-112.5 md:w-112.5">
-            A Glimpse Into Sukoon
-          </h1>
-          <p className="text-[#DDB789] text-xl md:text-2xl  font-instrument-regular leading-6 md:leading-7 pt-8 pr-0 md:pr-50 md:max-w-212.5 md:w-212.5">
+          <H2 className="text-[#DDB789]">A Glimpse</H2>
+          <H2 className="text-[#DDB789]">Into Sukoon</H2>
+          <Text className="text-[#DDB789] pt-8 pr-0 md:pr-50 md:max-w-212.5 md:w-212.5">
             Step inside Sukoon through the details that shape the experience.
             From the warmth of the interiors to the food, the table and the
             moments shared around it, every frame captures a little of what
             Sukoon feels like.
-          </p>
+          </Text>
         </div>
         <div className="hidden md:block">
-          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] md:w-80">
+          <Text className="text-[#EBD2B1] md:w-80">
             See the spaces, details and moments that bring Sukoon to life.
-          </p>
+          </Text>
           <div className="pt-5">
             <Link
               href="#"
@@ -120,9 +120,9 @@ const GalleryTagline = () => {
           </div>
         </div>
         <div className="md:hidden block pt-11">
-          <p className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] md:w-80">
+          <Text className="text-xl md:text-2xl font-instrument-regular text-[#EBD2B1] md:w-80">
             See the spaces, details and moments that bring Sukoon to life.
-          </p>
+          </Text>
           <div className="pt-5">
             <Link
               href="#"

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 
+import { H2, Text } from "@/app/components/Typography/Heading";
 import { motion } from "framer-motion";
 
 const SlowDown = () => {
@@ -74,19 +75,19 @@ const SlowDown = () => {
               </svg>
             </div>
             <div className="pt-7.5">
-              <p className="text-[#474806] font-charman-serif-light text-[28px] md:text-fluid-64 md:w-137.5 text-center -mt-5">
+              <H2 className="text-[#474806] md:w-137.5 text-center -mt-5">
                 Slow Down and
-              </p>
-              <p className="text-[#474806] font-charman-serif-light text-[28px]  md:text-fluid-64 md:w-150 text-center -mt-2.5 md-mt-[20px] md:-mt-7.5">
+              </H2>
+              <H2 className="text-[#474806] md:w-150 text-center">
                 Make Time for Sukoon
-              </p>
+              </H2>
             </div>
-            <div className="xs:w-[400px] md:w-160 pt-2 flex flex-col items-center md:pb-0">
-              <p className="font-instrument-regular md:text-base text-center text-black  ">
+            <div className="xs:w-[400px] md:w-200 pt-5 flex flex-col items-center md:pb-0">
+              <Text className="font-instrument-regular md:text-base text-center text-black  ">
                 Good food tastes even better when it’s shared. Reserve your
                 table at Sukoon and settle in for soulful Indian flavours, warm
                 hospitality and moments made to be savoured.
-              </p>
+              </Text>
               <Link
                 href="#"
                 className="cursor-pointer text-[#474806] text-base border-[#474806] border rounded-full px-7.5 py-2.5 mt-7.5 font-instrument-regular "
