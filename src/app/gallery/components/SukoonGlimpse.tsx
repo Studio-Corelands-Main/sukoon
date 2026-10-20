@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useElementHeight } from "@/hooks/useElementHeight";
 import { galleryFilters, menulist } from "../../../../constants/menu/list";
 import { motion } from "motion/react";
+import { H2, Text } from "@/app/components/Typography/Heading";
 
 // How many times the image set repeats before scrolling stops loading more
 const MAX_PAGES = 5;
@@ -52,18 +53,18 @@ export default function SukoonGlimpse() {
             >
               <div className="flex flex-col md:flex-row justify-between md:items-center  pt-25 pb-8 gap-8">
                 <div className="md:w-[50%]">
-                  <h1 className="font-charman-serif-light text-[48px] md:text-fluid-40 text-[#777A35] w-60 md:w-58 leading-10">
+                  <H2 className="text-[#777A35] text-[36px]! w-60 md:w-58 ">
                     A Glimpse Into Sukoon
-                  </h1>
+                  </H2>
                 </div>
                 <div className="md:w-[50%] flex justify-end">
-                  <p className="text-[24px] md:text-fluid-20 font-instrument-regular text-[#0B0B0B] md:w-200 leading-6.5">
+                  <Text className="font-instrument-regular text-[#0B0B0B] md:w-200">
                     {" "}
                     Some details are felt before they are noticed. The light,
                     the textures, the table, the quiet corners and the moments
                     shared between them all come together to create the Sukoon
                     experience.{" "}
-                  </p>
+                  </Text>
                 </div>
               </div>
               {/* Hairline stays 0.75px so it doesn't vanish when scaled down */}
@@ -71,7 +72,7 @@ export default function SukoonGlimpse() {
             </div>
 
             <div className="pointer-events-auto md:w-[30%]">
-              <TabsList className=" flex flex-col items-start justify-between md:gap-y-72.5 w-full px-0 h-full  ">
+              <TabsList className=" flex flex-col items-start justify-between md:gap-y-72.5 w-full px-0  ">
                 {/* Below md the filters become a full-bleed, horizontally scrollable pill strip.
                     md:text-fluid-16 scales the line height the inline tabs sit on */}
                 <div className="flex gap-5 overflow-x-auto no-scrollbar self-stretch bg-[#474806] -mx-7.5 px-7.5 py-5 sm:-mx-14 sm:px-14 md:block md:self-auto md:overflow-visible md:bg-transparent md:mx-0 md:p-0 md:text-fluid-16">
@@ -97,7 +98,7 @@ export default function SukoonGlimpse() {
           {/* IMAGES — scroll underneath the pinned frame */}
           <div
             className="md:mt-[calc(5.375rem-100vh)] md:ml-auto md:w-[70%] md:pl-2 md:pt-(--glimpse-header-h)"
-            style={{ "--glimpse-header-h": `${headerHeight}px` } as CSSProperties}
+            
           >
             {galleryFilters.map((record) => (
               <TabsContent

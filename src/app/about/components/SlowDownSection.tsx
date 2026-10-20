@@ -1,4 +1,4 @@
-import { H2 } from "@/app/components/Typography/Heading";
+import { H2, Text } from "@/app/components/Typography/Heading";
 
 const SlowDownSection = () => {
   return (
@@ -15,12 +15,12 @@ const SlowDownSection = () => {
         </div>
         <div className="md:w-[40%] relative px-7.5 sm:px-13 md:px-0">
           <div className="sticky top-10 pb-10">
-            <p className="text-black font-instrument-regular text-xl pb-4">
+            <Text className="text-black font-instrument-regular text-xl pb-4">
               The name speaks to a sense of ease, comfort and quiet contentment.
               That feeling became the starting point for everything we wanted
               Sukoon to be.
-            </p>
-            <p className="text-black font-instrument-regular text-xl pb-4">
+            </Text>
+            <Text className="text-black font-instrument-regular text-xl pb-4">
               We wanted to create a space where Indian food could be enjoyed
               without rush. Where familiar flavours could retain their soul
               while being expressed with a thoughtful, contemporary approach.
@@ -28,12 +28,12 @@ const SlowDownSection = () => {
               dishes we prepare to the atmosphere around the table, every detail
               has been considered with the same intention: to make people feel
               welcome, comfortable and present.{" "}
-            </p>
-            <p className="text-black font-instrument-regular text-xl">
+            </Text>
+            <Text className="text-black font-instrument-regular text-xl">
               Sukoon is our interpretation of Indian dining today. Rooted in
               what we know and love, yet open to new ideas, new expressions and
               new memories.
-            </p>
+            </Text>
           </div>
         </div>
       </div>

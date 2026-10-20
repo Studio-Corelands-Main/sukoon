@@ -1,37 +1,39 @@
+import { H1, H2, Text } from "@/app/components/Typography/Heading";
+
 export default function ContactForm() {
   return (
     <div className="pt-25 md:pt-38 pb-50 bg-[#F4EDE2] px-7.5 sm:px-13 md:px-container-25 ">
       <div className="flex flex-col items-center gap-8 pb-[100px] sm:pb-[150px] md:pb-44.75">
-        <h1 className="text-[#515227] text-[35px] sm:text-[48px] md:text-fluid-48 font-charman-serif-light leading-12">
+        <H2 className="text-[#515227] text-[35px] sm:text-[48px] md:text-fluid-48 font-charman-serif-light leading-12">
           Need a little help? We’re here.
-        </h1>
-        <p className="text-[#0B0B0B]  md:w-234.75 text-[18px] sm:text-[24px] md:text-fluid-24 font-instrument-regular text-center leading-8 w-full">
+        </H2>
+        <Text className="text-[#0B0B0B]  md:w-234.75 text-[18px] sm:text-[24px] md:text-fluid-24 font-instrument-regular text-center leading-8 w-full">
           From reservations and dining enquiries to celebrations and special
           requests, our team is here to make things simple. Tell us what you
           need and we will be happy to guide you.
-        </p>
+        </Text>
       </div>
       <div className="flex flex-col md:flex-row md:items-center gap-15 md:gap-0">
         <div className="md:w-[50%]">
-          <h1 className="text-[#252600] text-[48px] md:text-fluid-84 font-charman-serif-light leading-15 sm:mb-4 mb-6">
+          <H2 className="text-[#252600] text-[48px] md:text-fluid-84 font-charman-serif-light leading-15 sm:mb-4 mb-6">
             Contact Us
-          </h1>
-          <p className="text-[20px] sm:text-[24px] md:text-fluid-24 font-instrument-regular sm:w-85 md:w-90 mb-15 md:mb-18.75">
+          </H2>
+          <Text className="text-[20px] sm:text-[24px] md:text-fluid-24 font-instrument-regular sm:w-85 md:w-90 mb-15 md:mb-18.75">
             Let’s talk. Whatever you need, we’re ready to help.
-          </p>
+          </Text>
           <div className="hidden md:block">
-            <p className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">
+            <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">
               EMAIL: <span className="underline">email@domain.com.au</span>
-            </p>
-            <p className="font-instrument-regular  text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-10  md:mb-16">
+            </Text>
+            <Text className="font-instrument-regular  text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-10  md:mb-16">
               PHONE: <span className="underline"> 04 000 0000</span>
-            </p>
-            <p className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-2">
+            </Text>
+            <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-2">
               ADDRESS
-            </p>
-            <p className="w-[235px] md:w-58.75 text-[#0B0B0B] font-charman-serif-light text-[24px] md:text-fluid-32 leading-7">
+            </Text>
+            <Text className="w-[235px] md:w-58.75 text-[#0B0B0B] font-charman-serif-light text-[24px] md:text-fluid-32 leading-7">
               128 Euede Rivoli, 4th Melburne
-            </p>
+            </Text>
           </div>
         </div>
         <div className="md:w-[50%] gap-8 md:gap-12.5 flex flex-col items-start">
@@ -66,18 +68,18 @@ export default function ContactForm() {
           </button>
         </div>
         <div className="md:hidden mt-45">
-          <p className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">
+          <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">
             EMAIL: <span className="underline">email@domain.com.au</span>
-          </p>
-          <p className="font-instrument-regular  text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-10  md:mb-16">
+          </Text>
+          <Text className="font-instrument-regular  text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-10  md:mb-16">
             PHONE: <span className="underline"> 04 000 0000</span>
-          </p>
-          <p className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-2">
+          </Text>
+          <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-2">
             ADDRESS
-          </p>
-          <p className="w-[180px] text-[#0B0B0B] font-charman-serif-light text-[24px] md:text-fluid-32 leading-7">
+          </Text>
+          <Text className="w-[180px] text-[#0B0B0B] font-charman-serif-light text-[24px] md:text-fluid-32 leading-7">
             128 Euede Rivoli, 4th Melburne
-          </p>
+          </Text>
         </div>
       </div>
     </div>
