@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { H2, Text } from "@/app/components/Typography/Heading";
 import { motion } from "framer-motion";
+import Button from "@/app/components/Button";
 
 const SlowDown = () => {
   // const sectionRef = useRef<HTMLElement>(null);
@@ -88,12 +89,12 @@ const SlowDown = () => {
                 table at Sukoon and settle in for soulful Indian flavours, warm
                 hospitality and moments made to be savoured.
               </Text>
-              <Link
+              <Button
+                color="#474806"
+                label="BOOK NOW"
+                className="cursor-pointer mt-7.5 bg-transparent hover:bg-[#474806] text-[#474806] hover:text-white"
                 href="#"
-                className="cursor-pointer text-[#474806] text-base border-[#474806] border rounded-full px-7.5 py-2.5 mt-7.5 font-instrument-regular "
-              >
-                BOOK NOW
-              </Link>
+              />
             </div>
           </div>
         </div>

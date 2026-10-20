@@ -1,3 +1,4 @@
+import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 import Link from "next/link";
 
@@ -24,12 +25,12 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
         <div className="hidden md:block ">
           <Text className="text-[#EBD2B1] w-[831px]">{content}</Text>
           <div className="mt-10 mb-8">
-            <Link
-              href={"#"}
-              className="text-base font-instrument-regular text-[#DDB789] border border-[#DDB789] rounded-[500px] md:rounded-[31.25rem] py-2.5 px-8 uppercase"
-            >
-              OUR STORY
-            </Link>
+            <Button
+              className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white w-fit"
+              color="#DDB789"
+              label="OUR STORY"
+              href="/about"
+            />
           </div>
         </div>
         <div className="pt-10">
@@ -38,12 +39,12 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
           <div className="md:hidden block pt-5 ">
             <Text className="text-[#EBD2B1]">{content}</Text>
             <div className="mt-10">
-              <Link
-                href={"#"}
-                className="text-base font-instrument-regular text-[#DDB789] border border-[#DDB789] rounded-[500px] md:rounded-[31.25rem] py-2.5 px-8 uppercase"
-              >
-                OUR STORY
-              </Link>
+              <Button
+                className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white w-fit"
+                color="#DDB789"
+                label="OUR STORY"
+                href="/about"
+              />
             </div>
           </div>
         </div>

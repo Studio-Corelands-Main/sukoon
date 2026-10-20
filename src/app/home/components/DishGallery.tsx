@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 import { useElementHeight } from "@/hooks/useElementHeight";
 import { type CSSProperties, type ReactNode, useEffect, useState } from "react";
@@ -95,11 +96,12 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
             and moments made to be savoured.
           </Text>
 
-          <button className="border border-[#DDB789] rounded-full w-fit">
-            <p className="text-[16px] md:text-fluid-16 py-2.5 px-7.5 text-[#DDB789] font-instrument-regular">
-              VIEW MENU
-            </p>
-          </button>
+          <Button
+            className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white w-fit"
+            color="#DDB789"
+            label="VIEW MENU"
+            href="/gallery"
+          />
         </div>
       </div>
 

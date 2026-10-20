@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import NextIcon from "../../../../public/logo/NextIcon";
 import PrevIcon from "../../../../public/logo/PrevIcon";
+import Button from "@/app/components/Button";
 
 const images = [
   "/images/moment-1.png",
@@ -58,12 +59,14 @@ const GalleryTagline = () => {
             See the spaces, details and moments that bring Sukoon to life.
           </Text>
           <div className="pt-5">
-            <Link
-              href="#"
-              className="inline-block border border-[#DDB789] rounded-full text-xs md:text-base py-2.5 px-7.5 text-[#DDB789] font-instrument-regular"
-            >
-              VIEW GALLERY
-            </Link>
+            <Button
+              className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white"
+              color="#DDB789"
+              label="VIEW GALLERY"
+              href="/gallery"
+            />
+            
+            
           </div>
         </div>
       </div>
@@ -124,12 +127,13 @@ const GalleryTagline = () => {
             See the spaces, details and moments that bring Sukoon to life.
           </Text>
           <div className="pt-5">
-            <Link
-              href="#"
-              className="inline-block border border-[#DDB789] rounded-full text-xs md:text-base py-2.5 px-7.5 text-[#DDB789] font-instrument-regular"
-            >
-              VIEW GALLERY
-            </Link>
+            <Button
+              className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white"
+              color="#DDB789"
+              label="VIEW GALLERY"
+              href="/gallery"
+            />
+            
           </div>
         </div>
       </div>

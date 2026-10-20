@@ -1,3 +1,4 @@
+import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 import Link from "next/link";
 
@@ -23,12 +24,12 @@ const AboutMoment = () => {
             experience.
           </Text>
           <div className="mt-8">
-            <Link
+            <Button
+              className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white"
+              color="#DDB789"
+              label="VIEW GALLERY"
               href="/gallery"
-              className="text-base font-instrument-regular text-[#DDB789] border border-[#DDB789] rounded-[500px] md:rounded-[31.25rem] py-2.5 px-8 uppercase"
-            >
-              View GALLERY
-            </Link>
+            />
           </div>
         </div>
       </div>
@@ -36,19 +37,18 @@ const AboutMoment = () => {
         <img src="/images/feel-right.png" />
       </div>
       <div className="md:hidden w-full">
-          <p className="max-w-100 text-[15px] md:text-fluid-20 font-instrument-regular text-[#EBD2B1]   ">
-            Step inside Sukoon and discover the atmosphere behind the
-            experience.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/gallery"
-              className="text-base font-instrument-regular text-[#DDB789] border border-[#DDB789] rounded-[500px] md:rounded-[31.25rem] py-2.5 px-8 uppercase"
-            >
-              View GALLERY
-            </Link>
-          </div>
+        <p className="max-w-100 text-[15px] md:text-fluid-20 font-instrument-regular text-[#EBD2B1]   ">
+          Step inside Sukoon and discover the atmosphere behind the experience.
+        </p>
+        <div className="mt-8">
+          <Button
+            className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-white"
+            color="#DDB789"
+            label="VIEW GALLERY"
+            href="/gallery"
+          />
         </div>
+      </div>
     </div>
   );
 };

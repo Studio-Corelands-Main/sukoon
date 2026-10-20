@@ -1,3 +1,4 @@
+import Button from "@/app/components/Button";
 import { H1, H2, Text } from "@/app/components/Typography/Heading";
 
 export default function ContactForm() {
@@ -63,9 +64,12 @@ export default function ContactForm() {
             className="w-full h-20 border-b border-0 focus:outline-none text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
             placeholder="Your Message"
           />
-          <button className="border rounded-full px-7.5 py-2.5 cursor-pointer border-[#777A35] text-[#777A35] uppercase">
-            Send Message
-          </button>
+
+          <Button
+            className="text-[#777A35] cursor-pointer mt-7.5 bg-transparent hover:bg-[#777A35] hover:text-white"
+            color="#777A35"
+            label="Send Message"
+          />
         </div>
         <div className="md:hidden mt-45">
           <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">

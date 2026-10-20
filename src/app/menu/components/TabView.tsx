@@ -2,6 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "motion/react";
 import { menulist } from "../../../../constants/menu/list";
+import Button from "@/app/components/Button";
 interface MenuI {
   id: number;
   tag: string;
@@ -21,12 +22,12 @@ const TabView = () => {
       <div className="sticky top-21.5 z-40 bg-[#515227]   overflow-x-scroll md:overflow-x-hidden">
         <TabsList className=" mx-auto flex justify-center gap-2 px-2 pt-10 pb-6 sm:gap-5 sm:pt-15 sm:pb-10  ">
           {menulist.map((item) => (
-            <TabsTrigger
-              key={item.id}
-              value={item.tag}
-              className="shrink-0 cursor-pointer rounded-full border border-[#FFF9F0] px-7.5 py-5 text-sm font-instrument-regular text-[#FFF9F0] bg-[#481904] hover:text-white data-active:bg-[#481904] data-active:text-white sm:text-base"
-            >
-              {item.title}
+            <TabsTrigger key={item.id} value={item.tag}>
+              <Button
+                className="text-[#FFF9F0] cursor-pointer mt-7.5 bg-[#481904] hover:bg-[#FFF9F0] hover:text-[#481904]"
+                color="#481904"
+                label={item.title}
+              />
             </TabsTrigger>
           ))}
         </TabsList>
