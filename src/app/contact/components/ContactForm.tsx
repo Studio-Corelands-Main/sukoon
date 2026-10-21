@@ -1,91 +1,129 @@
 import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 
+// Shared field styling. 16px minimum on mobile stops iOS from zooming on focus.
+const fieldClass =
+  "w-full min-w-0 border-0 border-b border-black/50 bg-transparent pb-2.5 text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 focus:outline-none focus:border-[#777A35] transition-colors place";
+
+const detailLabelClass =
+  "font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]";
+
 export default function ContactForm() {
   return (
-    <div className="pt-25 md:pt-38 pb-50 bg-[#F4EDE2] px-7.5 sm:px-13 container-px ">
-      <div className="flex flex-col items-center gap-8 pb-25 sm:pb-37.5 md:pb-44.75">
-        <H2 className="text-[#515227] text-[35px] sm:text-[48px] md:text-fluid-48 font-charman-serif-light leading-12">
+    <section className="bg-[#F4EDE2] px-6 pt-20 pb-25 sm:px-13 sm:pt-25 md:pt-38 md:pb-50 container-px">
+      {/* Intro */}
+      <div className="mx-auto flex max-w-234.75 flex-col items-center gap-6 pb-20 text-center sm:gap-8 sm:pb-37.5 md:pb-44.75">
+        <H2 className="text-[#515227]   font-charman-serif-light">
           Need a little help? We’re here.
         </H2>
-        <Text className="text-[#0B0B0B]  md:w-234.75 text-[18px] sm:text-[24px] md:text-fluid-24 font-instrument-regular text-center leading-8 w-full">
+        <Text className="w-full text-[#0B0B0B]   font-instrument-regular">
           From reservations and dining enquiries to celebrations and special
           requests, our team is here to make things simple. Tell us what you
           need and we will be happy to guide you.
         </Text>
       </div>
-      <div className="flex flex-col md:flex-row md:items-center gap-15 md:gap-0">
-        <div className="md:w-[50%]">
-          <H2 className="text-[#252600] text-[48px] md:text-fluid-84 font-charman-serif-light leading-15 sm:mb-4 mb-6">
+
+      {/*
+        Mobile:  heading → form → details (one column, DOM order)
+        Desktop: heading + details on the left, form on the right
+      */}
+      <div className="grid grid-cols-1 gap-y-15 lg:grid-cols-2 lg:items-start gap-x-8 lg:gap-y-0 lg:gap-x-20">
+        {/* Heading */}
+        <div className="">
+          <H2 className="text-[#252600] mb-4  text-center lg:text-left">
             Contact Us
           </H2>
-          <Text className="text-[20px] sm:text-[24px] md:text-fluid-24 font-instrument-regular sm:w-85 md:w-90 mb-15 md:mb-18.75">
+          <Text className="lg:max-w-90 mb-4   text-center lg:text-left lg:mb-18.75 mx-auto mx-0">
             Let’s talk. Whatever you need, we’re ready to help.
           </Text>
-          <div className="hidden md:block">
-            <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">
-              EMAIL: <span className="underline">email@domain.com.au</span>
-            </Text>
-            <Text className="font-instrument-regular  text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-10  md:mb-16">
-              PHONE: <span className="underline"> 04 000 0000</span>
-            </Text>
-            <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-2">
-              ADDRESS
-            </Text>
-            <Text className="w-[235px] md:w-58.75 text-[#0B0B0B] font-charman-serif-light text-[24px] md:text-fluid-32 leading-7">
-              128 Euede Rivoli, 4th Melburne
-            </Text>
-          </div>
         </div>
-        <div className="md:w-[50%] gap-8 md:gap-12.5 flex flex-col items-start">
-          <div className="flex flex-row gap-10 w-full">
-            <input
-              type="text"
-              className="w-full border-b border-0 focus:outline-none text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              className="w-full border-b border-0 focus:outline-none text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
-              placeholder="Last Name"
-            />
+
+        {/* Form */}
+        <div className="flex flex-col items-start gap-8     md:gap-12.5">
+          <div className="flex w-full flex-col gap-8 sm:flex-row sm:gap-10">
+            <label className="w-full">
+              <span className="sr-only">First name</span>
+              <input
+                type="text"
+                name="firstName"
+                autoComplete="given-name"
+                placeholder="First Name"
+                className={fieldClass}
+              />
+            </label>
+            <label className="w-full">
+              <span className="sr-only">Last name</span>
+              <input
+                type="text"
+                name="lastName"
+                autoComplete="family-name"
+                placeholder="Last Name"
+                className={fieldClass}
+              />
+            </label>
           </div>
-          <input
-            type="text"
-            className="w-full border-b border-0 focus:outline-none text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
-            placeholder="Your Email"
-          />
-          <input
-            type="text"
-            className="w-full border-b border-0 focus:outline-none text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
-            placeholder="Your phone no"
-          />
-          <textarea
-            className="w-full h-20 border-b border-0 focus:outline-none text-[16px] md:text-fluid-20 font-instrument-regular placeholder:text-[#0B0B0B]/20 pb-2.5 border-black/50"
-            placeholder="Your Message"
-          />
+
+          <label className="w-full">
+            <span className="sr-only">Email</span>
+            <input
+              type="email"
+              name="email"
+              autoComplete="email"
+              inputMode="email"
+              placeholder="Your Email"
+              className={fieldClass}
+            />
+          </label>
+
+          <label className="w-full">
+            <span className="sr-only">Phone number</span>
+            <input
+              type="tel"
+              name="phone"
+              autoComplete="tel"
+              inputMode="tel"
+              placeholder="Your phone no"
+              className={fieldClass}
+            />
+          </label>
+
+          <label className="w-full">
+            <span className="sr-only">Message</span>
+            <textarea
+              name="message"
+              rows={3}
+              placeholder="Your Message"
+              className={`${fieldClass} resize-none`}
+            />
+          </label>
 
           <Button
-            className="text-[#777A35] cursor-pointer mt-7.5 bg-transparent hover:bg-[#777A35] hover:text-white"
+            className="mt-4 w-full cursor-pointer bg-transparent text-[#777A35] hover:bg-[#777A35] hover:text-white sm:mt-7.5 sm:w-auto"
             color="#777A35"
             label="SEND MESSAGE"
           />
         </div>
-        <div className="md:hidden mt-45">
-          <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B]">
-            EMAIL: <span className="underline">email@domain.com.au</span>
+
+        {/* Contact details: below the form on mobile, under the heading on desktop */}
+        <address className="not-italic  ">
+          <Text className={`${detailLabelClass} break-all`}>
+            EMAIL:{" "}
+            <a href="mailto:email@domain.com.au" className="underline">
+              email@domain.com.au
+            </a>
           </Text>
-          <Text className="font-instrument-regular  text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-10  md:mb-16">
-            PHONE: <span className="underline"> 04 000 0000</span>
+          <Text className={`${detailLabelClass} mb-10 md:mb-16`}>
+            PHONE:{" "}
+            <a href="tel:040000000" className="underline">
+              04 000 0000
+            </a>
           </Text>
-          <Text className="font-instrument-regular text-[16px] md:text-fluid-20 text-[#0B0B0B] mb-2">
-            ADDRESS
-          </Text>
-          <Text className="w-[180px] text-[#0B0B0B] font-charman-serif-light text-[24px] md:text-fluid-32 leading-7">
+          <Text className={`${detailLabelClass} mb-2`}>ADDRESS</Text>
+          <Text className="max-w-58.75 text-[#0B0B0B] font-charman-serif-light text-[24px] leading-7 md:text-fluid-32 md:leading-tight">
             128 Euede Rivoli, 4th Melburne
           </Text>
-        </div>
+        </address>
       </div>
-    </div>
+    </section>
   );
 }

@@ -93,7 +93,7 @@ const Footer = () => {
       <footer className="bg-[#481904]  px-7.5 sm:px-13 container-px text-[#F4EDE2]">
         <div className="h-px bg-[#F4EDE2]" />
 
-        <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-15 md:gap-10  md:gap-x-50 pt-25 justify-between md:pb-51.5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-15 md:gap-10  md:gap-x-50 pt-25 justify-between pb-10 md:pb-51.5">
           {footerSections.map(({ title, items }) => (
             <div key={title}>
               <h3 className="font-instrument-regular text-sm lg:text-base uppercase text-[#DDB789]">
@@ -157,20 +157,20 @@ const Footer = () => {
         <p className="md:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-15.5 mb-2.5">
           Website by <strong>Corelands</strong>
         </p>
-        <div className="flex flex-row  justify-end items-center gap-5">
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular ">
+        <div className="flex flex-col md:flex-row  justify-end items-center gap-3 md:gap-5">
+          <p className="text-[#F4EDE2]/50 text-[10px] md:text-sm font-instrument-regular text-nowrap">
             ©2026 All rights reserved
           </p>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50 "></div>
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
+          <p className="text-[#F4EDE2]/50 text-[10px] md:text-sm font-instrument-regular uppercase text-nowrap">
             TERMS & CONDITIONS
           </p>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
+          <p className="text-[#F4EDE2]/50 text-[10px] md:text-sm font-instrument-regular uppercase ">
             PRIVACY POLICY
           </p>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
-          <p className="hidden md:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
+          <p className="hidden md:block text-[#F4EDE2] text-[10px] md:text-sm font-instrument-regular uppercase ">
             Website by{" "}
             <strong>
               <Link href={URLS.CORELANDS}>Corelands</Link>

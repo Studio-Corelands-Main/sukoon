@@ -7,7 +7,7 @@ const ShowMenu = () => {
       <H2 className="pt-25 text-center font-charman-serif-light text-[38px] md:text-fluid-48 text-[#F4EDE2] leading-8">
         Where Flavour Meets Comfort
       </H2>
-      <Text className="w-full md:max-w-298.75 md:w-298.75 font-instrument-regular text-base md:text-xl md:text-2xl pt-8 mx-auto text-center  text-[#F4EDE2]">
+      <Text className="w-full lg:max-w-298.75 pt-8 mx-auto text-center  text-[#F4EDE2]">
         Our menu is rooted in the flavours of India, brought to the table with
         warmth, balance and a thoughtful contemporary touch. Familiar dishes are
         prepared with care, allowing every plate to feel comforting, generous

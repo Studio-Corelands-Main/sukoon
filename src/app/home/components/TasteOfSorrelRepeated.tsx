@@ -15,7 +15,7 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
           <img
             src="/images/behind-sukoon.png"
             alt="Behind Sukoon"
-            className="w-94.5 md:w-151.75 h-142.75 md:h-211.25 "
+            className="w-94.5 md:w-151.75 h-full lg:h-211.25 "
           />
           <Text className="pt-5  text-[#DDB789]">Behind Sukoon</Text>
         </div>

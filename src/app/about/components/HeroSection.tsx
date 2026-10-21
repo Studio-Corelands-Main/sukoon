@@ -16,7 +16,7 @@ const HeroSection = ({
       className="bg-center bg-cover bg-no-repeat w-full h-screen px-7.5 sm:px-13 container-px text-white flex flex-col justify-end pb-35"
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div className={`${pathname === "/contact" ? "md:w-191" : "md:w-175"}  `}>
+      <div className={`${pathname === "/contact" ? "lg:w-191" : "md:w-175"}  `}>
         <H1>{title}</H1>
         <H1 className="-mt-5">{secondTitle}</H1>
 
