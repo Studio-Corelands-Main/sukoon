@@ -281,10 +281,10 @@ export function TasteOfSukoon() {
       </div>
 
       {/* Body */}
-      <div className="container-px flex items-start gap-8 pt-10">
+      <div className="container-px flex items-start lg:gap-8 gap-3">
         {/* LEFT: sticky */}
-        <div className="sticky top-(--dish-header-h) z-10 w-1/2 self-start pl-8 md:pl-0">
-          <div className="flex flex-col justify-start lg:w-1/2">
+        <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start pl-8 pt-8 lg:pl-0 lg:pt-0">
+          <div className="flex flex-col justify-start ">
             <H2
               key={activeDish}
               className="text-[#DDB789] animate-in fade-in duration-300"
@@ -310,13 +310,13 @@ export function TasteOfSukoon() {
         </div>
 
         {/* RIGHT: stacking cards */}
-        <div ref={columnRef} className="w-1/2 min-w-0">
+        <div ref={columnRef} className="w-[70%] lg:w-1/2 min-w-0">
           {dishes.map((dish, index) => (
             <div
               key={dish.name}
               ref={setDishRef(dish.name)}
               data-dish-name={dish.name}
-              className="sticky top-(--dish-header-h) lg:top-(--dish-header-h) bg-[#481904] pb-10"
+              className="sticky top-(--dish-header-h) bg-[#481904] pt-8 pb-10 lg:pt-0"
               style={{ zIndex: 20 + index }}
             >
               <img
