@@ -4,7 +4,7 @@ const SlowDownSection = () => {
   return (
     <>
       <div className="pt-15 sm:pt-25 md:pt-24 px-7.5 sm:px-13  sm:pb-10 pb-20 md:pb-37.5 bg-[#F4EDE2]">
-        <H2 className="sm:w-149 lg:max-w-250   mx-auto text-center text-[#474806] ">
+        <H2 className=" lg:max-w-250   mx-auto text-center text-[#474806] ">
           Rooted in the warmth of Indian culture, shaped for today and created
           for moments that deserve to be savoured.
         </H2>
