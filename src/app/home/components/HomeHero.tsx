@@ -2,7 +2,14 @@
 
 import { useHeaderHidden } from "@/app/components/header/headerVisibility";
 import SukoonLogo from "@/app/components/SukoonLogo";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { Text } from "@/app/components/Typography/Heading";
+import {
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { URLS } from "../../../../constants/routes/urls";
@@ -14,167 +21,158 @@ const HEADER_TOP = 30;
 // Hero scroll progress at which the logo reaches its header position
 const DOCK_PROGRESS = 0.7;
 
-// Root scale factor: 1 below md and at 1920, root font size / 16 from md up
+const MD_QUERY = "(width >= 48rem)";
+
 const getRootScale = () =>
-  window.matchMedia("(width >= 48rem)").matches
-    ? parseFloat(getComputedStyle(document.documentElement).fontSize) / 16
-    : 1;
+  parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
 
 const HomeHero = () => {
   const heroRef = useRef<HTMLElement>(null);
   const placeholderRef = useRef<HTMLDivElement>(null);
-  const [isDesktop, setIsDesktop] = useState(false);
 
-  const [positions, setPositions] = useState({
-    startX: 0,
-    startY: 0,
-    startWidth: 0,
-    endX: 0,
-    endY: HEADER_TOP,
-    endWidth: HEADER_WIDTH,
-    ready: false,
-  });
+  // Positions as motion values so the transforms always use the latest numbers
+  const startX = useMotionValue(0);
+  const startY = useMotionValue(0);
+  const startW = useMotionValue(0);
+  const endX = useMotionValue(0);
+  const endY = useMotionValue(HEADER_TOP);
+  const endW = useMotionValue(HEADER_WIDTH);
 
-  const [showHeader, setShowHeader] = useState(false);
+  const [ready, setReady] = useState(false);
   const [docked, setDocked] = useState(false);
   const headerHidden = useHeaderHidden();
 
-  const { scrollY, scrollYProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
 
-  useEffect(() => {
-    const unsubscribe = scrollY.on("change", (value) => {
-      setShowHeader(value > 20);
-    });
+  useMotionValueEvent(scrollYProgress, "change", (p) => {
+    setDocked(p >= DOCK_PROGRESS);
+  });
 
-    return () => unsubscribe();
-  }, [scrollY]);
-
-  // Once docked, the logo hides and shows together with the header instead
-  // of staying fixed at the top
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (value) => {
-      setDocked(value >= DOCK_PROGRESS);
-    });
-
-    return () => unsubscribe();
-  }, [scrollYProgress]);
+  // 0 → 1 between the top of the hero and the dock point, then held at 1
+  const t = useTransform(scrollYProgress, (p) =>
+    Math.min(Math.max(p / DOCK_PROGRESS, 0), 1),
+  );
 
   const x = useTransform(
-    scrollYProgress,
-    [0, DOCK_PROGRESS, 1],
-    [positions.startX, positions.endX, positions.endX],
+    [t, startX, endX],
+    ([t, s, e]: number[]) => s + (e - s) * t,
   );
-
   const y = useTransform(
-    scrollYProgress,
-    [0, DOCK_PROGRESS, 1],
-    [positions.startY, positions.endY, positions.endY],
+    [t, startY, endY],
+    ([t, s, e]: number[]) => s + (e - s) * t,
   );
-
   const width = useTransform(
-    scrollYProgress,
-    [0, DOCK_PROGRESS, 1],
-    [positions.startWidth, positions.endWidth, positions.endWidth],
+    [t, startW, endW],
+    ([t, s, e]: number[]) => s + (e - s) * t,
   );
 
   useEffect(() => {
-    const updatePositions = () => {
-      // The logo animates into the header from md up; below md it stays static in the hero
-      const desktop = window.matchMedia("(width >= 48rem)").matches;
-      setIsDesktop(desktop);
+    const update = () => {
+      const hero = heroRef.current;
+      const placeholder = placeholderRef.current;
+      if (!hero || !placeholder) return;
 
-      if (!desktop) {
-        setPositions((prev) => ({ ...prev, ready: false }));
+      if (!window.matchMedia(MD_QUERY).matches) {
+        setReady(false);
         return;
       }
 
-      const placeholder = placeholderRef.current;
-      if (!placeholder) return;
-
+      const heroRect = hero.getBoundingClientRect();
       const rect = placeholder.getBoundingClientRect();
       const scale = getRootScale();
-      const endWidth = HEADER_WIDTH * scale;
+      const w = HEADER_WIDTH * scale;
+      // clientWidth excludes the scrollbar, so the docked logo is truly centred
+      const viewportW = document.documentElement.clientWidth;
 
-      setPositions({
-        startX: rect.left,
-        startY: rect.top,
-        startWidth: rect.width,
-        endX: (window.innerWidth - endWidth) / 2,
-        endY: HEADER_TOP * scale,
-        endWidth,
-        ready: true,
-      });
+      startX.set(rect.left);
+      // Measured relative to the hero, so it's correct even if the page
+      // loads already scrolled
+      startY.set(rect.top - heroRect.top);
+      startW.set(rect.width);
+      endX.set((viewportW - w) / 2);
+      endY.set(HEADER_TOP * scale);
+      endW.set(w);
+      setReady(true);
     };
 
-    updatePositions();
-    window.addEventListener("resize", updatePositions);
-
-    return () => window.removeEventListener("resize", updatePositions);
-  }, []);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [startX, startY, startW, endX, endY, endW]);
 
   return (
     <>
       <section
         ref={heroRef}
-        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-container-25 container-px"
+        className="relative h-screen w-full bg-cover bg-center bg-no-repeat px-7.5 text-white md:px-container-25 container-px bg-blend-overlay bg-black/40"
         style={{ backgroundImage: "url('/images/hero-image.png')" }}
       >
-        <p className="w-63.75 pt-43 text-[16px] font-instrument-regular md:w-64 md:text-fluid-16">
+        {/* Desktop tagline: same breakpoint as the animated logo */}
+        <Text className="hidden w-64 pt-43 text-white md:block">
           CONTEMPORARY INDIAN DINING MADE FOR CALM MOMENTS.
-        </p>
+        </Text>
 
-        {/* Reserves the logo's original bottom position */}
-        <div className="absolute inset-x-7.5 bottom-25 flex justify-center md:inset-x-25">
+        {/* Reserves the logo's original bottom position (desktop) */}
+        <div className="absolute inset-x-7.5 bottom-25 hidden justify-center md:flex md:inset-x-25">
           <div
             ref={placeholderRef}
             className="aspect-950/169 w-full max-w-237.5"
           />
         </div>
-      </section>
 
-      {/* One actual logo, animated from hero position to header */}
-      {isDesktop ? (
-        <motion.div
-          style={{
-            position: "fixed",
-            left: 0,
-            top: 0,
-            x,
-            y,
-            width,
-            visibility: positions.ready ? "visible" : "hidden",
-            pointerEvents: "none",
-            zIndex: 50,
-          }}
-          className="max-w-[calc(100vw-3.75rem)]"
-        >
-          {/* Slides out above the viewport with the header, same timing */}
-          <div
-            className="transition-transform duration-300 ease-out"
-            style={{
-              transform:
-                headerHidden && docked
-                  ? `translateY(calc(-100% - ${positions.endY}px))`
-                  : "translateY(0)",
-            }}
-          >
-            <Link href={URLS.HOME} className="cursor-pointer">
-              <SukoonLogo className="block h-auto w-full" />
-            </Link>
-          </div>
-        </motion.div>
-      ) : (
-        <div className="absolute inset-x-7.5 bottom-25 flex justify-center md:hidden">
-          <div className="aspect-950/169 w-full max-w-237.5">
-            <Link href={URLS.HOME} className="cursor-pointer">
+        {/* Mobile: static tagline + logo, now INSIDE the section */}
+        <div className="absolute inset-x-7.5 bottom-6 md:hidden">
+          <Text className="text-white">
+            CONTEMPORARY INDIAN DINING MADE FOR CALM MOMENTS.
+          </Text>
+          <div className="flex justify-center pt-8">
+            <Link
+              href={URLS.HOME}
+              className="block aspect-950/169 w-full max-w-237.5"
+            >
               <SukoonLogo className="block h-auto w-full" />
             </Link>
           </div>
         </div>
-      )}
+      </section>
+
+      {/* Desktop: one logo animated from the hero to the header.
+          Always rendered, hidden by CSS below md, so there's no flash */}
+      <motion.div
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 0,
+          x,
+          y,
+          width,
+          visibility: ready ? "visible" : "hidden",
+          zIndex: 50,
+        }}
+        className="pointer-events-none hidden md:block"
+      >
+        {/* Slides out above the viewport with the header, same timing */}
+        <div
+          className="transition-transform duration-300 ease-out"
+          style={{
+            transform:
+              headerHidden && docked
+                ? "translateY(calc(-100% - var(--logo-top)))"
+                : "translateY(0)",
+            ["--logo-top" as string]: `${HEADER_TOP}px`,
+          }}
+        >
+          <Link
+            href={URLS.HOME}
+            className="pointer-events-auto block cursor-pointer"
+          >
+            <SukoonLogo className="block h-auto w-full" />
+          </Link>
+        </div>
+      </motion.div>
     </>
   );
 };

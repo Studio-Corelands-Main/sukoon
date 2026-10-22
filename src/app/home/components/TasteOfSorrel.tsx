@@ -333,7 +333,6 @@ export function TasteOfSukoon() {
           ))}
         </div>
       </div>
-
       <div className="flex justify-center lg:hidden">
         <Button
           className="mx-auto mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"

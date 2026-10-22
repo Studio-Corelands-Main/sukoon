@@ -52,7 +52,7 @@ const ExperinceSection = () => {
           </svg>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 bg-[#F9F9F9] md:h-270  h-[600px] md:pt-0">
+      <div className="w-full lg:w-1/2 bg-[#F9F9F9] lg:h-270 hidden lg:block  md:pt-0 ">
         <img
           src="/images/hero-image.png"
           alt=""
