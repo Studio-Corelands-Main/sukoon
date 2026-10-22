@@ -240,100 +240,100 @@ export function TasteOfSukoon() {
   );
 
   return (
-    <section
-      className="relative bg-[#481904]"
-      style={{ "--dish-header-h": `${stickyOffset}px` } as CSSProperties}
-    >
-      {/* Cover strip: hides content scrolling above the sticky header */}
-      <div
-        aria-hidden
-        className="pointer-events-none sticky top-0 z-40 h-21.5 bg-[#481904]"
-      />
-
-      {/* Header */}
-      <div
-        ref={headerRef}
-        className="container-px sticky top-21.5 z-30 bg-[#481904] px-8"
+    <>
+      <section
+        className="relative bg-[#481904]"
+        style={{ "--dish-header-h": `${stickyOffset}px` } as CSSProperties}
       >
-        <div className="flex w-full flex-col items-start justify-between gap-8 pb-8 lg:flex-row lg:px-0">
-          <div className="lg:w-1/2">
-            <H2 className="text-[36px]! text-[#DDB789] lg:w-1/2">
-              A Taste of Sukoon
-            </H2>
-          </div>
-          <div className="flex justify-end lg:w-1/2">
-            <Text className="  text-[#EBD2B1] lg:ml-30 lg:pt-0">
-              Rooted in the flavours of India and guided by a contemporary hand,
-              our menu brings together comfort, character and thoughtful detail.
-            </Text>
-          </div>
-        </div>
+        {/* Cover strip: hides content scrolling above the sticky header */}
+        <div
+          aria-hidden
+          className="pointer-events-none sticky top-0 z-40 h-21.5 bg-[#481904]"
+        />
 
-        <div className="lg:pb-15">
-          <div className="h-[0.75px] bg-[#DDB789]" />
-        </div>
-
-        <Text className="my-10 block text-[#EBD2B1] lg:hidden">
-          Good food tastes even better when it’s shared. Reserve your table at
-          Sukoon and settle in for soulful Indian flavours, warm hospitality and
-          moments made to be savoured.
-        </Text>
-      </div>
-
-      {/* Body */}
-      <div className="container-px flex items-start lg:gap-8 gap-3">
-        {/* LEFT: sticky */}
-        <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start pl-8 pt-8 lg:pl-0 lg:pt-0">
-          <div className="flex flex-col justify-start ">
-            <H2
-              key={activeDish}
-              className="text-[#DDB789] animate-in fade-in duration-300"
-            >
-              {activeDish}
-            </H2>
-
-            <Text className="my-10 hidden text-[#EBD2B1] lg:block lg:max-w-162.5">
-              Good food tastes even better when it’s shared. Reserve your table
-              at Sukoon and settle in for soulful Indian flavours, warm
-              hospitality and moments made to be savoured.
-            </Text>
-
-            <div className="hidden lg:block">
-              <Button
-                className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
-                color="#DDB789"
-                label="VIEW MENU"
-                href="/gallery"
-              />
+        {/* Header */}
+        <div
+          ref={headerRef}
+          className="container-px sticky top-21.5 z-30 bg-[#481904] px-8"
+        >
+          <div className="flex w-full flex-col items-start justify-between gap-8 pb-8 lg:flex-row lg:px-0">
+            <div className="lg:w-1/2">
+              <H2 className="text-[36px]! text-[#DDB789] lg:w-1/2">
+                A Taste of Sukoon
+              </H2>
+            </div>
+            <div className="flex justify-end lg:w-1/2">
+              <Text className="  text-[#EBD2B1] lg:ml-30 lg:pt-0">
+                Rooted in the flavours of India and guided by a contemporary
+                hand, our menu brings together comfort, character and thoughtful
+                detail.
+              </Text>
             </div>
           </div>
+
+          <div className="lg:pb-15">
+            <div className="h-[0.75px] bg-[#DDB789]" />
+          </div>
+
+          <Text className="my-10 block text-[#EBD2B1] lg:hidden">
+            Good food tastes even better when it’s shared. Reserve your table at
+            Sukoon and settle in for soulful Indian flavours, warm hospitality
+            and moments made to be savoured.
+          </Text>
         </div>
 
-        {/* RIGHT: stacking cards */}
-        <div ref={columnRef} className="w-[70%] lg:w-1/2 min-w-0">
-          {dishes.map((dish, index) => (
-            <div
-              key={dish.name}
-              ref={setDishRef(dish.name)}
-              data-dish-name={dish.name}
-              className="sticky top-(--dish-header-h) bg-[#481904] pt-8 pb-10 lg:pt-0"
-              style={{ zIndex: 20 + index }}
-            >
-              <img
-                src={dish.image}
-                alt={dish.name}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                className="mb-5 w-full object-cover h-[calc(100svh-var(--dish-header-h)-100px)] lg:max-h-162.5"
-              />
-              <p className="font-instrument-regular text-[20px] leading-6 text-[#DDB789] md:text-fluid-20">
-                {dish.name}
-              </p>
+        {/* Body */}
+        <div className="container-px flex items-start lg:gap-8 gap-3">
+          {/* LEFT: sticky */}
+          <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start pl-8 pt-8 lg:pl-0 lg:pt-0">
+            <div className="flex flex-col justify-start ">
+              <H2
+                key={activeDish}
+                className="text-[#DDB789] animate-in fade-in duration-300"
+              >
+                {activeDish}
+              </H2>
+
+              <Text className="my-10 hidden text-[#EBD2B1] lg:block lg:max-w-162.5">
+                Good food tastes even better when it’s shared. Reserve your
+                table at Sukoon and settle in for soulful Indian flavours, warm
+                hospitality and moments made to be savoured.
+              </Text>
+
+              <div className="hidden lg:block">
+                <Button
+                  className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
+                  color="#DDB789"
+                  label="VIEW MENU"
+                  href="/gallery"
+                />
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* RIGHT: stacking cards */}
+          <div ref={columnRef} className="w-[70%] lg:w-1/2 min-w-0">
+            {dishes.map((dish, index) => (
+              <div
+                key={dish.name}
+                ref={setDishRef(dish.name)}
+                data-dish-name={dish.name}
+                className="sticky top-(--dish-header-h) bg-[#481904] pt-8 lg:pt-0"
+                style={{ zIndex: 20 + index }}
+              >
+                <img
+                  src={dish.image}
+                  alt={dish.name}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  className="mb-5 w-full object-cover h-[calc(100svh-var(--dish-header-h)-100px)] lg:max-h-162.5"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="flex justify-center lg:hidden">
+      </section>
+      <div className="flex justify-center lg:hidden bg-[#481904]">
         <Button
           className="mx-auto mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
           color="#DDB789"
@@ -341,6 +341,6 @@ export function TasteOfSukoon() {
           href="/gallery"
         />
       </div>
-    </section>
+    </>
   );
 }

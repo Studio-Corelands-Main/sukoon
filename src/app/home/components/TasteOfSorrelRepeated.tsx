@@ -3,8 +3,8 @@ import { H2, Text } from "@/app/components/Typography/Heading";
 
 const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
   return (
-    <div className="bg-[#481904] lg:pt-37.5">
-      <div className="flex flex-col lg:flex-row items-end gap-10 justify-between h-full pb-35.75 container-px px-8">
+    <div className="bg-[#481904] lg:pt-37.5 lg:pb-35.75 pb-8">
+      <div className="flex flex-col lg:flex-row items-end gap-10 justify-between h-full  container-px px-8">
         <div className="w-full lg:w-1/2">
           <H2 className=" text-[#DDB789] pb-10 pt-27.5 md:pt-0">
             Made with care.
@@ -33,7 +33,7 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
               />
             </div>
           </div>
-          <div className="pt-10">
+          <div className="lg:pt-10">
             <img src="/images/people.png" />
             <Text className="pt-5 text-[#DDB789]">The People of Sukoon</Text>
             <div className="md:hidden block pt-5 ">

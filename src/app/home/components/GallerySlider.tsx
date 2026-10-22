@@ -55,9 +55,11 @@ export function GallerySlider({ images, activeIndex, direction }: Props) {
           transition={{ duration: 0.9, ease: EASE }}
           draggable={false}
           decoding="async"
-          className="absolute inset-0 h-full w-full object-cover will-change-transform"
+          className="absolute inset-0 h-full w-full object-cover will-change-transform bg-blend-overlay bg-black/50"
         />
       </AnimatePresence>
+      {/* Overlay: above the slides (they use zIndex 1–2), below your controls (z-10) */}
+      <div className="pointer-events-none absolute inset-0 z-3 bg-black/20" />
     </div>
   );
 }

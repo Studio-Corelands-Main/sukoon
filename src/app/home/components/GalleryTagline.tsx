@@ -40,7 +40,7 @@ const GalleryTagline = () => {
   }, [isHovered, activeIndex, handleNext]);
 
   return (
-    <section className="bg-[#481904] flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between px-7.5 sm:px-13 container-px py-15 lg:py-37.5">
+    <section className="bg-[#481904] flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between px-7.5 sm:px-13 container-px py-15 pb-0 lg:py-37.5">
       <div className="w-full lg:w-1/2 flex flex-col justify-between">
         <div>
           <H2 className="text-[#DDB789]">A Glimpse</H2>
@@ -81,7 +81,7 @@ const GalleryTagline = () => {
               direction={direction}
             />
 
-            <div className="absolute bottom-7.5 left-7.5 right-7.5 z-10 flex items-end justify-between">
+            <div className="absolute bottom-3 lg:bottom-7.5 left-7.5 right-7.5 z-10 flex items-center justify-between">
               <div className="font-charman-serif-light text-[40px] md:text-fluid-40 text-[#DDB789]">
                 {activeIndex + 1}/{images.length}
               </div>
