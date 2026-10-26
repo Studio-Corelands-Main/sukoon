@@ -82,9 +82,9 @@ const GalleryTagline = () => {
             />
 
             <div className="absolute bottom-3 lg:bottom-7.5 left-7.5 right-7.5 z-10 flex items-center justify-between">
-              <div className="font-charman-serif-light text-[40px] md:text-fluid-40 text-[#DDB789]">
+              <H2 className="text-[#DDB789]">
                 {activeIndex + 1}/{images.length}
-              </div>
+              </H2>
 
               <div className="flex gap-4 md:[&>button>svg]:size-6.25">
                 <button

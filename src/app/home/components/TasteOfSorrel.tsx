@@ -285,7 +285,7 @@ export function TasteOfSukoon() {
         {/* Body */}
         <div className="container-px flex items-start lg:gap-8 gap-3">
           {/* LEFT: sticky */}
-          <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start pl-8 pt-8 lg:pl-0 lg:pt-0">
+          <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start pl-8 pt-8 md:pl-0 lg:pt-0">
             <div className="flex flex-col justify-start ">
               <H2
                 key={activeDish}
@@ -333,9 +333,9 @@ export function TasteOfSukoon() {
           </div>
         </div>
       </section>
-      <div className="flex justify-center lg:hidden bg-[#481904]">
+      <div className="flex justify-start lg:hidden bg-[#481904] container-px px-8 md:px-0">
         <Button
-          className="mx-auto mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
+          className="  mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
           color="#DDB789"
           label="VIEW MENU"
           href="/gallery"
