@@ -15,10 +15,10 @@ const ShowMenu = () => {
         and remembered.
       </Text>
       <div className="relative">
-        <div
+        {/* <div
           aria-hidden
           className="pointer-events-none sticky top-0 z-40 h-21.5 bg-[#515227]"
-        />
+        /> */}
         <TabView />
       </div>
     </div>
