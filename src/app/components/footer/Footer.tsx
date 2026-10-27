@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { URLS } from "../../../../constants/routes/urls";
+import Button from "../Button";
+import { H2, Text } from "../Typography/Heading";
 
 interface FooterItem {
   label: ReactNode;
@@ -91,7 +93,31 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#481904]  px-7.5 sm:px-13 container-px text-[#F4EDE2]">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-15 md:gap-10  md:gap-x-50 pt-25 justify-between pb-10 md:pb-51.5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-15 md:gap-10  md:gap-x-10 pt-25 justify-between pb-10 md:pb-51.5">
+          <div>
+            <H2 className="text-2xl! leading-[24px]! text-[#DDB789] -mt-[2px] w-[260px]">
+              Come in, slow down, and savour the moment.
+            </H2>
+            <Text className="text-sm! leading-[20px]! pt-5">
+              Rooted in Indian flavours and warm hospitality, Sukoon is a place
+              to gather over good food and stay a little longer.
+            </Text>
+
+            <div className=" flex gap-3  pt-5">
+              <Button
+                label="ORDER NOW"
+                href="#"
+                color="#DDB789"
+                className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit text-nowrap text-[10px]!"
+              />
+              <Button
+                label="RESERVE"
+                color="#DDB789"
+                href="#"
+                className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit text-nowrap text-[10px]!"
+              />
+            </div>
+          </div>
           {footerSections.map(({ title, items }) => (
             <div key={title}>
               <h3 className="font-instrument-regular text-sm lg:text-base uppercase text-[#DDB789]">
@@ -104,12 +130,12 @@ const Footer = () => {
                     {href ? (
                       <Link
                         href={href}
-                        className="block transition-opacity hover:opacity-70 font-instrument-regular text-base lg:text-xl cursor-pointer"
+                        className="block transition-opacity hover:opacity-70 font-instrument-regular text-base   cursor-pointer"
                       >
                         {label}
                       </Link>
                     ) : (
-                      <div className="transition-opacity hover:opacity-70 font-instrument-regular text-base lg:text-xl cursor-pointer">
+                      <div className="transition-opacity hover:opacity-70 font-instrument-regular text-base   cursor-pointer">
                         {label}
                       </div>
                     )}

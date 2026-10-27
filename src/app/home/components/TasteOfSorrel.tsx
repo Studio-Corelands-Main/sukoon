@@ -188,6 +188,7 @@ import { H2, Text } from "@/app/components/Typography/Heading";
 import { useElementHeight } from "@/hooks/useElementHeight";
 import type { CSSProperties } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { URLS } from "../../../../constants/routes/urls";
 
 // Matches the outer sticky offset (top-21.5 = 86px)
 const NAV_OFFSET = 86;
@@ -304,8 +305,14 @@ export function TasteOfSukoon() {
                 <Button
                   className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
                   color="#DDB789"
-                  label="VIEW MENU"
-                  href="/gallery"
+                  label="ORDER NOW"
+                  href={URLS.MENU}
+                />
+                <Button
+                  className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904] ml-3"
+                  color="#DDB789"
+                  label="EXPLORE THE MENU"
+                  href={URLS.GALLERY}
                 />
               </div>
             </div>
@@ -333,12 +340,18 @@ export function TasteOfSukoon() {
           </div>
         </div>
       </section>
-      <div className="flex justify-start lg:hidden bg-[#481904] container-px px-8 md:px-0">
+      <div className="flex justify-start lg:hidden bg-[#481904] container-px px-8 md:px-0 pb-0 md:pb-10 xl:pb-0">
         <Button
-          className="  mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
+          className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
           color="#DDB789"
-          label="VIEW MENU"
-          href="/gallery"
+          label="ORDER NOW"
+          href={URLS.MENU}
+        />
+        <Button
+          className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904] ml-3"
+          color="#DDB789"
+          label="EXPLORE THE MENU"
+          href={URLS.GALLERY}
         />
       </div>
     </>
