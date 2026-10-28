@@ -162,13 +162,19 @@ const Footer = () => {
             ©2026 All rights reserved
           </p>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50 "></div>
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
+          <Link
+            href={URLS.TERMS}
+            className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase transition-opacity hover:opacity-70"
+          >
             TERMS & CONDITIONS
-          </p>
+          </Link>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase ">
+          <Link
+            href={URLS.PRIVACY}
+            className="text-[#F4EDE2]/50 text-sm font-instrument-regular uppercase transition-opacity hover:opacity-70"
+          >
             PRIVACY POLICY
-          </p>
+          </Link>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
           <p className="hidden md:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
             Website by{" "}
