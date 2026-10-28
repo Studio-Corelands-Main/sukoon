@@ -1,10 +1,9 @@
 import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
-import Link from "next/link";
 
 const AboutMoment = () => {
   return (
-    <div className="flex flex-col md:flex-row items-stretch gap-y-8 md:gap-y-0 gap-x-8 h-full pb-25 md:pb-35.75 px-7.5 sm:px-13 md:px-container-25 bg-[#481904] pt-25 md:pt-60">
+    <div className="flex flex-col md:flex-row items-stretch gap-y-8 md:gap-y-0 gap-x-8 h-full pb-25 md:pb-35.75 px-7.5 sm:px-13  container-px bg-[#481904] pt-25 md:pt-60">
       <div className="md:w-[60%] flex flex-col justify-between  md:gap-20 md:gap-0">
         <div className=" ">
           <H2 className="text-[#DDB789]">

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { URLS } from "../../../../constants/routes/urls";
+import Button from "../Button";
+import { H2, Text } from "../Typography/Heading";
 
 interface FooterItem {
   label: ReactNode;
@@ -73,11 +75,11 @@ const footerSections: FooterSection[] = [
     items: [
       {
         label: "Instagram",
-        href: "#",
+        href: URLS.INSTAGRAM,
       },
       {
         label: "Facebook",
-        href: "#",
+        href: URLS.FACEBOOK,
       },
       {
         label: "YouTube",
@@ -91,9 +93,31 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#481904]  px-7.5 sm:px-13 container-px text-[#F4EDE2]">
-        <div className="h-px bg-[#F4EDE2]" />
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-15 md:gap-10  md:gap-x-10 pt-25 justify-between pb-10 md:pb-51.5">
+          <div>
+            <H2 className="text-2xl! leading-[24px]! text-[#DDB789] -mt-[2px] w-[260px]">
+              Come in, slow down, and savour the moment.
+            </H2>
+            <Text className="text-sm! leading-[20px]! pt-5">
+              Rooted in Indian flavours and warm hospitality, Sukoon is a place
+              to gather over good food and stay a little longer.
+            </Text>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-15 md:gap-0  md:gap-x-50 pt-25 justify-between md:pb-51.5">
+            <div className=" flex gap-3  pt-5">
+              <Button
+                label="ORDER NOW"
+                href="#"
+                color="#DDB789"
+                className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit text-nowrap text-[10px]!"
+              />
+              <Button
+                label="RESERVE"
+                color="#DDB789"
+                href="#"
+                className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit text-nowrap text-[10px]!"
+              />
+            </div>
+          </div>
           {footerSections.map(({ title, items }) => (
             <div key={title}>
               <h3 className="font-instrument-regular text-sm lg:text-base uppercase text-[#DDB789]">
@@ -106,12 +130,12 @@ const Footer = () => {
                     {href ? (
                       <Link
                         href={href}
-                        className="block transition-opacity hover:opacity-70 font-instrument-regular text-base lg:text-xl cursor-pointer"
+                        className="block transition-opacity hover:opacity-70 font-instrument-regular text-base   cursor-pointer"
                       >
                         {label}
                       </Link>
                     ) : (
-                      <div className="transition-opacity hover:opacity-70 font-instrument-regular text-base lg:text-xl cursor-pointer">
+                      <div className="transition-opacity hover:opacity-70 font-instrument-regular text-base   cursor-pointer">
                         {label}
                       </div>
                     )}
@@ -122,7 +146,7 @@ const Footer = () => {
           ))}
         </div>
       </footer>
-      <div className="flex flex-col md:flex-row justify-between items-center py-13 bg-[#7A2F08] px-7.5 sm:px-13 container-px">
+      <div className="flex flex-col lg:flex-row gap-10 justify-between items-center py-13 bg-[#7A2F08] px-7.5 sm:px-13 container-px">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -157,8 +181,8 @@ const Footer = () => {
         <p className="md:hidden text-[#F4EDE2] text-sm font-instrument-regular uppercase mt-15.5 mb-2.5">
           Website by <strong>Corelands</strong>
         </p>
-        <div className="flex flex-row  justify-end items-center gap-5">
-          <p className="text-[#F4EDE2]/50 text-sm font-instrument-regular ">
+        <div className="flex flex-col md:flex-row  justify-end items-center gap-3 md:gap-5">
+          <p className="text-[#F4EDE2]/50 text-[10px] md:text-sm font-instrument-regular text-nowrap">
             ©2026 All rights reserved
           </p>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50 "></div>
@@ -176,7 +200,7 @@ const Footer = () => {
             PRIVACY POLICY
           </Link>
           <div className="h-0.75 w-0.75 md:h-0.75 md:w-0.75 bg-[#F4EDE2]/50"></div>
-          <p className="hidden md:block text-[#F4EDE2] text-sm font-instrument-regular uppercase ">
+          <p className="hidden md:block text-[#F4EDE2] text-[10px] md:text-sm font-instrument-regular uppercase ">
             Website by{" "}
             <strong>
               <Link href={URLS.CORELANDS}>Corelands</Link>

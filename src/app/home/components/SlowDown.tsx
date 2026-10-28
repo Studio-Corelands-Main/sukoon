@@ -1,9 +1,9 @@
 "use client";
-import Link from "next/link";
 
+import Button from "@/app/components/Button";
 import { H2, Text } from "@/app/components/Typography/Heading";
 import { motion } from "framer-motion";
-import Button from "@/app/components/Button";
+import { URLS } from "../../../../constants/routes/urls";
 
 const SlowDown = () => {
   // const sectionRef = useRef<HTMLElement>(null);
@@ -43,7 +43,7 @@ const SlowDown = () => {
   return (
     <section
       // ref={sectionRef}
-      className="bg-center bg-cover bg-no-repeat md:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-container-7.5  py-10 md:py-43 overflow-hidden"
+      className="bg-center bg-cover bg-no-repeat md:bg-fixed w-full h-full text-white flex flex-col justify-center items-center md:px-container-7.5  py-26 md:py-43 overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-image.png')" }}
     >
       <motion.div
@@ -89,12 +89,20 @@ const SlowDown = () => {
                 table at Sukoon and settle in for soulful Indian flavours, warm
                 hospitality and moments made to be savoured.
               </Text>
-              <Button
-                color="#474806"
-                label="BOOK NOW"
-                className="cursor-pointer mt-7.5 bg-transparent hover:bg-[#474806] text-[#474806] hover:text-white"
-                href="#"
-              />
+              <div>
+                <Button
+                  color="#474806"
+                  label="ORDER ONLINE"
+                  className="cursor-pointer mt-7.5 bg-transparent hover:bg-[#474806] text-[#474806] hover:text-white"
+                  href={URLS.MENU}
+                />
+                <Button
+                  color="#474806"
+                  label="BOOK NOW"
+                  className="cursor-pointer mt-7.5 bg-transparent hover:bg-[#474806] text-[#474806] hover:text-white ml-3"
+                  href="#"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -88,9 +88,9 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
 
         {/* LEFT CONTENT */}
         <div className="pointer-events-auto flex flex-col justify-start lg:w-1/2">
-          <H2 className="text-[#DDB789]  ">{activeDish}</H2>
+          <H2 className="text-[#DDB789]">{activeDish}</H2>
 
-          <Text className=" text-[#EBD2B1] my-10 md:max-w-162.5 md:w-162.5">
+          <Text className=" text-[#EBD2B1] my-10 lg:max-w-162.5  ">
             Good food tastes even better when it’s shared. Reserve your table at
             Sukoon and settle in for soulful Indian flavours, warm hospitality
             and moments made to be savoured.
@@ -106,7 +106,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
       </div>
 
       {/* RIGHT DISHES — each sticks below the pinned frame so the next one stacks over it */}
-      <div className="mt-20 lg:mt-[-100vh] md:ml-auto lg:w-1/2 lg:pt-(--dish-header-h)">
+      <div className="mt-20 lg:mt-[-100vh] md:ml-auto lg:w-1/2 xl:pt-(--dish-header-h)">
         {dishes.map((dish) => (
           <div
             key={dish.name}
@@ -116,7 +116,7 @@ const DishGallery = ({ header }: { header: ReactNode }) => {
               src={dish.image}
               alt={dish.name}
               data-dish-name={dish.name}
-              className="w-full h-[650px] md:h-162.5 object-cover mb-5"
+              className="w-full h-full lg:h-162.5 object-cover mb-5"
             />
 
             <p className="text-[20px] md:text-fluid-20 font-instrument-regular text-[#DDB789] leading-6 mb-10">

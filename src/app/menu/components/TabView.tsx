@@ -17,17 +17,14 @@ interface Menu {
 
 const TabView = () => {
   return (
-    <Tabs defaultValue="veg" className="w-full   ">
-      <div className="sticky top-21.5 z-40 bg-[#515227]   overflow-x-scroll md:overflow-x-hidden">
-        <TabsList className=" mx-auto flex justify-center gap-2 px-2 pt-10 pb-6 sm:gap-5 sm:pt-15 sm:pb-10  ">
+    <Tabs defaultValue="veg" className="w-full">
+      <div className="sticky top-0 z-40 bg-[#515227] overflow-x-scroll md:overflow-x-hidden">
+        <TabsList className=" mx-auto flex justify-center gap-2 px-2 pt-10 pb-6 sm:gap-5 sm:pb-10  ">
           {menulist.map((item) => (
             <TabsTrigger key={item.id} value={item.tag}>
-              <div
-                className="text-[#FFF9F0] cursor-pointer mt-7.5 bg-[#481904] hover:bg-[#FFF9F0] hover:text-[#481904] px-5 py-1.5 text-[12px] lg:px-7.5 lg:py-2.5 lg:text-[14px] border rounded-full border-[#481904] hover:border-transparent font-instrument-regular"
-                
-              >
+              <div className="text-[#FFF9F0] cursor-pointer bg-[#481904] hover:bg-[#FFF9F0] hover:text-[#481904] px-5 py-1.5 text-[12px] lg:px-7.5 lg:py-2.5 lg:text-[14px] border rounded-full border-[#481904] hover:border-transparent font-instrument-regular">
                 {item.title}
-                </div>
+              </div>
             </TabsTrigger>
           ))}
         </TabsList>
