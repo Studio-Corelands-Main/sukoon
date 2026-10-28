@@ -75,11 +75,11 @@ const footerSections: FooterSection[] = [
     items: [
       {
         label: "Instagram",
-        href: "#",
+        href: URLS.INSTAGRAM,
       },
       {
         label: "Facebook",
-        href: "#",
+        href: URLS.FACEBOOK,
       },
       {
         label: "YouTube",
