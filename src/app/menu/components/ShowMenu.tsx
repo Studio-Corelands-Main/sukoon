@@ -20,15 +20,13 @@ const ShowMenu = () => {
         Where Flavour Meets Comfort
       </H2>
       <Text className="w-full lg:max-w-298.75 pt-8 mx-auto text-center  text-[#F4EDE2]">
-        Our menu is rooted in the flavours of India, brought to the table with
-        warmth, balance and a thoughtful contemporary touch. Familiar dishes are
-        prepared with care, allowing every plate to feel comforting, generous
-        and full of character. At Sukoon, food is made to be shared, savoured
-        and remembered.
+        Our vegetarian, non-vegetarian and vegan menus each pair bold flavour
+        with the kind of comfort you only get from a home-cooked meal. Pick one
+        below to see what is cooking.
       </Text>
       <div className="2xl:w-325 mx-auto grid md:grid-cols-2 2xl:grid-cols-3 gap-10 py-25">
         {MENU.map((item) => (
-          <div>
+          <div key={item.label} className="w-full">
             <div className="bg-[#7A2F08] w-full py-10  relative">
               <img src="/images/menu-bg.png" className="mx-auto" />
               <div className=" absolute top-30 bottom-30 z-50 left-0 right-0 mx-auto">

@@ -54,7 +54,7 @@ const GalleryTagline = () => {
         </div>
         <div className="hidden md:block">
           <Text className="text-[#EBD2B1] md:w-80">
-            See the spaces, details and moments that bring Sukoon to life.
+            There is plenty more to see in the full gallery.
           </Text>
           <div className="pt-5">
             <Button
@@ -110,7 +110,7 @@ const GalleryTagline = () => {
 
         <div className="md:hidden block pt-11">
           <Text className="text-[#EBD2B1] md:w-80">
-            See the spaces, details and moments that bring Sukoon to life.
+            There is plenty more to see in the full gallery.
           </Text>
           <div className="pt-5">
             <Button

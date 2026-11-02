@@ -8,7 +8,7 @@ const page = () => {
       <HeroSection
         title="Moments"
         secondTitle="of Sukoon"
-        subTitle="Step inside Sukoon through the spaces, details and moments that shape the experience. From warm interiors to thoughtful touches, every frame reflects the feeling behind the brand."
+        subTitle="Snapshots from our kitchen, our dining room and the evenings in between. Browse the food, the drinks and the atmosphere that make Sukoon what it is."
         image="/images/hero-image.png"
       />
       <TabsVertical />

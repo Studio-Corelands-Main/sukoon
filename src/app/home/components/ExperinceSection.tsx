@@ -11,9 +11,9 @@ const ExperinceSection = () => {
           </H2>
 
           <Text className="text-[#0b0b0b] pt-8 md:max-w-143">
-            Inspired by the warmth of Indian culture, Sukoon brings together
-            familiar flavours, thoughtful design and genuine hospitality in a
-            calm, contemporary setting. Every detail is considered with
+            Drawing on the richness of Indian heritage, Sukoon brings together
+            familiar flavours, thoughtful design and attentive service in a
+            relaxed, modern setting. Every detail is considered with
             intention, creating a place where comfort feels natural, moments
             feel unhurried and good food is enjoyed the way it should be.
           </Text>

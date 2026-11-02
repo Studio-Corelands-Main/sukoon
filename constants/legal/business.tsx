@@ -5,9 +5,9 @@ export const BUSINESS = {
   legalName: "Sukoon",
   abn: "",
   address: "498-500 Mt Alexander Road, Ascot Vale VIC 3032",
-  email: "email@domain.com.au",
-  phone: "04 000 0000",
-  phoneHref: "tel:0400000000",
+  email: "info@sukoonindianrestaurant.com.au",
+  phone: " 03 9495 6762",
+  phoneHref: "tel:0394956762",
 };
 
 export const LEGAL_LAST_UPDATED = "28 October 2026";

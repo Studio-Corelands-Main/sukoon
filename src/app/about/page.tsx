@@ -10,9 +10,9 @@ const page = () => {
       <HeroSection 
         title="A Story Rooted "
         secondTitle="in Comfort"
-        subTitle="Good food tastes even better when it’s shared. Reserve your table at
-          Sukoon and settle in for soulful Indian flavours, warm hospitality and
-          moments made to be savoured." image="/images/hero-image.png"/>
+        subTitle="Every place has a beginning. Ours started with a simple wish: to
+          open a restaurant where guests feel looked after, well fed and in good
+          company." image="/images/hero-image.png"/>
       <SlowDownSection />
       <FeelingSection />
       <SlowDown />

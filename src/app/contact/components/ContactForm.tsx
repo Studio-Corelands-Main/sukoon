@@ -18,8 +18,8 @@ export default function ContactForm() {
         </H2>
         <Text className="w-full text-[#0B0B0B]   font-instrument-regular">
           From reservations and dining enquiries to celebrations and special
-          requests, our team is here to make things simple. Tell us what you
-          need and we will be happy to guide you.
+          requests, our team can help. Tell us what you have in mind and we
+          will take it from there.
         </Text>
       </div>
 
@@ -34,7 +34,8 @@ export default function ContactForm() {
             Contact Us
           </H2>
           <Text className="lg:max-w-90 mb-4   text-center lg:text-left lg:mb-18.75 mx-auto mx-0">
-            Let’s talk. Whatever you need, we’re ready to help.
+            Let’s talk. Send us a message and we will get back to you as soon
+            as we can.
           </Text>
         </div>
 
@@ -108,19 +109,19 @@ export default function ContactForm() {
         <address className="not-italic  ">
           <Text className={`${detailLabelClass} break-all`}>
             EMAIL:{" "}
-            <a href="mailto:email@domain.com.au" className="underline">
-              email@domain.com.au
+            <a href="mailto:info@sukoonindianrestaurant.com.au" className="underline">
+              info@sukoonindianrestaurant.com.au
             </a>
           </Text>
           <Text className={`${detailLabelClass} mb-10 md:mb-16`}>
             PHONE:{" "}
-            <a href="tel:040000000" className="underline">
-              04 000 0000
+            <a href="tel:0394956762" className="underline">
+              03 9495 6762
             </a>
           </Text>
           <Text className={`${detailLabelClass} mb-2`}>ADDRESS</Text>
           <Text className="max-w-58.75 text-[#0B0B0B] font-charman-serif-light text-[24px] leading-7 md:text-fluid-32 md:leading-tight">
-            128 Euede Rivoli, 4th Melburne
+            498-500 mt Alexander road Ascot Vale, VIC 3032
           </Text>
         </address>
       </div>

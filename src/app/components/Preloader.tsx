@@ -143,8 +143,7 @@ export default function Preloader() {
 
       <div className="relative flex items-end justify-between font-instrument-regular">
         <p className="max-w-[250px] text-[16px] leading-[1.2] md:max-w-62.5 md:text-fluid-16 font-instrument-regular">
-          Stay until the early hours with cocktails, craft beers, bar food &amp;
-          London&apos;s finest hi-fi sound
+          Warming the spices and setting the scene
         </p>
         <p className="font-charman-serif-light text-[22px] md:text-fluid-22 tabular-nums">
           {Math.round(percent)}%

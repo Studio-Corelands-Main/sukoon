@@ -13,7 +13,7 @@ const page = () => {
   return (
     <LegalPage
       title="Terms & Conditions"
-      intro="The terms that apply when you use our website, book a table or visit Sukoon."
+      intro="Please take a moment to read these terms. They keep things clear and fair for our guests and for us."
       lastUpdated={LEGAL_LAST_UPDATED}
       sections={termsSections}
     />

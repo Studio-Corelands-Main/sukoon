@@ -277,9 +277,8 @@ export function TasteOfSukoon() {
           </div>
 
           <Text className="my-10 block text-[#EBD2B1] lg:hidden">
-            Good food tastes even better when it’s shared. Reserve your table at
-            Sukoon and settle in for soulful Indian flavours, warm hospitality
-            and moments made to be savoured.
+            Here are a few of our kitchen favourites, perfect if you are trying
+            Sukoon for the first time.
           </Text>
         </div>
 
@@ -296,9 +295,8 @@ export function TasteOfSukoon() {
               </H2>
 
               <Text className="my-10 hidden text-[#EBD2B1] lg:block lg:max-w-162.5">
-                Good food tastes even better when it’s shared. Reserve your
-                table at Sukoon and settle in for soulful Indian flavours, warm
-                hospitality and moments made to be savoured.
+                A kitchen favourite that never goes out of style. Add it to
+                your order or explore the rest of the menu.
               </Text>
 
               <div className="hidden lg:block">

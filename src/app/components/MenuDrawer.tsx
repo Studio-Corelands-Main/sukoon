@@ -167,11 +167,11 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             />
           </Link>
           <div className="flex flex-col items-end text-[11px] md:text-fluid-11 leading-tight">
-            <a href="tel:0400000000" className="hover:underline">
-              04 0000 000
+            <a href="tel:0394956762" className="hover:underline">
+               03 9495 6762
             </a>
-            <a href="mailto:email@domain.com.au" className="hover:underline">
-              email@domain.com.au
+            <a href="mailto:info@sukoonindianrestaurant.com.au" className="hover:underline">
+              info@sukoonindianrestaurant.com.au
             </a>
           </div>
         </div>

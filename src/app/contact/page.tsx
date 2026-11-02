@@ -9,7 +9,7 @@ export default function Contact() {
       <HeroSection
         title="Come as you are."
         secondTitle="Stay for the Sukoon."
-        subTitle="A warm table, familiar flavours and time well spent. Everything here is designed to help you feel a little more at ease."
+        subTitle="Whether it is a weeknight dinner for two or a night out with the whole family, every guest is welcomed like an old friend."
         image="/images/hero-image.png"
       />
       <ContactForm/>

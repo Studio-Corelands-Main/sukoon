@@ -13,7 +13,7 @@ const page = () => {
   return (
     <LegalPage
       title="Privacy Policy"
-      intro="How we collect, use and protect your personal information when you visit our website, contact us or dine with us."
+      intro="Your trust matters to us. This page sets out what we do with your details and the choices you have about them."
       lastUpdated={LEGAL_LAST_UPDATED}
       sections={privacySections}
     />

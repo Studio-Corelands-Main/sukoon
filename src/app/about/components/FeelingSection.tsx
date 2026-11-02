@@ -14,10 +14,9 @@ const FeelingSection = () => {
             <img src="/images/feel-right.png" />
           </div>
           <Text className="md:max-w-184.5 font-instrument-regular text-[#0B0B0B] py-8 md:py-0 md:pt-8">
-            Sukoon is the feeling of being completely at ease. It is found in
-            familiar flavours, warm surroundings, unhurried conversations and
-            the comfort of simply being present. That idea shapes everything we
-            create, from the food we serve to the space that surrounds it.
+            In Hindi and Urdu, sukoon means a deep, settled peace: the moment
+            your shoulders drop and the day finally lets go. It lives in a
+            favourite dish, a long conversation and having nowhere else to be.
           </Text>
         </div>
         <div className="w-full">

@@ -26,12 +26,10 @@ const HomeGallery = () => {
           Flavours That Comforts The Soul
         </H2>
         <Text className="text-[#FFF9F0] text-center w-full xl:w-287.75 mx-auto">
-          Sukoon brings together the warmth of Indian hospitality with a
-          quieter, more considered way of dining. Familiar flavours are
-          approached with care, while every detail is shaped to make you feel
-          comfortable from the moment you arrive. It is food, space and
-          hospitality coming together with one purpose: to leave you with a
-          little more comfort than you came with.
+          Rich curries, smoky grills and fragrant rice dishes, each one layered
+          with spice and cooked with patience. It is the kind of food that warms
+          you from the inside and has you planning your next visit before the
+          last plate is cleared.
         </Text>
       </div>
       <div className="pb-8 lg:pb-25 overflow-hidden ">

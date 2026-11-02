@@ -22,15 +22,15 @@ const SlowDownSection = () => {
             </Text>
             <Text className="text-black pb-4">
               We wanted to create a space where Indian food could be enjoyed
-              without rush. Where familiar flavours could retain their soul
+              without rush. Where classic recipes could retain their soul
               while being expressed with a thoughtful, contemporary approach.
               And where hospitality felt genuine rather than rehearsed. From the
-              dishes we prepare to the atmosphere around the table, every detail
-              has been considered with the same intention: to make people feel
+              dishes we prepare to the atmosphere around the table, everything
+              has been guided by the same intention: to make people feel
               welcome, comfortable and present.{" "}
             </Text>
             <Text className="text-black">
-              Sukoon is our interpretation of Indian dining today. Rooted in
+              Sukoon is our interpretation of Indian dining today. Grounded in
               what we know and love, yet open to new ideas, new expressions and
               new memories.
             </Text>

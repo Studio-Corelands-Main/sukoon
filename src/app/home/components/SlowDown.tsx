@@ -87,7 +87,7 @@ const SlowDown = () => {
               <Text className="text-center text-black  px-10 md:px-30 xl:px-0">
                 Good food tastes even better when it’s shared. Reserve your
                 table at Sukoon and settle in for soulful Indian flavours, warm
-                hospitality and moments made to be savoured.
+                hospitality and an evening set aside just for you.
               </Text>
               <div>
                 <Button

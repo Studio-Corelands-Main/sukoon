@@ -196,10 +196,10 @@ export const termsSections: LegalSectionI[] = [
     title: "Third-party websites and services",
     content: (
       <p>
-        Our website links to services we do not control, such as social media,
-        maps and booking platforms. We are not responsible for their content,
-        availability or privacy practices, and your use of them is subject to
-        their own terms.
+        Some links on our website take you to services run by others, such as
+        our booking platform, maps and social media. We are not responsible for
+        their content, availability or privacy practices, and your use of them
+        is subject to their own terms.
       </p>
     ),
   },
@@ -257,7 +257,7 @@ export const termsSections: LegalSectionI[] = [
     title: "Changes to these terms",
     content: (
       <p>
-        We may update these terms from time to time. The updated version
+        These terms may be revised occasionally. The updated version
         applies from the date it is published on this page, shown as &quot;Last
         updated&quot; at the top. Bookings already confirmed are covered by the
         terms in place when you made them.

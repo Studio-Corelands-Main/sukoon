@@ -26,12 +26,12 @@ const footerSections: FooterSection[] = [
         ),
       },
       {
-        label: "email@domain.com.au",
-        href: "mailto:email@domain.com.au",
+        label: "info@sukoonindianrestaurant.com.au",
+        href: "mailto:info@sukoonindianrestaurant.com.au",
       },
       {
-        label: "04 000 0000",
-        href: "tel:0400000000",
+        label: "03 9495 6762",
+        href: "tel:0394956762",
       },
     ],
   },
@@ -42,11 +42,11 @@ const footerSections: FooterSection[] = [
         label: "Mon - Closed",
       },
       {
-        label: "Tue - Sat - 11 AM - 11 PM",
+        label: "Tuesday to Sunday - 5pm - 11pm ",
       },
-      {
-        label: "Sun - 11 AM - 4 PM",
-      },
+      // {
+      //   label: "Sun - 11 AM - 4 PM",
+      // },
     ],
   },
   {
@@ -99,8 +99,8 @@ const Footer = () => {
               Come in, slow down, and savour the moment.
             </H2>
             <Text className="text-sm! leading-[20px]! pt-5">
-              Rooted in Indian flavours and warm hospitality, Sukoon is a place
-              to gather over good food and stay a little longer.
+              Our doors are open for leisurely dinners, or order online when you
+              would rather stay in.
             </Text>
 
             <div className=" flex gap-3  pt-5">

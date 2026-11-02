@@ -104,14 +104,14 @@ export function TabsVertical() {
           <div className="flex w-full flex-col justify-between gap-8 bg-[#F4EDE2] px-8 pt-25 pb-8 md:flex-row md:items-center lg:px-0 container-px">
             <div className="md:w-1/2">
               <H2 className="w-60 text-[36px]! text-[#777A35] md:w-58">
-                A Glimpse Into Sukoon
+                The Details We Love
               </H2>
             </div>
             <div className="flex justify-end md:w-1/2">
               <Text className="text-[#0B0B0B] md:w-200">
                 Some details are felt before they are noticed. The light, the
-                textures, the table, the quiet corners and the moments shared
-                between them all come together to create the Sukoon experience.
+                textures, the quiet corners and the care on every plate all add
+                up to the Sukoon experience.
               </Text>
             </div>
           </div>

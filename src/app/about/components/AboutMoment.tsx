@@ -7,20 +7,18 @@ const AboutMoment = () => {
       <div className="md:w-[60%] flex flex-col justify-between  md:gap-20 md:gap-0">
         <div className=" ">
           <H2 className="text-[#DDB789]">
-            A Glimpse
-            <br /> Into Sukoon
+            See It
+            <br /> For Yourself
           </H2>
           <Text className="md:max-w-162.5 md:w-162.5 text-[#DDB789] pt-8 ">
-            From quiet corners and thoughtful details to the warmth that fills
-            the room, every part of Sukoon has been shaped to create a sense of
-            ease. Explore the spaces, moments and details that bring our story
-            to life.
+            Words can only say so much. The room, the plates and the people
+            behind them tell the rest of our story, and our gallery shows them
+            up close.
           </Text>
         </div>
         <div className="hidden md:block w-full">
           <Text className="max-w-100 text-[#EBD2B1]   ">
-            Step inside Sukoon and discover the atmosphere behind the
-            experience.
+            Take a look around before your first visit.
           </Text>
           <div className="mt-8">
             <Button
@@ -37,7 +35,7 @@ const AboutMoment = () => {
       </div>
       <div className="md:hidden w-full">
         <p className="max-w-100 text-[15px] md:text-fluid-20 font-instrument-regular text-[#EBD2B1]   ">
-          Step inside Sukoon and discover the atmosphere behind the experience.
+          Take a look around before your first visit.
         </p>
         <div className="mt-8">
           <Button
