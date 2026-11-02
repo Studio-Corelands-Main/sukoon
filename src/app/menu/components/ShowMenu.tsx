@@ -3,20 +3,16 @@ import { H2, Text } from "@/app/components/Typography/Heading";
 
 const MENU = [
   {
-    label: "Food",
-    href: "/menus/food.pdf",
-  },
-  {
-    label: "Platters",
-    href: "/menus/platters.pdf",
-  },
-  {
     label: "Drinks",
-    href: "/menus/drinks.pdf",
+    href: "/menus/drinks-menu.pdf",
   },
   {
     label: "Tikki",
     href: "/menus/tikki-bar.pdf",
+  },
+  {
+    label: "Food",
+    href: "/menus/food-menu.pdf",
   },
 ];
 
