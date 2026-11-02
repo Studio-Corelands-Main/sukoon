@@ -9,7 +9,8 @@ const page = () => {
       <HeroSection
         title="Flavours Made  to Feel Familiar"
         subTitle="The dishes you know by heart, cooked the way you remember them, alongside a few new ones worth discovering. Take your time and order for the table."
-        image="/images/menu.png"
+        image="/images/menu-hero.jpg"
+        className="menu-hero"
       />
       <ShowMenu/>
       <SlowDown/>

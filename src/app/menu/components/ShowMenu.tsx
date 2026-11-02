@@ -7,7 +7,7 @@ const MENU = [
     href: "/menus/drinks-menu.pdf",
   },
   {
-    label: "Tikki",
+    label: "Tikki Bar Menu",
     href: "/menus/tikki-bar.pdf",
   },
   {

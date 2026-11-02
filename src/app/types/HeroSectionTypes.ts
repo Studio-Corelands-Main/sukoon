@@ -3,4 +3,5 @@ export interface HeroSectionI {
   secondTitle?: string
   subTitle: string;
   image: string;
+  className?: string;
 }
