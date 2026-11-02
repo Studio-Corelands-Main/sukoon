@@ -311,7 +311,7 @@ export function TasteOfSukoon() {
                   className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904] ml-3"
                   color="#DDB789"
                   label="EXPLORE THE MENU"
-                  href={URLS.GALLERY}
+                  href={URLS.MENU}
                 />
               </div>
             </div>
