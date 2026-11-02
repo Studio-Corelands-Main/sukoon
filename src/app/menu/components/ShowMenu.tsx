@@ -3,13 +3,12 @@ import { H2, Text } from "@/app/components/Typography/Heading";
 
 const MENU = [
   {
-    label: "Veg",
+    label: "Food",
+    href: "/menus/food.pdf",
   },
   {
-    label: "Non-Veg",
-  },
-  {
-    label: "Vegan",
+    label: "Platters",
+    href: "/menus/platters.pdf",
   },
   {
     label: "Drinks",
@@ -64,7 +63,7 @@ const ShowMenu = () => {
             <div className="flex justify-center w-full">
               <Button
                 color="#DDB789"
-                label="CHECK MENU"
+                label="VIEW MENU"
                 href={item.href}
                 target="_blank"
                 className="bg-[#DDB789] text-[#656631] hover:text-[#DDB789] hover:bg-transparent mt-5 mx-auto hover:border! hover:border-[#DDB789]! cursor-pointer"
