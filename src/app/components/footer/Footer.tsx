@@ -81,10 +81,10 @@ const footerSections: FooterSection[] = [
         label: "Facebook",
         href: URLS.FACEBOOK,
       },
-      {
-        label: "YouTube",
-        href: "#",
-      },
+      // {
+      //   label: "YouTube",
+      //   href: "#",
+      // },
     ],
   },
 ];

@@ -15,7 +15,7 @@ const navLinks = [
 
 const socialLinks = [
   { label: "INSTAGRAM", href: "#" },
-  { label: "YOUTUBE", href: "#" },
+  // { label: "YOUTUBE", href: "#" },
   { label: "LINKEDIN", href: "#" },
 ];
 

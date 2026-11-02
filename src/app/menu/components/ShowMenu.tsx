@@ -11,6 +11,14 @@ const MENU = [
   {
     label: "Vegan",
   },
+  {
+    label: "Drinks",
+    href: "/menus/drinks.pdf",
+  },
+  {
+    label: "Tikki",
+    href: "/menus/tikki-bar.pdf",
+  },
 ];
 
 const ShowMenu = () => {
@@ -20,9 +28,9 @@ const ShowMenu = () => {
         Where Flavour Meets Comfort
       </H2>
       <Text className="w-full lg:max-w-298.75 pt-8 mx-auto text-center  text-[#F4EDE2]">
-        Our vegetarian, non-vegetarian and vegan menus each pair bold flavour
-        with the kind of comfort you only get from a home-cooked meal. Pick one
-        below to see what is cooking.
+        From vegetarian, non-vegetarian and vegan dishes to tikki small plates
+        and drinks, every menu pairs bold flavour with the kind of comfort you
+        only get from a home-cooked meal. Pick one below to see what is cooking.
       </Text>
       <div className="2xl:w-325 mx-auto grid md:grid-cols-2 2xl:grid-cols-3 gap-10 py-25">
         {MENU.map((item) => (
@@ -57,6 +65,8 @@ const ShowMenu = () => {
               <Button
                 color="#DDB789"
                 label="CHECK MENU"
+                href={item.href}
+                target="_blank"
                 className="bg-[#DDB789] text-[#656631] hover:text-[#DDB789] hover:bg-transparent mt-5 mx-auto hover:border! hover:border-[#DDB789]! cursor-pointer"
               ></Button>
             </div>
