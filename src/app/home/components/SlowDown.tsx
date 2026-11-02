@@ -94,7 +94,8 @@ const SlowDown = () => {
                   color="#474806"
                   label="ORDER ONLINE"
                   className="cursor-pointer mt-7.5 bg-transparent hover:bg-[#474806] text-[#474806] hover:text-white"
-                  href={URLS.MENU}
+                  href="https://sukoonindianrestaurant.square.site"
+                  target="_blank"
                 />
                 <Button
                   color="#474806"

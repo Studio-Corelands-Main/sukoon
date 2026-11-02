@@ -304,7 +304,8 @@ export function TasteOfSukoon() {
                   className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
                   color="#DDB789"
                   label="ORDER NOW"
-                  href={URLS.MENU}
+                  href="https://sukoonindianrestaurant.square.site"
+                  target="_blank"
                 />
                 <Button
                   className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904] ml-3"
@@ -343,7 +344,8 @@ export function TasteOfSukoon() {
           className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904]"
           color="#DDB789"
           label="ORDER NOW"
-          href={URLS.MENU}
+          href="https://sukoonindianrestaurant.square.site"
+          target="_blank"
         />
         <Button
           className="mt-7.5 w-fit cursor-pointer bg-transparent text-[#DDB789] hover:bg-[#DDB789] hover:text-[#481904] ml-3"

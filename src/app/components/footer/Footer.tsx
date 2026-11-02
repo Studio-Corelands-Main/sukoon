@@ -106,7 +106,8 @@ const Footer = () => {
             <div className=" flex gap-3  pt-5">
               <Button
                 label="ORDER NOW"
-                href="#"
+                href="https://sukoonindianrestaurant.square.site"
+                target="_blank"
                 color="#DDB789"
                 className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit text-nowrap text-[10px]!"
               />
