@@ -307,23 +307,52 @@ export const galleryFilters = [
 
 export const filteredImages = [
   {
-    imagePath: "/images/1.png",
+    imagePath: "/images/food-6.webp",
     tag: "food",
   },
   {
-    imagePath: "/images/1.png",
+    imagePath: "/images/food-2.webp",
     tag: "food",
   },
   {
-    imagePath: "/images/1.png",
+    imagePath: "/images/food-7.webp",
     tag: "food",
   },
   {
-    imagePath: "/images/2.png",
+    imagePath: "/images/food-4.webp",
+    tag: "food",
+  },
+  {
+    imagePath: "/images/food-5.webp",
+    tag: "food",
+  },
+  {
+    imagePath: "/images/food-1.webp",
+    tag: "food",
+  },
+  {
+    imagePath: "/images/food-3.webp",
+    tag: "food",
+  },
+  // drinks
+  {
+    imagePath: "/images/drink-1.webp",
     tag: "drinks",
   },
   {
-    imagePath: "/images/moment-1.png",
+    imagePath: "/images/drink-2.webp",
+    tag: "drinks",
+  },
+  {
+    imagePath: "/images/drink-3.webp",
+    tag: "drinks",
+  },
+  {
+    imagePath: "/images/drink-4.webp",
+    tag: "drinks",
+  },
+  {
+    imagePath: "/images/drink-5.webp",
     tag: "drinks",
   },
 

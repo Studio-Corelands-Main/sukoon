@@ -11,7 +11,7 @@ const FeelingSection = () => {
             Called Sukoon
           </H2>
           <div className="mt-8 md:hidden">
-            <img src="/images/feel-right.png" />
+            <img src="/images/feel-right.webp" />
           </div>
           <Text className="md:max-w-184.5 font-instrument-regular text-[#0B0B0B] py-8 md:py-0 md:pt-8">
             In Hindi and Urdu, sukoon means a deep, settled peace: the moment
@@ -24,7 +24,7 @@ const FeelingSection = () => {
         </div>
       </div>
       <div className="hidden md:w-[50%] md:flex flex-col justify-between items-stretch h-full">
-        <img src="/images/feel-right.png" />
+        <img src="/images/feel-right.webp" />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@
 const dishes = [
   {
     name: "Butter Chicken",
-    image: "/images/1.png",
+    image: "/images/food-4.webp",
   },
   {
     name: "Paneer Tikka",
@@ -18,7 +18,7 @@ const dishes = [
     image: "/images/3.png",
   },
   {
-    name: "Biryani",
+    name: "Channa masala",
     image: "/images/gallery.png",
   },
 ];
@@ -295,8 +295,8 @@ export function TasteOfSukoon() {
               </H2>
 
               <Text className="my-10 hidden text-[#EBD2B1] lg:block lg:max-w-162.5">
-                A kitchen favourite that never goes out of style. Add it to
-                your order or explore the rest of the menu.
+                A kitchen favourite that never goes out of style. Add it to your
+                order or explore the rest of the menu.
               </Text>
 
               <div className="hidden lg:block">

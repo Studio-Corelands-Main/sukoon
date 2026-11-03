@@ -11,7 +11,7 @@ const SlowDownSection = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-start gap-10  bg-[#F4EDE2] relative">
         <div className="w-full">
-          <img src="/images/about-image.png" className="md:w-283.75" />
+          <img src="/images/about-image.webp" className="md:w-283.75" />
         </div>
         <div className="md:w-[40%] relative px-7.5 sm:px-13 md:px-0 container-pr">
           <div className="sticky top-10 pb-10">
@@ -22,9 +22,9 @@ const SlowDownSection = () => {
             </Text>
             <Text className="text-black pb-4">
               We wanted to create a space where Indian food could be enjoyed
-              without rush. Where classic recipes could retain their soul
-              while being expressed with a thoughtful, contemporary approach.
-              And where hospitality felt genuine rather than rehearsed. From the
+              without rush. Where classic recipes could retain their soul while
+              being expressed with a thoughtful, contemporary approach. And
+              where hospitality felt genuine rather than rehearsed. From the
               dishes we prepare to the atmosphere around the table, everything
               has been guided by the same intention: to make people feel
               welcome, comfortable and present.{" "}

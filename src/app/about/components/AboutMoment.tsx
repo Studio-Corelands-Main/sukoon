@@ -31,7 +31,7 @@ const AboutMoment = () => {
         </div>
       </div>
       <div className="md:w-[40%] flex flex-col justify-between items-stretch h-full mt-3 md:mt-0">
-        <img src="/images/feel-right.png" />
+        <img src="/images/footer-right.webp" />
       </div>
       <div className="md:hidden w-full">
         <p className="max-w-100 text-[15px] md:text-fluid-20 font-instrument-regular text-[#EBD2B1]   ">

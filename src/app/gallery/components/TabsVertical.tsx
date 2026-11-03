@@ -1,10 +1,9 @@
 "use client";
 
 import { H2, Text } from "@/app/components/Typography/Heading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useElementHeight } from "@/hooks/useElementHeight";
 import type { CSSProperties } from "react";
-import { memo, useCallback, useState, useSyncExternalStore } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import {
   filteredImages,
   galleryFilters,
@@ -13,7 +12,10 @@ import {
 // Images per page: one full-width hero followed by two half-width images
 const IMAGES_PER_PAGE = 3;
 
-// Each filter's images, split into pages for infinite scroll
+// Matches Tailwind's `lg` breakpoint, where the header is sticky
+const LG_QUERY = "(min-width: 1024px)";
+
+// Each category's images, split into hero + pair groups
 const pagesByTag: Record<string, string[][]> = Object.fromEntries(
   galleryFilters.map(({ tag }) => {
     const images = filteredImages
@@ -26,25 +28,6 @@ const pagesByTag: Record<string, string[][]> = Object.fromEntries(
     return [tag, pages];
   }),
 );
-
-// ---------------------------------------------------------------------------
-// Matches Tailwind's `lg` breakpoint. Server render assumes mobile.
-// ---------------------------------------------------------------------------
-const LG_QUERY = "(min-width: 1024px)";
-
-function subscribe(callback: () => void) {
-  const mql = window.matchMedia(LG_QUERY);
-  mql.addEventListener("change", callback);
-  return () => mql.removeEventListener("change", callback);
-}
-
-function useIsDesktop() {
-  return useSyncExternalStore(
-    subscribe,
-    () => window.matchMedia(LG_QUERY).matches,
-    () => false,
-  );
-}
 
 // ---------------------------------------------------------------------------
 // One "page" of images: a full-width hero followed by two half-width images
@@ -71,13 +54,13 @@ const GalleryPage = memo(function GalleryPage({
       />
 
       {rest.length > 0 && (
-        <div className="mt-3 flex flex-row gap-3.5 md:mt-7.5 md:gap-7.5">
+        <div className="mt-7.5 flex flex-row gap-3.5 md:mt-7.5 md:gap-7.5">
           {rest.map((src, i) => (
             <div key={i} className="w-1/2">
               <img
                 src={src}
                 alt=""
-                className="object-cover"
+                className="object-cover "
                 loading="lazy"
                 decoding="async"
               />
@@ -90,34 +73,54 @@ const GalleryPage = memo(function GalleryPage({
 });
 
 export function TabsVertical() {
-  const [activeTab, setActiveTab] = useState(galleryFilters[0].tag);
-  const [tabsListRef, tabsListHeight] = useElementHeight<HTMLDivElement>();
-  const [pages, setPages] = useState(1);
-  const isDesktop = useIsDesktop();
+  const [activeTag, setActiveTag] = useState(galleryFilters[0].tag);
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  // Measured header height, used as the sticky offset for the desktop tab list
+  // Measured header height, used as the sticky offset for the desktop nav
   const [headerRef, headerHeight] = useElementHeight<HTMLDivElement>();
+  // Measured nav height, used as the scroll offset for the mobile pill strip
+  const [navRef, navHeight] = useElementHeight<HTMLDivElement>();
 
-  const handleTabChange = useCallback((value: string) => {
-    setActiveTab(value);
-    setPages(1);
-  }, []);
+  // Highlights the section currently passing a line ~40% down the viewport
+  useEffect(() => {
+    const handleScroll = () => {
+      const line = window.innerHeight * 0.4;
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
 
-  // Stable ref callback: the observer is created once per sentinel mount
-  // (the sentinel is re-keyed per page so it re-fires if it stays in view)
-  const loadMoreRef = useCallback((node: HTMLDivElement | null) => {
-    if (!node) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setPages((count) => count + 1);
+      let current = galleryFilters[0].tag;
+      for (const { tag } of galleryFilters) {
+        const section = sectionRefs.current[tag];
+        if (section && section.getBoundingClientRect().top <= line) {
+          current = tag;
         }
-      },
-      { rootMargin: "300px" },
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
+      }
+      if (atBottom) current = galleryFilters[galleryFilters.length - 1].tag;
+      setActiveTag(current);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
+
+  // Scrolls a section to just below whatever is pinned at the top
+  const scrollToSection = (tag: string) => {
+    const section = sectionRefs.current[tag];
+    if (!section) return;
+    const offset = window.matchMedia(LG_QUERY).matches
+      ? headerHeight
+      : navHeight;
+    window.scrollTo({
+      top: section.getBoundingClientRect().top + window.scrollY - offset,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div
@@ -146,58 +149,70 @@ export function TabsVertical() {
           </div>
         </div>
 
-        {/* Tabs: a single tree for all breakpoints */}
-        <Tabs
-          value={activeTab}
-          onValueChange={handleTabChange}
-          orientation={isDesktop ? "vertical" : "horizontal"}
-          className="relative container-px max-lg:px-8 md:flex items-start md:gap-10 pb-20 lg:pb-0"
-        >
-          <TabsList
-            ref={tabsListRef}
-            className="sticky top-0 z-10 max-lg:w-full max-lg:border-2 max-lg:border-[#F4EDE2] max-lg:bg-[#F4EDE2] max-lg:py-15 lg:top-(--header-h) lg:h-fit lg:w-[30%] self-start "
+        <div className="relative container-px max-lg:px-8 lg:flex items-start lg:gap-10 pb-20 lg:pb-0">
+          {/* Section nav: pill strip on mobile, sticky vertical list on desktop */}
+          <div
+            ref={navRef}
+            className="sticky top-0 z-10 flex gap-3 overflow-x-auto no-scrollbar bg-[#F4EDE2] py-6 max-lg:-mx-8 max-lg:px-8 lg:top-(--header-h) lg:h-fit lg:w-[30%] lg:flex-col lg:items-start lg:gap-4 lg:overflow-visible lg:py-0 self-start"
           >
-            {galleryFilters.map((item) => (
-              <TabsTrigger
-                key={item.id}
-                value={item.tag}
-                className="px-0 opacity-50 data-active:opacity-100 group-data-[variant=default]/tabs-list:data-active:shadow-none max-md:flex-none max-md:px-8 rounded-full hover:text-[#777A35] hover:bg-white lg:hover:bg-transparent  data-active:text-white lg:data-active:text-[#777A35] py-5 lg:pt-0 max-md:opacity-100  data-active:border-[#777A35]  data-active:bg-[#777A35] lg:data-active:bg-transparent max-md:group-data-vertical/tabs:w-auto border-0 "
-              >
-                <span className="text-[16px] lg:text-[48px] font-instrument-regular lg:font-charman-serif-light! cursor-pointer">
-                  {item.title}
-                </span>
-              </TabsTrigger>
-            ))}
+            {galleryFilters.map((item) => {
+              const active = item.tag === activeTag;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-current={active ? "true" : undefined}
+                  onClick={() => scrollToSection(item.tag)}
+                  className={`flex-none cursor-pointer rounded-full px-8 py-2.5 transition-colors lg:rounded-none lg:px-0 lg:py-0 ${
+                    active
+                      ? "bg-[#777A35] text-white lg:bg-transparent lg:text-[#777A35]"
+                      : "text-[#474806] hover:bg-white hover:text-[#777A35] lg:opacity-50 lg:hover:bg-transparent lg:hover:opacity-100"
+                  }`}
+                >
+                  <span className="text-[16px] lg:text-[48px] font-instrument-regular lg:font-charman-serif-light!">
+                    {item.title}
+                  </span>
+                </button>
+              );
+            })}
 
-            <div></div>
-          </TabsList>
+            <p className="hidden md:block md:mt-60 text-[14px] text-[#0B0B0B] font-instrument-regular md:w-120 ">
+              {galleryFilters.find((f) => f.tag === activeTag)?.description}
+            </p>
+          </div>
 
+          {/* Sections: one per category, all shown in order */}
           <div className="min-w-0 flex-1">
-            {galleryFilters.map((record) => (
-              <TabsContent
-                key={record.id}
-                value={record.tag}
-                className="mt-0 sm:mb-25"
+            {galleryFilters.map((section, sectionIndex) => (
+              <section
+                key={section.id}
+                id={`gallery-${section.tag}`}
+                ref={(node) => {
+                  sectionRefs.current[section.tag] = node;
+                }}
+                className="mb-7  "
               >
-                <div className="flex flex-col gap-3.5 md:gap-7.5">
-                  {pagesByTag[record.tag]
-                    .slice(0, pages)
-                    .map((images, index) => (
-                      <GalleryPage
-                        key={index}
-                        images={images}
-                        eager={index === 0}
-                      />
-                    ))}
+                <div className="mb-6 md:mb-10">
+                  {/* <h3 className="text-[28px] md:text-[40px] font-charman-serif-light text-[#474806]">
+                    {section.title}
+                  </h3> */}
+                  {/* <p className="mt-2 text-[14px] text-[#0B0B0B] font-instrument-regular md:w-120">
+                    {section.description}
+                  </p> */}
                 </div>
-
-                {pages < pagesByTag[record.tag].length && (
-                  <div key={pages} ref={loadMoreRef} />
-                )}
-              </TabsContent>
+                <div className="flex flex-col gap-3.5 md:gap-7.5 ">
+                  {pagesByTag[section.tag].map((images, index) => (
+                    <GalleryPage
+                      key={index}
+                      images={images}
+                      eager={sectionIndex === 0 && index === 0}
+                    />
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
-        </Tabs>
+        </div>
       </div>
     </div>
   );
