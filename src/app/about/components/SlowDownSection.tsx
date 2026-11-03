@@ -14,7 +14,7 @@ const SlowDownSection = () => {
           <img src="/images/about-image.webp" className="md:w-283.75" />
         </div>
         <div className="md:w-[40%] relative px-7.5 sm:px-13 md:px-0 container-pr">
-          <div className="sticky top-10 pb-10">
+          <div className="sticky top-10 ">
             <Text className="text-black   pb-4">
               The name speaks to a sense of ease, comfort and quiet contentment.
               That feeling became the starting point for everything we wanted

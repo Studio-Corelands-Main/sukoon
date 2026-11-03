@@ -344,18 +344,22 @@ export const filteredImages = [
     tag: "drinks",
   },
   {
-    imagePath: "/images/drink-3.webp",
+    imagePath: "/images/drink-4.webp",
     tag: "drinks",
   },
   {
-    imagePath: "/images/drink-4.webp",
+    imagePath: "/images/drink-6.webp",
     tag: "drinks",
   },
   {
     imagePath: "/images/drink-5.webp",
     tag: "drinks",
   },
-
+  {
+    imagePath: "/images/drink-3.webp",
+    tag: "drinks",
+  },
+  // experience
   {
     imagePath: "/images/menu-hero.jpg",
     tag: "experience",

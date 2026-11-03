@@ -14,9 +14,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: "INSTAGRAM", href: "#" },
-  // { label: "YOUTUBE", href: "#" },
-  { label: "LINKEDIN", href: "#" },
+  { label: "INSTAGRAM", href: URLS.INSTAGRAM },
+
+  { label: "FACEBOOK", href: URLS.FACEBOOK },
 ];
 
 interface MenuDrawerProps {
@@ -59,21 +59,22 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
         role="dialog"
         aria-modal="true"
         aria-label="Site navigation"
-        className={`absolute inset-y-0 left-0 flex h-[100dvh] w-full flex-col bg-[#1d2002] text-[#f3ead8] font-instrument-regular transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${
-          open ? "translate-x-0" : "-translate-x-full"
+        className={`absolute inset-y-0 left-0 flex h-dvh w-full flex-col bg-[#1d2002] text-[#f3ead8] font-instrument-regular transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+          open ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         {/* Top bar */}
-        <div className="flex shrink-0 items-center justify-between gap-4 px-4 pt-4 sm:px-8 md:px-container-25 md:pt-6">
-          <Link
-            href="/reserve"
+        <div className="flex shrink-0 items-center justify-between gap-4  pt-4 px-7.5 sm:px-13 container-px md:pt-6">
+          <div
             onClick={onClose}
             className="shrink-0 rounded-full border border-[#f3ead8]/70 px-7.5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-fluid-16 transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
           >
             RESERVE
-          </Link>
+          </div>
           <p className="hidden truncate text-[16px] md:text-fluid-16 underline md:block">
-            205 Swan St, Richmond
+            <Link href={URLS.ADDRESS} target="_blank">
+              498-500 mt Alexander road Ascot Vale VIC 3032
+            </Link>
           </p>
           <button
             type="button"
@@ -144,8 +145,8 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
         </div>
 
         {/* Bottom bar */}
-        <div className="grid shrink-0 grid-cols-2 items-center gap-y-4 bg-[#24280a] px-4 py-5 sm:grid-cols-3 sm:px-8 md:px-container-25 md:py-6">
-          <ul className="flex flex-col text-[11px] md:text-fluid-11 leading-tight">
+        <div className="grid shrink-0 grid-cols-2 items-center gap-y-4 bg-[#24280a]  py-5 sm:grid-cols-3 px-7.5 sm:px-13 container-px md:py-6">
+          <ul className="flex flex-col gap-1 text-[11px] md:text-fluid-11 leading-tight">
             {socialLinks.map((s, i) => (
               <li key={s.label}>
                 <a href={s.href} className="hover:underline">
@@ -167,12 +168,12 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             />
           </Link>
           <div className="flex flex-col items-end text-[11px] md:text-fluid-11 leading-tight">
-            <a href="tel:0394956762" className="hover:underline">
-               03 9495 6762
-            </a>
-            <a href="mailto:info@sukoonindianrestaurant.com.au" className="hover:underline">
+            <Link href={URLS.PHONE} className="hover:underline">
+              03 9495 6762
+            </Link>
+            <Link href={URLS.EMAIL} className="hover:underline">
               info@sukoonindianrestaurant.com.au
-            </a>
+            </Link>
           </div>
         </div>
       </aside>

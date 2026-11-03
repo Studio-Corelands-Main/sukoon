@@ -13,9 +13,9 @@ const ExperinceSection = () => {
           <Text className="text-[#0b0b0b] pt-8 md:max-w-143">
             Drawing on the richness of Indian heritage, Sukoon brings together
             familiar flavours, thoughtful design and attentive service in a
-            relaxed, modern setting. Every detail is considered with
-            intention, creating a place where comfort feels natural, moments
-            feel unhurried and good food is enjoyed the way it should be.
+            relaxed, modern setting. Every detail is considered with intention,
+            creating a place where comfort feels natural, moments feel unhurried
+            and good food is enjoyed the way it should be.
           </Text>
         </div>
         <div className="pt-10  ">
@@ -54,7 +54,7 @@ const ExperinceSection = () => {
       </div>
       <div className="w-full lg:w-1/2 bg-[#F9F9F9] lg:h-270 hidden lg:block  md:pt-0 ">
         <img
-          src="/images/hero-image.png"
+          src="/images/right-mid.webp"
           alt=""
           className="w-full h-full object-cover "
         />

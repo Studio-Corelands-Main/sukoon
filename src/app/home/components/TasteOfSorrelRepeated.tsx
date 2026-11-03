@@ -14,7 +14,7 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
 
           <div>
             <img
-              src="/images/behind-sukoon.png"
+              src="/images/behind-sukoon.webp"
               alt="Behind Sukoon"
               className="w-94.5 md:w-151.75 h-full lg:h-211.25 "
             />
@@ -34,7 +34,7 @@ const TasteOfSorrelRepeated = ({ content }: { content: string }) => {
             </div>
           </div>
           <div className="lg:pt-10">
-            <img src="/images/people.png" />
+            <img src="/images/about-image-home.webp" />
             <Text className="pt-5 text-[#DDB789]">The People of Sukoon</Text>
             <div className="md:hidden block pt-5 ">
               <Text className="text-[#EBD2B1]">{content}</Text>

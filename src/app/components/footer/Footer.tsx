@@ -21,17 +21,19 @@ const footerSections: FooterSection[] = [
       {
         label: (
           <div className="w-[230px] md:w-57.5">
-            498-500 mt Alexander road Ascot Vale, VIC 3032
+            <Link href={URLS.ADDRESS} target="_blank">
+              498-500 mt Alexander road Ascot Vale, VIC 3032
+            </Link>
           </div>
         ),
       },
       {
         label: "info@sukoonindianrestaurant.com.au",
-        href: "mailto:info@sukoonindianrestaurant.com.au",
+        href: URLS.EMAIL,
       },
       {
         label: "03 9495 6762",
-        href: "tel:0394956762",
+        href: URLS.PHONE,
       },
     ],
   },
@@ -54,19 +56,19 @@ const footerSections: FooterSection[] = [
     items: [
       {
         label: "Menu",
-        href: "/menu",
+        href: URLS.MENU,
       },
       {
         label: "Gallery",
-        href: "/gallery",
+        href: URLS.GALLERY,
       },
       {
         label: "Story",
-        href: "/story",
+        href: URLS.ABOUT,
       },
       {
         label: "Contact",
-        href: "/contact",
+        href: URLS.CONTACT,
       },
     ],
   },
@@ -204,7 +206,9 @@ const Footer = () => {
           <p className="hidden md:block text-[#F4EDE2] text-[10px] md:text-sm font-instrument-regular uppercase ">
             Website by{" "}
             <strong>
-              <Link href={URLS.CORELANDS}>Corelands</Link>
+              <Link href={URLS.CORELANDS} target="_blank">
+                Corelands
+              </Link>
             </strong>
           </p>
         </div>
