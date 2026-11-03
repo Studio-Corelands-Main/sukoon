@@ -7,19 +7,19 @@
 const dishes = [
   {
     name: "Butter Chicken",
-    image: "/images/food-4.webp",
+    image: "/images/butter-chicken.jpg",
   },
   {
-    name: "Paneer Tikka",
-    image: "/images/2.png",
+    name: "Samosa",
+    image: "/images/samosa.jpg",
   },
   {
-    name: "Dal Makhani",
-    image: "/images/3.png",
+    name: "Pani puri",
+    image: "/images/pani-puri.jpg",
   },
   {
     name: "Channa masala",
-    image: "/images/gallery.png",
+    image: "/images/chana-masala.jpg",
   },
 ];
 // const TasteOfSorrel = () => {
@@ -285,7 +285,7 @@ export function TasteOfSukoon() {
         {/* Body */}
         <div className="container-px flex items-start lg:gap-8 gap-3">
           {/* LEFT: sticky */}
-          <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start pl-8 pt-8 md:pl-0 lg:pt-0">
+          <div className="sticky top-(--dish-header-h) z-10 w-[30%] lg:w-1/2 self-start   pt-8 md:pl-0 lg:pt-0">
             <div className="flex flex-col justify-start ">
               <H2
                 key={activeDish}
