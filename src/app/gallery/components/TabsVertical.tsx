@@ -5,10 +5,27 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useElementHeight } from "@/hooks/useElementHeight";
 import type { CSSProperties } from "react";
 import { memo, useCallback, useState, useSyncExternalStore } from "react";
-import { galleryFilters } from "../../../../constants/menu/list";
+import {
+  filteredImages,
+  galleryFilters,
+} from "../../../../constants/menu/list";
 
-// How many times the image set repeats before scrolling stops loading more
-const MAX_PAGES = 5;
+// Images per page: one full-width hero followed by two half-width images
+const IMAGES_PER_PAGE = 3;
+
+// Each filter's images, split into pages for infinite scroll
+const pagesByTag: Record<string, string[][]> = Object.fromEntries(
+  galleryFilters.map(({ tag }) => {
+    const images = filteredImages
+      .filter((image) => image.tag === tag)
+      .map((image) => image.imagePath);
+    const pages = [];
+    for (let i = 0; i < images.length; i += IMAGES_PER_PAGE) {
+      pages.push(images.slice(i, i + IMAGES_PER_PAGE));
+    }
+    return [tag, pages];
+  }),
+);
 
 // ---------------------------------------------------------------------------
 // Matches Tailwind's `lg` breakpoint. Server render assumes mobile.
@@ -32,13 +49,20 @@ function useIsDesktop() {
 // ---------------------------------------------------------------------------
 // One "page" of images: a full-width hero followed by two half-width images
 // ---------------------------------------------------------------------------
-const GalleryPage = memo(function GalleryPage({ eager }: { eager: boolean }) {
+const GalleryPage = memo(function GalleryPage({
+  images,
+  eager,
+}: {
+  images: string[];
+  eager: boolean;
+}) {
+  const [hero, ...rest] = images;
   const loading = eager ? "eager" : "lazy";
 
   return (
     <div>
       <img
-        src="/images/hero-image.png"
+        src={hero}
         alt=""
         className="w-full"
         loading={loading}
@@ -46,19 +70,21 @@ const GalleryPage = memo(function GalleryPage({ eager }: { eager: boolean }) {
         fetchPriority={eager ? "high" : "auto"}
       />
 
-      <div className="mt-3 flex flex-row gap-3.5 md:mt-7.5 md:gap-7.5">
-        {[0, 1].map((i) => (
-          <div key={i} className="w-1/2">
-            <img
-              src="/images/gallery.png"
-              alt=""
-              className="md:w-157.5 md:h-189.5"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        ))}
-      </div>
+      {rest.length > 0 && (
+        <div className="mt-3 flex flex-row gap-3.5 md:mt-7.5 md:gap-7.5">
+          {rest.map((src, i) => (
+            <div key={i} className="w-1/2">
+              <img
+                src={src}
+                alt=""
+                className="object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 });
@@ -84,7 +110,7 @@ export function TabsVertical() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setPages((count) => Math.min(count + 1, MAX_PAGES));
+          setPages((count) => count + 1);
         }
       },
       { rootMargin: "300px" },
@@ -154,12 +180,20 @@ export function TabsVertical() {
                 className="mt-0 sm:mb-25"
               >
                 <div className="flex flex-col gap-3.5 md:gap-7.5">
-                  {Array.from({ length: pages }, (_, index) => (
-                    <GalleryPage key={index} eager={index === 0} />
-                  ))}
+                  {pagesByTag[record.tag]
+                    .slice(0, pages)
+                    .map((images, index) => (
+                      <GalleryPage
+                        key={index}
+                        images={images}
+                        eager={index === 0}
+                      />
+                    ))}
                 </div>
 
-                {pages < MAX_PAGES && <div key={pages} ref={loadMoreRef} />}
+                {pages < pagesByTag[record.tag].length && (
+                  <div key={pages} ref={loadMoreRef} />
+                )}
               </TabsContent>
             ))}
           </div>

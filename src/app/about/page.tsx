@@ -7,12 +7,14 @@ import SlowDownSection from "./components/SlowDownSection";
 const page = () => {
   return (
     <div className="">
-      <HeroSection 
+      <HeroSection
         title="A Story Rooted "
         secondTitle="in Comfort"
         subTitle="Every place has a beginning. Ours started with a simple wish: to
           open a restaurant where guests feel looked after, well fed and in good
-          company." image="/images/hero-image.png"/>
+          company."
+        image="/images/hero-image.png"
+      />
       <SlowDownSection />
       <FeelingSection />
       <SlowDown />

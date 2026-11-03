@@ -20,7 +20,7 @@ const FeelingSection = () => {
           </Text>
         </div>
         <div className="w-full">
-          <img src="/images/about-dish.png" className="w-full" />
+          <img src="/images/exp-3.jpg" className="w-full" />
         </div>
       </div>
       <div className="hidden md:w-[50%] md:flex flex-col justify-between items-stretch h-full">

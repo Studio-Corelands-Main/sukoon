@@ -304,3 +304,51 @@ export const galleryFilters = [
       "Sukoon is more than a meal. It is the warmth of the room, the ease of good company and thoughtful details that invite you to slow down and stay a little longer.",
   },
 ];
+
+export const filteredImages = [
+  {
+    imagePath: "/images/1.png",
+    tag: "food",
+  },
+  {
+    imagePath: "/images/1.png",
+    tag: "food",
+  },
+  {
+    imagePath: "/images/1.png",
+    tag: "food",
+  },
+  {
+    imagePath: "/images/2.png",
+    tag: "drinks",
+  },
+  {
+    imagePath: "/images/moment-1.png",
+    tag: "drinks",
+  },
+
+  {
+    imagePath: "/images/menu-hero.jpg",
+    tag: "experience",
+  },
+  {
+    imagePath: "/images/exp-1.jpg",
+    tag: "experience",
+  },
+  {
+    imagePath: "/images/exp-2.jpg",
+    tag: "experience",
+  },
+  {
+    imagePath: "/images/exp-3.jpg",
+    tag: "experience",
+  },
+  {
+    imagePath: "/images/exp-4.jpg",
+    tag: "experience",
+  },
+  {
+    imagePath: "/images/exp-5.jpg",
+    tag: "experience",
+  },
+];
