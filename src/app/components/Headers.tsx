@@ -82,9 +82,13 @@ export default function Headers() {
           <div className="shrink-0">
             {/* Mobile logo slot: left */}
             <LogoSlot show={showLogo} className="block w-[130px] md:hidden" />
-            <p className="text-[13px] py-2 px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 hidden md:block border border-white rounded-full">
+            <button
+              type="button"
+              data-booking=""
+              className="text-[13px] py-2 px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 hidden md:block border border-white rounded-full cursor-pointer"
+            >
               RESERVE
-            </p>
+            </button>
           </div>
 
           {/* Desktop logo slot: truly centred, regardless of side widths */}

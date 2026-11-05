@@ -101,7 +101,7 @@ const SlowDown = () => {
                   color="#474806"
                   label="BOOK NOW"
                   className="cursor-pointer mt-7.5 bg-transparent hover:bg-[#474806] text-[#474806] hover:text-white ml-3"
-                  href="#"
+                  booking
                 />
               </div>
             </div>

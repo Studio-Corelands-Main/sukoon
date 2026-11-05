@@ -65,12 +65,14 @@ export default function MenuDrawer({ open, onClose }: MenuDrawerProps) {
       >
         {/* Top bar */}
         <div className="flex shrink-0 items-center justify-between gap-4  pt-4 px-7.5 sm:px-13 container-px md:pt-6">
-          <div
+          <button
+            type="button"
+            data-booking=""
             onClick={onClose}
-            className="shrink-0 rounded-full border border-[#f3ead8]/70 px-7.5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-fluid-16 transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
+            className="shrink-0 cursor-pointer rounded-full border border-[#f3ead8]/70 px-7.5 py-2 text-[13px] md:px-7.5 md:py-2.5 md:text-fluid-16 transition-colors hover:bg-[#f3ead8] hover:text-[#1d2002]"
           >
             RESERVE
-          </div>
+          </button>
           <p className="hidden truncate text-[16px] md:text-fluid-16 underline md:block">
             <Link href={URLS.ADDRESS} target="_blank">
               498-500 mt Alexander road Ascot Vale VIC 3032

@@ -116,7 +116,7 @@ const Footer = () => {
               <Button
                 label="RESERVE"
                 color="#DDB789"
-                href="#"
+                booking
                 className="text-[#DDB789] cursor-pointer mt-7.5 bg-transparent hover:bg-[#DDB789] hover:text-[#481904] w-fit text-nowrap text-[10px]!"
               />
             </div>

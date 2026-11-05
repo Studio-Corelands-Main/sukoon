@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
+import BookingModal from "./components/booking/BookingModal";
 import Footer from "./components/footer/Footer";
 import Headers from "./components/Headers";
 import Preloader from "./components/Preloader";
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* <ConditionalHeader /> */}
         {children}
         <Footer />
+        <BookingModal />
       </body>
     </html>
   );
