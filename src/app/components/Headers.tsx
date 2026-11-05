@@ -79,16 +79,23 @@ export default function Headers() {
         <div
           className={`relative h-full flex flex-row items-center justify-between gap-4 py-4 px-7.5 sm:px-13 md:pt-6 container-px text-white font-instrument-regular transition-transform duration-300 ease-out ${hidden ? "-translate-y-full" : "translate-y-0"} ${atTop ? "bg-transparent" : "bg-[#515227] backdrop-blur-2xl"}`}
         >
-          <div className="shrink-0">
+          <div className="shrink-0 flex gap-2">
             {/* Mobile logo slot: left */}
             <LogoSlot show={showLogo} className="block w-[130px] md:hidden" />
             <button
               type="button"
               data-booking=""
-              className="text-[13px] py-2 px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 hidden md:block border border-white rounded-full cursor-pointer"
+              className="text-[13px] py-2 px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 hidden md:block border border-white rounded-full cursor-pointer md:w-[200px]"
             >
               RESERVE
             </button>
+
+            <Link
+              href={URLS.ORDER_ONLINE}
+              className="text-[13px] py-2 text-center px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 hidden md:block border border-white rounded-full cursor-pointer uppercase md:w-[200px]"
+            >
+              Order Online
+            </Link>
           </div>
 
           {/* Desktop logo slot: truly centred, regardless of side widths */}

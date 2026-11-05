@@ -6,11 +6,12 @@ import { useEffect } from "react";
 import { URLS } from "../../../constants/routes/urls";
 
 const navLinks = [
-  { label: "HOME", href: "/" },
-  { label: "OUR STORY", href: "/about" },
-  { label: "MENU", href: "/menu" },
-  { label: "GALLERY", href: "/gallery" },
-  { label: "CONTACT", href: "/contact" },
+  { label: "HOME", href: URLS.HOME },
+  { label: "OUR STORY", href: URLS.ABOUT },
+  { label: "MENU", href: URLS.MENU },
+  { label: "GALLERY", href: URLS.GALLERY },
+  { label: "CONTACT", href: URLS.CONTACT },
+  { label: "ORDER ONLINE", href: URLS.ORDER_ONLINE },
 ];
 
 const socialLinks = [
