@@ -14,7 +14,9 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { URLS } from "../../../../constants/routes/urls";
 
 // Hero scroll progress at which the logo lands in the header
 const DOCK_PROGRESS = 0.7;
@@ -134,6 +136,21 @@ const HomeHero = () => {
         </div>
 
         <div className="absolute inset-x-7.5 bottom-6 md:hidden">
+          <div className="pb-10 flex gap-2">
+            <button
+              // type="button"
+              data-booking=""
+              className="text-[13px] py-2 px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5 border border-white rounded-full cursor-pointer w-[200px]"
+            >
+              RESERVE
+            </button>
+            <Link
+              href={URLS.ORDER_ONLINE}
+              className="text-[13px] py-2 text-center px-7.5 md:text-fluid-16 md:py-2.5 md:px-7.5  border border-white rounded-full cursor-pointer uppercase w-[200px]"
+            >
+              Order Online
+            </Link>
+          </div>
           <Text className="text-white">
             CONTEMPORARY INDIAN DINING MADE FOR CALM MOMENTS.
           </Text>

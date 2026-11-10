@@ -1,4 +1,7 @@
 // Placeholder details until the client confirms them. The ABN line only
+
+import { URLS } from "../routes/urls";
+
 // renders once abn is filled in.
 export const BUSINESS = {
   name: "Sukoon",
@@ -15,10 +18,10 @@ export const LEGAL_LAST_UPDATED = "28 October 2026";
 export const BusinessContactList = () => (
   <ul>
     <li>
-      Email: <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
+      Email: <a href={`${URLS.EMAIL}`}>{BUSINESS.email}</a>
     </li>
     <li>
-      Phone: <a href={BUSINESS.phoneHref}>{BUSINESS.phone}</a>
+      Phone: <a href={URLS.PHONE}>{BUSINESS.phone}</a>
     </li>
     <li>Address: {BUSINESS.address}</li>
   </ul>
