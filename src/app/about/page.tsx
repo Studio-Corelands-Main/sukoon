@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { aboutSchema } from "@/lib/schema";
 import SlowDown from "../home/components/SlowDown";
 import AboutMoment from "./components/AboutMoment";
 import FeelingSection from "./components/FeelingSection";
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div className="">
+      <JsonLd data={aboutSchema} />
       <HeroSection
         title="A Story Rooted "
         secondTitle="in Comfort"

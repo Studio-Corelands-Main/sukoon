@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { contactSchema } from "@/lib/schema";
 import React from "react";
 import HeroSection from "../about/components/HeroSection";
 import SlowDown from "../home/components/SlowDown";
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div>
+      <JsonLd data={contactSchema} />
       <HeroSection
         title="Come as you are."
         secondTitle="Stay for the Sukoon."

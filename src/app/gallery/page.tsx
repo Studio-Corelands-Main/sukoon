@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { gallerySchema } from "@/lib/schema";
 import HeroSection from "../about/components/HeroSection";
 import SlowDown from "../home/components/SlowDown";
 import { TabsVertical } from "./components/TabsVertical";
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div>
+      <JsonLd data={gallerySchema} />
       <HeroSection
         title="Moments"
         secondTitle="of Sukoon"

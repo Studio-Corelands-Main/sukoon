@@ -1,5 +1,7 @@
 "use client";
 import "swiper/css";
+import JsonLd from "@/components/JsonLd";
+import { homeSchema } from "@/lib/schema";
 import ExperinceSection from "./home/components/ExperinceSection";
 import GalleryTagline from "./home/components/GalleryTagline";
 
@@ -29,6 +31,7 @@ const images = [
 export default function Home() {
   return (
     <>
+      <JsonLd data={homeSchema} />
       <HomeHero />
       <HomeGallery />
       <ExperinceSection />
