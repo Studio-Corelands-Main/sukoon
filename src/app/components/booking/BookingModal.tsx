@@ -79,7 +79,7 @@ export default function BookingModal() {
             <div
               className="eatclub-widget"
               {...{
-                account: "jai-ho-indian-restaurant-hoppe",
+                account: "sukoonindianrestaurant.com.au",
                 "hide-header": "false",
                 "min-height": "450",
                 "add-height": "50",
