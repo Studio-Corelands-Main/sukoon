@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
 import HeroSection from "../about/components/HeroSection";
 import SlowDown from "../home/components/SlowDown";
 import ContactForm from "./components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact and Book a Table | Sukoon Ascot Vale",
+  description:
+    "Book a table or ask us a question. Sukoon is at 498-500 Mt Alexander Road, Ascot Vale. Open Tue to Sun, 5pm to 11pm. Call 03 9495 6762.",
+};
 
 export default function Contact() {
   return (

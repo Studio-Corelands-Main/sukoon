@@ -4,9 +4,9 @@ import { termsSections } from "../../../constants/legal/terms";
 import LegalPage from "../components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Sukoon",
+  title: "Terms and Conditions | Sukoon Indian Restaurant",
   description:
-    "The terms that apply when you use the Sukoon website, book a table or visit our restaurant.",
+    "Terms and conditions for using the Sukoon Indian Restaurant website, bookings and online orders at 498-500 Mt Alexander Road, Ascot Vale.",
 };
 
 const page = () => {

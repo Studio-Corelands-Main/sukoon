@@ -36,8 +36,9 @@ const charmanSerifLight = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sukoon",
-  description: "Flavours That Comforts The Soul",
+  title: "Sukoon Indian Restaurant | Ascot Vale, Melbourne",
+  description:
+    "Contemporary Indian dining in Ascot Vale. Butter chicken, smoky grills and Tikki Bar bites. Open Tue to Sun, 5pm to 11pm. Book or order online.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

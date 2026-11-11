@@ -4,9 +4,9 @@ import { privacySections } from "../../../constants/legal/privacy";
 import LegalPage from "../components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Sukoon",
+  title: "Privacy Policy | Sukoon Indian Restaurant",
   description:
-    "How Sukoon collects, uses and protects your personal information when you visit our website, contact us or dine with us.",
+    "How Sukoon Indian Restaurant in Ascot Vale collects, uses and protects your personal information when you book, order or contact us.",
 };
 
 const page = () => {

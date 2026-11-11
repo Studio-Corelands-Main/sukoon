@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import HeroSection from "../about/components/HeroSection";
 import SlowDown from "../home/components/SlowDown";
 import { TabsVertical } from "./components/TabsVertical";
+
+export const metadata: Metadata = {
+  title: "Gallery | Sukoon Indian Restaurant | Ascot Vale",
+  description:
+    "Take a look inside Sukoon: our Ascot Vale dining room, Indian dishes and the Tikki Bar. See the food and setting before your first visit.",
+};
 
 const page = () => {
   return (
